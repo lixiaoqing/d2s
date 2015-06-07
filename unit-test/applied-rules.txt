@@ -1,0 +1,27663 @@
+1
+NN
+科学家
+@@@
+scientists 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+为
+@@@
+to 
+-1 
+
+OOV => 攸关
+
+OOV => 初期
+
+OOV => 失智症
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBN JJ NN 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 染色
+
+OOV => 体
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+OOV => 定序
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+完成|||~
+@@@
+NP 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+2
+OOV => 群
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+一|||~
+@@@
+IN 
+0 
+
+NN
+科学家
+@@@
+scientists 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+OOV => 巴黎
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+OOV => 二日
+
+NN
+电
+@@@
+( 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NN
+）
+@@@
+) 
+-1 
+
+NP
+NN NN
+@@@
+NP ADVP 
+1 0 
+
+NP
+NP NP NP
+@@@
+NP JJ NN 
+0 1 2 
+
+LC
+间
+@@@
+between 
+-1 
+
+LCP
+NP LC
+@@@
+NP RB 
+0 1 
+
+VP
+VV LCP
+@@@
+IN NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+PN
+他们
+@@@
+they 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+完成
+@@@
+completed 
+-1 
+
+OOV => 定序
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+为
+@@@
+for 
+-1 
+
+NN
+人类
+@@@
+mankind 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OD
+第十四
+@@@
+'s 
+-1 
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+OOV => 染色
+
+OOV => 体
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+QP VP
+@@@
+NP VP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+VB NP PP ADVP 
+2 3 1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 染色体
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+P
+与
+@@@
+and 
+-1 
+
+CD
+许多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 疾病
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VV
+有关
+@@@
+about 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+包括
+@@@
+including 
+-1 
+
+OOV => 三十几
+
+QP
+CD CLP
+~|||M
+~|||岁
+@@@
+CD years old 
+0 -1 -1 
+
+NN
+者
+@@@
+these 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 罹患
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV VP
+可能|||~
+@@@
+may be VP 
+-1 -1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 初期
+
+OOV => 阿耳滋海
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 默氏症
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP NP
+@@@
+JJ NN NNS 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+NP VP
+PN|||~
+这|||~
+@@@
+JJ 
+0 
+
+IP
+IP PU IP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+3
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OD
+第四
+@@@
+fourth 
+-1 
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+OOV => 染色体
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 定序
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+VV NP
+完成|||~
+@@@
+NP 
+0 
+
+OOV => 为止
+
+NT
+目前
+@@@
+now 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+LCP
+NP LC
+@@@
+IN NP 
+1 0 
+
+PP
+P LCP
+到|||~
+@@@
+ADVP 
+0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+VP
+VC VP
+是|||~
+@@@
+VP 
+0 
+
+IP
+NP VP
+PN|||~
+这|||~
+@@@
+JJ 
+0 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+P
+由
+@@@
+by 
+-1 
+
+VV
+组成
+@@@
+a 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 八千七百多万
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+OOV => 去氧核糖核酸
+
+NN
+（
+@@@
+( 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => DNA
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP NP
+@@@
+JJ NN NNS 
+0 1 2 
+
+NN
+）
+@@@
+) 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+PP VP
+P NP|||~
+@@@
+VBP NP PP 
+0 2 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||，|||~|||~
+@@@
+S , and S . 
+0 -1 -1 1 2 
+
+4
+DP
+DT CLP
+这|||M
+~|||项
+@@@
+this 
+-1 
+
+NN
+研究
+@@@
+study 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+自然
+@@@
+natural 
+-1 
+
+NN
+科学
+@@@
+science 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 周刊
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+英国
+@@@
+britain 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP NP
+@@@
+JJ NN PP 
+1 2 0 
+
+VV
+发表
+@@@
+by 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP DP NP
+@@@
+JJ NNS SBAR 
+1 2 0 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OD
+第十四
+@@@
+'s 
+-1 
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+OOV => 染色
+
+OOV => 体
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 排序
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+VP
+QP VP
+@@@
+NP VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VV
+构成
+@@@
+constitute 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 一千零五十
+
+QP
+CD CLP
+~|||M
+~|||个
+@@@
+CD 
+0 
+
+OOV => 基因
+
+NP
+NN
+@@@
+NN 
+0 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 基因
+
+OOV => 片段
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PP
+P NP
+由|||~
+@@@
+FW 
+0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+VP
+VV PU IP
+显示|||，|||~
+@@@
+showing that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+5
+OOV => 基因
+
+NN
+科学家
+@@@
+scientists 
+-1 
+
+NN
+目标
+@@@
+target 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+NP DEG|||~
+NN NN|||的|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+VC
+是
+@@@
+is 
+-1 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+发现
+@@@
+find 
+-1 
+
+OOV => 致病
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+MSP VP
+以|||~
+@@@
+so as to VP 
+-1 -1 -1 0 
+
+OOV => 诊断
+
+NN
+工具
+@@@
+means 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+提供|||~
+@@@
+IN 
+0 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 缺陷
+
+OOV => 基因
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+VV
+提供
+@@@
+provide 
+-1 
+
+OOV => 终而
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 阻止
+
+VV
+产生
+@@@
+produced 
+-1 
+
+DT
+这些
+@@@
+these 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 基因
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NN
+障碍
+@@@
+obstacles 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+IP
+NP VP
+~|||VV NP
+@@@
+VBG NP NX 
+1 0 2 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 疗法
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+~|||CP NP
+@@@
+VBN ADVP VP 
+0 1 2 
+
+VP
+VV VP
+可|||~
+@@@
+CC 
+0 
+
+VP
+ADVP VP
+~|||VV VP
+@@@
+MD RB VP 
+1 0 2 
+
+IP
+NP PU VP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VC PU IP
+@@@
+VBD IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+6
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OD
+第十四
+@@@
+'s 
+-1 
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+OOV => 染色
+
+OOV => 体
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+QP VP
+@@@
+NP VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 攸关
+
+OOV => 功能
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 免疫
+
+NP
+NN NN
+~|||系统
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 丛
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+CD|||~
+两|||~
+@@@
+RB 
+0 
+
+OOV => 基因
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP NP
+@@@
+JJ NN NNS 
+0 1 2 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 六十多
+
+QP
+CD CLP
+~|||M
+~|||种
+@@@
+CD 
+0 
+
+OOV => 疾病
+
+OOV => 基因
+
+NP
+QP NP
+~|||NN NN
+@@@
+QP NN NNS 
+0 1 2 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NN
+科学家
+@@@
+scientists 
+-1 
+
+VV
+领导
+@@@
+leading 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => GENOSCOPE
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 法国
+
+OOV => 基因
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+中心
+@@@
+center 
+-1 
+
+NP
+NR NN NN NN
+@@@
+NP NN JJ NN 
+0 1 2 3 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+PP
+P NP
+由|||~
+@@@
+FW 
+0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP NP
+IP DEC|||NN NN
+@@@
+DT JJ NNS SBAR 
+1 2 3 0 
+
+VV
+表示
+@@@
+said 
+-1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||VV PU IP|||~
+@@@
+S , NP VP . 
+3 2 0 1 4 
+
+7
+OOV => 先前
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+CD
+许多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 疾病
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PP
+P NP
+对|||~
+@@@
+PP 
+0 
+
+VV
+进行
+@@@
+conduct 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+GLUE => X X X 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 辨认
+
+VV
+出
+@@@
+have 
+-1 
+
+VRD
+VV VV
+@@@
+have NP PRT 
+-1 0 1 
+
+OD
+第十四
+@@@
+'s 
+-1 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 染色体
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+OD CLP|||~
+@@@
+DT JJ NNS 
+0 1 2 
+
+VP
+VRD NP
+@@@
+VB NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+DT
+这些
+@@@
+these 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 疾病
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+VV
+包括
+@@@
+including 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||种
+@@@
+a 
+-1 
+
+OOV => 痉挛性
+
+OOV => 麻痹
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 幼童
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 罹患
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+PU
+、
+@@@
+, 
+-1 
+
+VA
+少
+@@@
+little 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+ADVP VP
+AD|||~
+过|||~
+@@@
+JJ 
+0 
+
+OOV => 齿
+
+NP
+NN
+@@@
+NN 
+0 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 损害
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 若干
+
+QP
+CD CLP
+~|||M
+~|||种
+@@@
+CD 
+0 
+
+OOV => 视力
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 听力
+
+NP
+QP NP
+~|||NN CC NN
+@@@
+DT NNS CC NNS 
+0 1 2 3 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+以及
+@@@
+and 
+-1 
+
+OOV => 初期
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 阿耳滋海
+
+OOV => 默氏症
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X X X X X 
+
+GLUE => X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||~|||NP VP|||~
+@@@
+SBAR , NP VP . 
+0 1 2 3 4 
+
+8
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+约
+@@@
+about 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 二十万
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 罹患
+
+OOV => 初期
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 阿耳滋海
+
+OOV => 默氏症
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VE IP
+有|||~
+@@@
+S 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 百分之五
+
+QP
+CD
+@@@
+CD 
+0 
+
+NR
+美
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+DP NP
+DT|||~
+全|||~
+@@@
+POS 
+0 
+
+OOV => 阿耳滋海
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 默氏症
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+患者
+@@@
+off explosive 
+-1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+QP
+DNP QP
+@@@
+NP ADVP 
+1 0 
+
+VP
+VV QP
+占|||~
+@@@
+accounted for NP 
+-1 -1 0 
+
+VP
+VP PU VP
+ADVP VP|||~|||~
+@@@
+VBG NNS CC NNS 
+0 1 2 3 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+9
+NN
+人类
+@@@
+mankind 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 二十三
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+OOV => 染色体
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+VP
+ADVP VP
+AD|||~
+共|||~
+@@@
+S 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+10
+CD
+三
+@@@
+three 
+-1 
+
+M
+年
+@@@
+years 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+NP QP
+NT|||CD CLP
+过去|||~|||~
+@@@
+in the past JJ NNS 
+-1 -1 -1 0 1 
+
+LC
+中
+@@@
+, 
+-1 
+
+LCP
+QP LC
+@@@
+NP RB 
+0 1 
+
+PU
+，
+@@@
+and 
+-1 
+
+CD
+三
+@@@
+three 
+-1 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+OOV => 染色
+
+OOV => 体
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 排序
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+完成|||~
+@@@
+NP 
+0 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+IP
+QP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VE IP
+有|||~
+@@@
+S 
+0 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+包括
+@@@
+including 
+-1 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 第二十
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 第二十一
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 对
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 第二十二
+
+QP
+OD CLP
+@@@
+NNP CD 
+1 0 
+
+GLUE => X X X X X 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+11
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+重新
+@@@
+their 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+开放
+@@@
+opening 
+-1 
+
+OOV => 马尼拉
+
+NP
+NR
+@@@
+NP 
+0 
+
+VP
+VV NP
+驻|||~
+@@@
+DT 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+@@@
+NN NNS 
+0 1 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+12
+NT
+今天
+@@@
+today 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+OOV => 马尼拉二日
+
+NN
+电
+@@@
+) 
+-1 
+
+NN
+）
+@@@
+, 
+-1 
+
+GLUE => X X X 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+NP
+NP NP
+NP NP|||~
+@@@
+NN NN PP 
+1 2 0 
+
+AD
+重新
+@@@
+their 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+开放
+@@@
+opening 
+-1 
+
+PN
+它
+@@@
+its 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 大使馆
+
+OOV => 菲律宾
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+VP
+VV NP
+驻|||~
+@@@
+DT 
+0 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+IP
+NP VP
+~|||NP ADVP VP
+@@@
+PP , NP VBP VP 
+1 -1 0 2 3 
+
+CD
+七
+@@@
+seven 
+-1 
+
+OOV => 周
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+LC
+前
+@@@
+before 
+-1 
+
+LCP
+QP LC
+@@@
+NP RB 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+DT
+该
+@@@
+the 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+OOV => 关闭
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+而|||~
+@@@
+NN 
+0 
+
+P
+因
+@@@
+because 
+-1 
+
+JJ
+所谓
+@@@
+so-called 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+VA
+明确
+@@@
+clear 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+恐怖
+@@@
+terrorist 
+-1 
+
+NP
+NN NN
+~|||分子
+@@@
+IN 
+0 
+
+VV
+攻击
+@@@
+attack 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+LCP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||，|||~|||~
+@@@
+S , and S . 
+0 -1 -1 1 2 
+
+13
+NN
+外交部
+@@@
+ministry 
+-1 
+
+OOV => 菲国
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+VV
+打
+@@@
+a 
+-1 
+
+OOV => 电话
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+给
+@@@
+to 
+-1 
+
+OOV => 奥勃
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 菲国
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP
+~|||NN
+~|||外长
+@@@
+JJ 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+恢复
+@@@
+resumed 
+-1 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+DT
+全部
+@@@
+all 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 作业
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+宣布|||~
+@@@
+announced that it VP 
+-1 -1 -1 0 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+OOV => 皮尔斯
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 马尼拉
+
+NP
+NR
+@@@
+NP 
+0 
+
+VP
+VV NP
+驻|||~
+@@@
+DT 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+NN
+大使
+@@@
+ambassador 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+IP
+NP VP
+NP NP|||~
+@@@
+JJ VBG PP 
+2 1 0 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+a 
+-1 
+
+NN
+声明
+@@@
+statement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+14
+OOV => 加拿大
+
+CC
+与
+@@@
+and 
+-1 
+
+NR
+欧盟
+@@@
+eu 
+-1 
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+CC
+和
+@@@
+and 
+-1 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+VA
+一样
+@@@
+like 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+OOV => 关闭
+
+PN
+它们
+@@@
+them 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+OOV => 二十八日
+
+OOV => 十一月
+
+NP
+NT NT
+@@@
+NN CD 
+1 0 
+
+PP
+P NP
+在|||~
+@@@
+VBZ 
+0 
+
+AD
+都
+@@@
+are 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+VB NP PP ADVP 
+2 3 1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+并
+@@@
+and 
+-1 
+
+AD
+重新
+@@@
+their 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+开放
+@@@
+opening 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+P
+在
+@@@
+in 
+-1 
+
+DT
+本
+@@@
+the 
+-1 
+
+OOV => 周
+
+CLP
+M
+@@@
+NNS 
+0 
+
+DP
+DT CLP
+@@@
+DT NN 
+0 1 
+
+OOV => 稍早
+
+NP
+NT
+@@@
+PP 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+@@@
+RBR VBN PP 
+1 2 0 
+
+VP
+VP PU CC VP
+@@@
+VP , CC VP 
+0 1 2 3 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+15
+OOV => 奥勃
+
+NP
+NR
+@@@
+NP 
+0 
+
+DT
+所有
+@@@
+all 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+CD
+三
+@@@
+three 
+-1 
+
+M
+位
+@@@
+the 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+NN
+大使
+@@@
+ambassador 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+VV
+表示
+@@@
+said 
+-1 
+
+OOV => 满意
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+对
+@@@
+in 
+-1 
+
+OOV => 菲律宾
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+政府
+@@@
+government 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+加强
+@@@
+strengthened 
+-1 
+
+NN
+安全
+@@@
+security 
+-1 
+
+NN
+措施
+@@@
+measures 
+-1 
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBN JJ NN 
+0 1 2 
+
+IP
+NP VP
+NP NP|||~
+@@@
+CC NP VP 
+0 1 2 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+AD
+都
+@@@
+are 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+VB NP PP ADVP 
+2 3 1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+16
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 关闭
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+AD
+曾
+@@@
+had 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 激怒
+
+OOV => 菲律宾
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+政府
+@@@
+government 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+~|||~|||NP NP
+@@@
+JJ NN NN NNS 
+0 1 2 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 过于
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 夸大
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+DEG
+的
+@@@
+a 
+-1 
+
+DNP
+ADJP DEG
+JJ|||~
+所谓|||~
+@@@
+DT 
+0 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+IP
+NP VP
+~|||VC NP
+@@@
+NP VBZ NP 
+2 1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+而
+@@@
+but 
+-1 
+
+OOV => 关闭
+
+GLUE => X 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+OOV => 伤害
+
+OOV => 菲国
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NN
+形象
+@@@
+image 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+NP VP|||~|||NP VP|||~
+@@@
+NP VP . NP VP . 
+0 1 2 3 4 5 
+
+17
+OOV => 马尼拉
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+曾
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 免除
+
+NN
+职务
+@@@
+positions 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+警方
+@@@
+police 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+官员
+@@@
+officials 
+-1 
+
+OOV => 情报
+
+NP
+NP NP
+~|||NN NN
+@@@
+JJ NNS PP 
+0 2 1 
+
+VP
+ADVP VP
+~|||VV AS NP
+~|||~|||了|||DNP NP
+~|||~|||~|||NP DEG|||~
+~|||~|||~|||~|||的|||~
+@@@
+ADVP VBG the NN PP 
+0 1 -1 3 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+P
+因为
+@@@
+because 
+-1 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 透露
+
+P
+经
+@@@
+by 
+-1 
+
+NN
+证实
+@@@
+confirmed 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP
+@@@
+PP 
+0 
+
+VP
+ADVP VP
+AD|||~
+未|||~
+@@@
+has not yet VP 
+-1 -1 -1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 情报
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+遭到
+@@@
+by 
+-1 
+
+NN
+恐怖
+@@@
+terrorist 
+-1 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+P
+有关
+@@@
+as 
+-1 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+CC
+与
+@@@
+and 
+-1 
+
+OOV => 加拿大
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+OOV => 大使馆
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+~|||VV NP
+@@@
+IN NP PP 
+1 2 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP CP NP
+@@@
+JJ NNS from china 's and NP 
+1 2 -1 -1 -1 -1 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+18
+NN
+办事处
+@@@
+office 
+-1 
+
+NR
+欧盟
+@@@
+) 
+-1 
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+P
+与
+@@@
+and 
+-1 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 大使馆
+
+DT
+同
+@@@
+with 
+-1 
+
+DP
+DT QP
+~|||CD
+~|||一
+@@@
+DT 
+0 
+
+OOV => 建筑
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+LCP
+NP LC
+~|||内
+@@@
+IN 
+0 
+
+PP
+P LCP
+在|||~
+@@@
+PP 
+0 
+
+VP
+VV PP
+@@@
+VBD PP 
+0 1 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+19
+OOV => 九一一
+
+QP
+CD
+@@@
+CD 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+恐怖
+@@@
+terrorist 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP QP NP
+@@@
+DT NP NP 
+1 0 2 
+
+VV
+攻击
+@@@
+attacks 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+NN
+周年
+@@@
+of 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LC
+左右
+@@@
+swayed 
+-1 
+
+LCP
+NP LC
+@@@
+NP RB 
+0 1 
+
+GLUE => X X 
+
+PP
+P LCP
+在|||~
+@@@
+PP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 东南亚
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP DP NP
+~|||DT|||NN
+~|||各|||地
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NN
+西方
+@@@
+western 
+-1 
+
+NN
+外交
+@@@
+diplomacy 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+OOV => 节团
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 关闭
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+纷纷|||~
+@@@
+VP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+使|||~|||~
+@@@
+so that NP VP 
+-1 -1 0 1 
+
+IP
+PP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+P
+因为
+@@@
+because 
+-1 
+
+VV
+遭到
+@@@
+by 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+与
+@@@
+with 
+-1 
+
+OOV => 欧萨玛．宾拉登
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 盖达
+
+NN
+组织
+@@@
+organization 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+CC
+及
+@@@
+and 
+-1 
+
+NN
+地方
+@@@
+local 
+-1 
+
+NN
+联盟
+@@@
+alliance 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+NP NP
+PN|||~
+其|||~
+@@@
+PRP$ 
+0 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+VV
+有关
+@@@
+about 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP NP
+IP DEC|||~
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+PN
+它们
+@@@
+them 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+20
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP
+~|||NN
+~|||外长
+@@@
+JJ 
+0 
+
+OOV => 指
+
+OOV => 恶劣
+
+VP
+VA
+@@@
+JJ 
+0 
+
+OOV => 北韩
+
+NN
+行为
+@@@
+behavior 
+-1 
+
+IP
+NP VP
+NN NN|||~
+@@@
+JJ NN NN 
+2 0 1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 无法
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+取得
+@@@
+has 
+-1 
+
+AD
+更
+@@@
+more 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 多
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+ADJP
+ADVP ADJP
+@@@
+RBS JJ 
+0 1 
+
+NN
+援助
+@@@
+aid 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+ADVP ADVP VP
+~|||~|||VV NP
+@@@
+MD ADVP VB NP 
+0 1 2 3 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+21
+NR
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+OOV => 雪梨
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 二日
+
+NN
+电
+@@@
+) 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+NN
+）
+@@@
+, 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LC
+间
+@@@
+between 
+-1 
+
+LCP
+NP LC
+@@@
+NP RB 
+0 1 
+
+JJ
+共同
+@@@
+common 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+努力
+@@@
+efforts 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+相信
+@@@
+believe 
+-1 
+
+OOV => 藐视
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+禁止
+@@@
+are prohibited 
+-1 -1 
+
+OOV => 核子
+
+OOV => 扩散
+
+OOV => 协定
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NN NN|||~
+@@@
+JJ NN NN 
+0 1 2 
+
+CC
+或
+@@@
+or 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 恶劣
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+行为
+@@@
+behavior 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 」
+
+GLUE => X X X X 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+更
+@@@
+more 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 多
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+ADJP
+ADVP ADJP
+@@@
+RBS JJ 
+0 1 
+
+NN
+援助
+@@@
+aid 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+CC
+或
+@@@
+or 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 让步
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV NP
+取得|||~
+@@@
+CD 
+0 
+
+OOV => 无法
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP ADVP VP
+@@@
+MD VB ADVP 
+0 2 1 
+
+GLUE => X X X 
+
+VP
+VV PU IP
+~|||，|||~
+@@@
+VBD SBAR 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+让|||~|||~
+@@@
+so that NP VP 
+-1 -1 0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+呼吁|||~|||~
+@@@
+call on NP S 
+-1 -1 0 1 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+NP NP|||~|||~
+@@@
+NP NP VP . 
+0 1 2 3 
+
+22
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP
+~|||NN
+~|||外长
+@@@
+JJ 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+决定
+@@@
+that 
+-1 
+
+AD
+重新
+@@@
+their 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+启动
+@@@
+started 
+-1 
+
+M
+处
+@@@
+section 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+一|||~
+@@@
+IN 
+0 
+
+OOV => 争议
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+引
+@@@
+'s 
+-1 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP NP
+@@@
+NP IN NP 
+2 0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 核子
+
+NN
+设施
+@@@
+facilities 
+-1 
+
+NP
+QP CP NP
+~|||~|||NN NN
+@@@
+DT ADJP NN NN 
+0 1 2 3 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+CC
+并
+@@@
+and 
+-1 
+
+OOV => 驱逐
+
+NR
+联合国
+@@@
+un 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+监测
+@@@
+monitoring 
+-1 
+
+NP
+NN NN
+~|||人员
+@@@
+VBG 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VP PU CC VP
+~|||，|||~|||~
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+OOV => 显然
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 旨
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+在
+@@@
+in 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+迫使
+@@@
+force 
+-1 
+
+LC
+间
+@@@
+between 
+-1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+@@@
+IN NP 
+1 0 
+
+NN
+援助
+@@@
+aid 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+NN
+贸易
+@@@
+trade 
+-1 
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||上
+@@@
+on NP 
+-1 0 
+
+VP
+PP VP
+~|||VV
+~|||让步
+@@@
+make concessions PP 
+-1 -1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+GLUE => X X X 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+ADVP NP VP
+@@@
+IN NP VP 
+0 1 2 
+
+IP
+IP PU IP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+NT
+今天
+@@@
+today 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+23
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+NN
+之一
+@@@
+one 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+DEC
+的
+@@@
+of 
+-1 
+
+CD
+少数
+@@@
+few 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+国家
+@@@
+countries 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+P
+与
+@@@
+with 
+-1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 邦交
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP NP NP
+IP DEC|||~|||~
+@@@
+JJ IN NP PP 
+3 1 2 0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+24
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 想要
+
+VV
+做
+@@@
+made 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+PU
+，
+@@@
+that 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+协议
+@@@
+agreement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+已
+@@@
+has 
+-1 
+
+GLUE => X 
+
+NP
+ADJP NP
+@@@
+DT VBG 
+1 0 
+
+OOV => 架构
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 违背
+
+OOV => 协定
+
+NP
+NN
+@@@
+NN 
+0 
+
+NT
+一九九四年
+@@@
+in 1994 
+-1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP NP NP
+IP DEC|||~|||~
+@@@
+DT NN NN VP 
+1 2 3 0 
+
+PP
+P NP
+以|||~
+@@@
+PP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+P
+从
+@@@
+from 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+国家
+@@@
+countries 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+全球
+@@@
+globally 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP DP NP
+@@@
+DT NNS PP 
+1 2 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+包括
+@@@
+including 
+-1 
+
+NR
+美国
+@@@
+the united states 
+-1 -1 -1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+GLUE => X X X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 让步
+
+PU
+、
+@@@
+, 
+-1 
+
+NN
+援助
+@@@
+aid 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+NN
+贸易
+@@@
+trade 
+-1 
+
+ETC
+等
+@@@
+, 
+-1 
+
+GLUE => X X X X X X 
+
+VP
+VV NP
+取得|||~
+@@@
+CD 
+0 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VC PU IP
+@@@
+VBD IN S 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+认为|||，|||~
+@@@
+believe that S 
+-1 -1 0 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+25
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+提出
+@@@
+proposed 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 一点
+
+QP
+CD
+@@@
+CD 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+很
+@@@
+very 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VA
+重要
+@@@
+important 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+ADVP VP
+AD|||VC NP
+也|||是|||~
+@@@
+is also NP 
+-1 -1 0 
+
+PRN
+VP
+@@@
+VP 
+0 
+
+GLUE => X X X X 
+
+OOV => 一点
+
+QP
+CD
+@@@
+CD 
+0 
+
+VC
+是
+@@@
+are 
+-1 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 恶劣
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+行为
+@@@
+behavior 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+获得
+@@@
+have 
+-1 
+
+OOV => 酬报
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+VP
+ADVP ADVP VP
+@@@
+MD ADVP VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VC PU IP
+@@@
+VBD IN S 
+0 1 2 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said : S 
+-1 -1 0 
+
+VV
+接受
+@@@
+accepted 
+-1 
+
+OOV => 广播
+
+NN
+公司
+@@@
+company 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VV
+访问
+@@@
+will visit 
+-1 -1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+IP
+NP VP
+NP NP|||~
+@@@
+NP VBN PP 
+1 2 0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+LCP
+IP LC
+~|||时
+@@@
+S 
+0 
+
+VP
+LCP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+26
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 驱逐
+
+NR
+联合国
+@@@
+un 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+监测
+@@@
+monitoring 
+-1 
+
+NP
+NN NN
+~|||人员
+@@@
+VBG 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+重新
+@@@
+their 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+启动
+@@@
+started 
+-1 
+
+OOV => 宁边
+
+OOV => 核子
+
+NN
+设施
+@@@
+facilities 
+-1 
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+VP
+VP PU VP
+VV NP|||~|||~
+@@@
+VB NN CC NN 
+0 1 2 3 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+DT
+这些
+@@@
+these 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+行径
+@@@
+act 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+OOV => 遏止
+
+OOV => 支援
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+提供|||~
+@@@
+IN 
+0 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NN
+社会
+@@@
+community 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBZ NP PP 
+0 2 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+GLUE => X X X X X 
+
+VP
+VV PU IP
+指出|||，|||~
+@@@
+pointed out that S 
+-1 -1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+27
+PU
+「
+@@@
+" 
+-1 
+
+VV
+产生
+@@@
+a 
+-1 
+
+OOV => 反
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 效果
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+IP
+NP VP
+PN|||~
+这|||~
+@@@
+JJ 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+我们
+@@@
+our 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 期望
+
+DT
+这些
+@@@
+these 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+外交
+@@@
+diplomatic 
+-1 
+
+NN
+措施
+@@@
+measures 
+-1 
+
+NP
+DP NP
+~|||NN NN
+@@@
+DT NNS NNS 
+0 1 2 
+
+VC
+是
+@@@
+are 
+-1 
+
+VA
+有效
+@@@
+effective 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X X X 
+
+28
+PU
+「
+@@@
+" 
+-1 
+
+CD
+一
+@@@
+one 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+DP
+DT QP
+另|||~
+@@@
+CD 
+0 
+
+NP
+DP NP
+~|||NN
+~|||方面
+@@@
+PP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CS
+如果
+@@@
+if 
+-1 
+
+ADVP
+CS
+@@@
+IN 
+0 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 反应
+
+OOV => 过度
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+GLUE => X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+ADVP IP
+@@@
+IN S 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 中
+
+OOV => 北韩
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+DNP
+ADJP DEG
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 计
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+VP
+VV AS NP
+~|||了|||~
+@@@
+VBD NP 
+0 1 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+GLUE => X X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X X 
+
+29
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+做
+@@@
+made 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+AD
+这么
+@@@
+such 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP VP
+@@@
+VBN ADVP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+想|||~
+@@@
+ADVP 
+0 
+
+VP
+ADVP VP
+AD|||~
+不|||~
+@@@
+S 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+30
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+澳洲
+@@@
+australia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+正
+@@@
+is 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+与
+@@@
+with 
+-1 
+
+NR
+美国
+@@@
+the united states 
+-1 -1 -1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+CC
+和
+@@@
+and 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+JJ
+主要
+@@@
+major 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 盟邦
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+AD
+密切
+@@@
+closely 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+合作
+@@@
+cooperate 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+迫使
+@@@
+force 
+-1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 撤销
+
+MSP
+所
+@@@
+has 
+-1 
+
+VV
+采取
+@@@
+adopted 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+P
+为
+@@@
+to 
+-1 
+
+VV
+恢复
+@@@
+resume 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+a 
+-1 
+
+OOV => 核子
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 冻结
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+VP
+PP VP
+~|||MSP VP
+@@@
+VBN VBN SBAR 
+1 2 0 
+
+NT
+最近
+@@@
+recently 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+步骤
+@@@
+steps 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+~|||CP NP
+@@@
+VBN ADVP VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+VP
+MSP VP
+以|||~
+@@@
+so as to VP 
+-1 -1 -1 0 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+31
+OOV => 唐纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+做
+@@@
+made 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+想|||~
+@@@
+ADVP 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+确保
+@@@
+ensure 
+-1 
+
+LC
+间
+@@@
+between 
+-1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+@@@
+IN NP 
+1 0 
+
+AD
+共同
+@@@
+together 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+采取
+@@@
+take 
+-1 
+
+NN
+对策
+@@@
+countermeasures 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+GLUE => X X 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+希望
+@@@
+hope 
+-1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+DEC
+的
+@@@
+the 
+-1 
+
+JJ
+特别
+@@@
+special 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 因应
+
+NN
+措施
+@@@
+measures 
+-1 
+
+AD
+未
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 经
+
+NN
+协调
+@@@
+coordination 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP ADJP NP
+IP DEC|||~|||NN NN
+@@@
+DT JJ NN NN ADJP 
+1 2 3 4 0 
+
+VP
+VV NP
+采取|||~
+@@@
+to adopt NP 
+-1 -1 0 
+
+VP
+ADVP VP
+~|||VV VP
+@@@
+MD RB VP 
+1 0 2 
+
+IP
+IP PU NP VP
+@@@
+S , NP VP . 
+0 1 2 3 -1 
+
+VP
+VC PU IP
+@@@
+VBD IN S 
+0 1 2 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+32
+OOV => 辩护
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NN
+振兴
+@@@
+prosperity 
+-1 
+
+NP
+NN NN NN
+@@@
+NP of NP PP 
+2 -1 1 0 
+
+P
+为
+@@@
+in 
+-1 
+
+PN
+其
+@@@
+his 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+PP
+P NP
+~|||NP NP
+@@@
+NP IN NP 
+2 0 1 
+
+IP
+NP VP
+~|||PP VP
+@@@
+NP PP S 
+2 0 1 
+
+33
+NN
+（
+@@@
+( 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+OOV => 华盛顿
+
+OOV => 六日
+
+NN
+电
+@@@
+( 
+-1 
+
+NN
+）
+@@@
+) 
+-1 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NN
+总统
+@@@
+president 
+-1 
+
+OOV => 布希
+
+OOV => 矢言
+
+GLUE => X X X X 
+
+PN
+其
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+提出
+@@@
+proposed 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+即将|||~
+@@@
+will soon be VP 
+-1 -1 -1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+计划
+@@@
+plan 
+-1 
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NN
+振兴
+@@@
+prosperity 
+-1 
+
+NP
+NN NN NN
+@@@
+NP of NP PP 
+2 -1 1 0 
+
+GLUE => X X X 
+
+OOV => 嘉惠
+
+PU
+「
+@@@
+" 
+-1 
+
+NN
+劳动
+@@@
+labor 
+-1 
+
+OOV => 大众
+
+OOV => 」
+
+GLUE => X X X X 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+而
+@@@
+but 
+-1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+只
+@@@
+only 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+OOV => 嘉惠
+
+OOV => 有钱
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VC VP
+@@@
+VBZ S 
+0 1 
+
+VP
+ADVP ADVP VP
+@@@
+MD ADVP VP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+一般
+@@@
+general 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 有钱人
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+可望
+@@@
+hopefully 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+从此
+@@@
+from 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+M
+项
+@@@
+in 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CLP
+@@@
+$ 
+0 
+
+VV
+敦促
+@@@
+urged 
+-1 
+
+AD
+大幅
+@@@
+by a large margin 
+-1 -1 -1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 减税
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+计划
+@@@
+plan 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP CP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+LCP
+NP LC
+~|||中
+@@@
+NP 
+0 
+
+GLUE => X X 
+
+VV
+获得
+@@@
+to 
+-1 
+
+AD
+最
+@@@
+most 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+ADJP
+ADVP ADJP
+~|||JJ
+~|||大
+@@@
+JJS 
+0 
+
+NN
+利益
+@@@
+interests 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+ADVP VP
+~|||VV IP
+~|||认为|||~
+@@@
+ADVP held that S 
+0 -1 -1 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+VP
+VP PU CC VP
+@@@
+VP , CC VP 
+0 1 2 3 
+
+GLUE => X X X X X X X X 
+
+34
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+告诉
+@@@
+tell 
+-1 
+
+OOV => 期待
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+AD
+正式
+@@@
+formally 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+发表
+@@@
+issued 
+-1 
+
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||项
+@@@
+DT 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+P
+在
+@@@
+in 
+-1 
+
+OOV => 芝加哥
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+~|||~|||VV NP
+@@@
+MD VB NP PP 
+1 2 3 0 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+记者
+@@@
+reporter 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 明天
+
+NP
+NT
+@@@
+PP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 诸位
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 听到
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+NN
+经济
+@@@
+economy 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NR|||~
+美国|||~
+@@@
+the us NN 
+-1 -1 0 
+
+VC
+是
+@@@
+is 
+-1 
+
+NN
+之一
+@@@
+one 
+-1 
+
+NN
+全球
+@@@
+global 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+最
+@@@
+most 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VA
+强大
+@@@
+powerful 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+NP ADVP VP
+@@@
+ADVP they ADVP VP 
+0 -1 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NP
+CP NP
+~|||NN NN
+@@@
+NP of JJ NN 
+2 -1 0 1 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PN
+我
+@@@
+i 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VP
+VV NP IP
+@@@
+VBZ NP PP 
+0 2 1 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP ADVP VP
+@@@
+MD VB ADVP 
+0 2 1 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+35
+AD
+不过
+@@@
+however 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+相信
+@@@
+believe 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+DNP
+NP DEG
+NR|||~
+美国|||~
+@@@
+DT united states 
+0 -1 -1 
+
+NN
+经济
+@@@
+economy 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+AD
+更
+@@@
+more 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VA
+强大
+@@@
+powerful 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+P
+比
+@@@
+than 
+-1 
+
+NT
+目前
+@@@
+at present 
+-1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+@@@
+RBR VBN PP 
+1 2 0 
+
+VP
+VV VP
+可以|||~
+@@@
+will be ADJP 
+-1 -1 0 
+
+VP
+ADVP VP
+AD|||~
+还|||~
+@@@
+S 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X X X 
+
+36
+VV
+预料
+@@@
+is unexpected 
+-1 -1 
+
+NN
+总统
+@@@
+president 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 布希
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+VP|||~
+VV NP|||~
+@@@
+VBG NP PP 
+0 2 1 
+
+VV
+发表
+@@@
+issued 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+an 
+-1 
+
+OOV => 为期
+
+QP
+CD CLP
+十|||M
+~|||年
+@@@
+decade 
+-1 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 斥
+
+OOV => 资
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 六千亿
+
+M
+美元
+@@@
+dollars 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+GLUE => X X X 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NN
+振兴
+@@@
+prosperity 
+-1 
+
+NP
+NN NN NN
+@@@
+NP of NP PP 
+2 -1 1 0 
+
+NP
+QP CP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+吸收
+@@@
+attract 
+-1 
+
+OOV => 股东
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+取消|||~
+@@@
+NP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 股利税
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+~|||CP NP
+@@@
+VBN ADVP VP 
+0 1 2 
+
+VP
+VV VP
+用|||MSP VP
+~|||来|||~
+@@@
+used to VP 
+-1 -1 0 
+
+CC
+并
+@@@
+and 
+-1 
+
+VV
+敦促
+@@@
+urged 
+-1 
+
+AD
+加速
+@@@
+quickly 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+推动
+@@@
+promote 
+-1 
+
+NP
+NN NN
+国会|||议员
+@@@
+congressman 
+-1 
+
+VV
+通过
+@@@
+through 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 二○○一年
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+IP
+NP VP
+NP NP|||~
+@@@
+NP VBN PP 
+1 2 0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+VV
+降低
+@@@
+reduce 
+-1 
+
+OOV => 税率
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+VP PU CC VP
+~|||，|||~|||~
+@@@
+VP CC VP 
+0 1 2 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+OOV => 半数
+
+NP
+NN
+@@@
+NN 
+0 
+
+IP
+NP NP VP
+NN|||~|||~
+其中|||~|||~
+@@@
+NP of which were NP 
+1 -1 -1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+NP VP|||~|||~|||~
+@@@
+NP VP CC VP . 
+0 1 2 3 4 
+
+37
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||项
+@@@
+DT 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+AD
+顺利
+@@@
+successfully 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+推动
+@@@
+promote 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+NP VP
+~|||VV VP
+~|||能否|||~
+@@@
+whether NP would VB or fail 
+-1 0 -1 1 -1 -1 
+
+PU
+，
+@@@
+, 
+-1 
+
+SB
+被
+@@@
+was 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+JJ
+前
+@@@
+former 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 哨战
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 二○○四年
+
+NP
+NT
+@@@
+PP 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+总统
+@@@
+presidential 
+-1 
+
+NN
+大选
+@@@
+election 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+NP NP NP
+@@@
+NP JJ NN 
+0 1 2 
+
+NP
+DNP ADJP NP
+NP DEG|||~|||~
+@@@
+DT JJ NN PP 
+1 2 3 0 
+
+VP
+VV NP
+视为|||~
+@@@
+regarded as NP 
+-1 -1 0 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 民主党
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 抨击
+
+OOV => 布希
+
+VCD
+VV VV
+@@@
+IN S 
+0 1 
+
+VP
+VCD
+@@@
+VP 
+0 
+
+NN
+蓝图
+@@@
+blueprint 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+OOV => 锦上添花
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VC NP
+是|||~
+@@@
+SBAR 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+像
+@@@
+like 
+-1 
+
+OOV => 民主党
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+提出
+@@@
+proposed 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+OOV => 雪
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+LCP
+NP LC
+~|||中
+@@@
+NP 
+0 
+
+PP
+P LCP
+@@@
+IN NP 
+0 1 
+
+OOV => 送炭
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+MD PP VB NP 
+0 1 2 3 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU IP PU IP PU
+~|||~|||~|||~|||~|||，|||~|||~
+@@@
+S , S , S , and S . 
+0 1 2 3 4 -1 -1 5 6 
+
+38
+AD
+主要
+@@@
+mainly 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+MSP
+以
+@@@
+to 
+-1 
+
+OOV => 提振
+
+NN
+消费
+@@@
+consumption 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+MSP VP
+@@@
+TO VP 
+0 1 
+
+OOV => 环绕
+
+P
+在
+@@@
+in 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+an 
+-1 
+
+OOV => 一千三百六十亿
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+GLUE => X X 
+
+DNP
+QP DEG
+~|||的
+@@@
+CD 
+0 
+
+NN
+奖励
+@@@
+awards 
+-1 
+
+NN
+措施
+@@@
+to 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+VV PP
+@@@
+VBD PP 
+0 1 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+DEC
+的
+@@@
+the 
+-1 
+
+OOV => 八点
+
+NN
+建议
+@@@
+proposal 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+NR
+民主党
+@@@
+democratic 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+@@@
+the NN 
+-1 0 
+
+IP
+NP VP
+~|||VV
+~|||提出
+@@@
+put forward by NP 
+-1 -1 -1 0 
+
+NP
+CP NP
+IP DEC|||~
+@@@
+DT NN PP 
+1 2 0 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+DT JJ NN 
+1 2 0 
+
+CD
+十
+@@@
+10 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||年
+@@@
+CD years ago 
+0 -1 -1 
+
+LC
+内
+@@@
+in 
+-1 
+
+LCP
+QP LC
+@@@
+NP RB 
+0 1 
+
+OOV => 总共
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 支出
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+CD
+一千亿
+@@@
+100 
+-1 
+
+QP
+CD CLP
+@@@
+IN NP 
+1 0 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+GLUE => X X X X 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||，|||~|||~
+@@@
+S , and S . 
+0 -1 -1 1 2 
+
+39
+OOV => 领袖
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 裴洛西
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 民主党
+
+OOV => 众院
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+NP
+NP NP
+NP NP|||~
+@@@
+NN NN PP 
+1 2 0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+这
+@@@
+this 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+a 
+-1 
+
+OOV => 公平
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+、
+@@@
+and 
+-1 
+
+NN
+成效
+@@@
+results 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 快速
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 会计
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 健全
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X X 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP CP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+AD
+联合
+@@@
+jointly 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+举行
+@@@
+held 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+P
+与
+@@@
+with 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 在野
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+议员
+@@@
+members 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+@@@
+RBR VBN PP 
+1 2 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 记者会
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||上
+@@@
+on NP 
+-1 0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+40
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 带领
+
+NR
+白宫
+@@@
+the white house 
+-1 -1 -1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 反驳
+
+NN
+外界
+@@@
+outsiders 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+OOV => 指控
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+VV
+说
+@@@
+said 
+-1 
+
+NN
+计划
+@@@
+was 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+PN|||~
+其|||~
+@@@
+PRP$ 
+0 
+
+AD
+只
+@@@
+only 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 嘉惠
+
+OOV => 有钱人
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+发表
+@@@
+published 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+即将|||~
+@@@
+will soon be VP 
+-1 -1 -1 0 
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NN
+振兴
+@@@
+prosperity 
+-1 
+
+NP
+NN NN
+@@@
+NP ADVP 
+1 0 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+OOV => 计划
+
+AD
+主要
+@@@
+mainly 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+着眼
+@@@
+with 
+-1 
+
+P
+于
+@@@
+on 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 提振
+
+NN
+经济
+@@@
+economic 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NN
+活力
+@@@
+vitality 
+-1 
+
+CC
+与
+@@@
+and 
+-1 
+
+NN
+成长
+@@@
+growth 
+-1 
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+OOV => 」
+
+GLUE => X X X X 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+VV PP
+@@@
+VBD PP 
+0 1 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+NP VP|||~|||NP VP|||~
+@@@
+NP VP . NP VP . 
+0 1 2 3 4 5 
+
+41
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||项
+@@@
+DT 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+提供
+@@@
+provide 
+-1 
+
+OOV => 减税
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+优惠
+@@@
+favored 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+NN
+劳动
+@@@
+labor 
+-1 
+
+OOV => 大众
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+PP
+P NP
+对|||~
+@@@
+PP 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+MD VB NP PP 
+0 2 3 1 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+42
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||项
+@@@
+DT 
+0 
+
+NN
+计划
+@@@
+program 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+OOV => 认知
+
+OOV => 多
+
+VV
+出来
+@@@
+out 
+-1 
+
+VRD
+VV VV
+@@@
+have NP PRT 
+-1 0 1 
+
+VP
+VRD
+@@@
+VB 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+钱
+@@@
+money 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+人们
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+钱
+@@@
+money 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+花|||~
+@@@
+NN 
+0 
+
+VP
+VV VP
+可能|||~
+@@@
+may be VP 
+-1 -1 0 
+
+VP
+ADVP VP
+AD|||~
+才|||~
+@@@
+TO 
+0 
+
+IP
+NP VP
+~|||VP PU VP
+@@@
+S , NP VP 
+1 2 0 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+如此
+@@@
+so 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+会
+@@@
+will 
+-1 
+
+VV
+创造
+@@@
+create 
+-1 
+
+VP
+ADVP VP
+AD|||VA
+更|||多
+@@@
+more 
+-1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+NN
+工作
+@@@
+work 
+-1 
+
+NN
+机会
+@@@
+opportunities 
+-1 
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+才|||~
+@@@
+TO 
+0 
+
+GLUE => X X 
+
+IP
+IP PU IP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV PU IP
+~|||，|||~
+@@@
+VBD SBAR 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+43
+VV
+愿
+@@@
+to 
+-1 
+
+VV
+谈判
+@@@
+talks 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 但
+
+OOV => 拒绝
+
+AD
+再
+@@@
+more 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 付出
+
+OOV => 报酬
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+VP CC VP
+@@@
+JJ CC JJ 
+0 1 2 
+
+OOV => 北韩
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+和|||~
+@@@
+NP 
+0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+44
+OOV => 七日
+
+OOV => 华盛顿
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+NN
+电
+@@@
+) 
+-1 
+
+NN
+）
+@@@
+. 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NR
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+NP
+NP NP NP
+@@@
+JJ NN PP 
+1 2 0 
+
+NR
+美国
+@@@
+the united states 
+-1 -1 -1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+OOV => 愿意
+
+P
+和
+@@@
+and 
+-1 
+
+OOV => 列为
+
+OOV => 敌国
+
+NP
+NN
+@@@
+NN 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 邪恶
+
+OOV => 轴心
+
+OOV => 」
+
+GLUE => X X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VV
+谈判
+@@@
+talks 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+但是
+@@@
+but 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+MSP
+以
+@@@
+so 
+-1 
+
+VV
+促使
+@@@
+compelling 
+-1 
+
+OOV => 计画
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 撤销
+
+OOV => 核子
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+NP NP
+PN|||~
+其|||~
+@@@
+PRP$ 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+MSP VP
+@@@
+TO VP 
+0 1 
+
+DP
+DT CLP
+这|||M
+~|||个
+@@@
+this 
+-1 
+
+NN
+财务
+@@@
+fiscal 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 困窘
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 共产国
+
+NP
+NN
+@@@
+NN 
+0 
+
+JJ
+新
+@@@
+new 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+奖励
+@@@
+awards 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X X 
+
+VP
+VV NP
+提供|||~
+@@@
+IN 
+0 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+VP
+VP PU VP
+~|||~|||ADVP ADVP VP
+@@@
+VP , CC VBD ADJP 
+0 1 2 3 4 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+表示|||~
+@@@
+SBAR 
+0 
+
+NT
+今天
+@@@
+today 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+45
+OOV => 布希
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+总统
+@@@
+president 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NN
+政府
+@@@
+government 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+NT
+目前
+@@@
+at present 
+-1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+NR
+伊拉克
+@@@
+iraq 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 北韩
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+CD
+双
+@@@
+dual 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||重
+@@@
+JJ 
+0 
+
+NN
+危机
+@@@
+crises 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+VP
+VV NP
+面临|||~
+@@@
+VB 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 布希
+
+JJ
+高级
+@@@
+high-level 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+政府
+@@@
+government 
+-1 
+
+NN
+官员
+@@@
+officials 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+CC
+和
+@@@
+and 
+-1 
+
+NR
+日本
+@@@
+japan 
+-1 
+
+CC
+与
+@@@
+and 
+-1 
+
+OOV => 南韩
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+NN
+外交官
+@@@
+diplomat 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP ADJP NP
+@@@
+JJ NN NNS 
+1 0 2 
+
+NN
+会谈
+@@@
+talks 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+LCP
+IP LC
+~|||后
+@@@
+NN 
+0 
+
+OOV => 发布
+
+NN
+声明
+@@@
+statement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PN
+这
+@@@
+this 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 意味
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+政策
+@@@
+policy 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP DNP NP
+~|||PP DEG|||~
+~|||P NP|||的|||~
+@@@
+NP CC PRP$ NNS 
+0 1 2 3 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 向前
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 迈进
+
+AS
+了
+@@@
+has 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||步
+@@@
+step 
+-1 
+
+GLUE => X X X 
+
+OOV => 」
+
+GLUE => X X X X 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+GLUE => X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+46
+NN
+声明
+@@@
+statement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+NN
+代表团
+@@@
+delegation 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NR|||~
+美国|||~
+@@@
+the us NN 
+-1 -1 0 
+
+OOV => 愿意
+
+P
+和
+@@@
+and 
+-1 
+
+OOV => 北韩
+
+OOV => 谈谈
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VV
+有关
+@@@
+about 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+说明|||~
+@@@
+shows that S 
+-1 -1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+要
+@@@
+to 
+-1 
+
+AD
+如何
+@@@
+how 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+履行
+@@@
+implementing 
+-1 
+
+NN
+义务
+@@@
+obligations 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NN
+社会
+@@@
+community 
+-1 
+
+NP
+NN NN
+@@@
+the NN NN 
+-1 0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+DNP
+PP DEG
+~|||的
+@@@
+PP 
+0 
+
+NP
+DNP NP
+@@@
+NP PP 
+1 0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+47
+AD
+不过
+@@@
+however 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+代表团
+@@@
+delegation 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NR|||~
+美国|||~
+@@@
+the us NN 
+-1 -1 0 
+
+NR
+美国
+@@@
+the united states 
+-1 -1 -1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 报酬
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+DT|||~
+任何|||~
+@@@
+NP 
+0 
+
+VP
+VV NP
+提供|||~
+@@@
+IN 
+0 
+
+VV
+让
+@@@
+let 
+-1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+JJ
+现行
+@@@
+existing 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+义务
+@@@
+obligations 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+履行|||ADJP NP
+@@@
+carrying out their JJ NNS 
+-1 -1 -1 0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP S 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PP
+P IP
+为了|||~
+@@@
+in order to VP 
+-1 -1 -1 0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+VP
+VV VP
+会|||~
+@@@
+PP 
+0 
+
+VP
+ADVP VP
+AD|||~
+不|||~
+@@@
+S 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+强调|||，|||~
+@@@
+emphasized that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X X X 
+
+48
+NN
+官员
+@@@
+officials 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 坚称
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 咬文
+
+OOV => 嚼字
+
+NN
+外交
+@@@
+diplomatic 
+-1 
+
+OOV => 用词
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+DNP NP
+NP DEG|||~
+NN NN|||的|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+PP
+P NP
+以|||~
+@@@
+PP 
+0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+IP
+NP VP
+NP NP|||~
+@@@
+NP VBN PP 
+1 2 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CS
+虽然
+@@@
+although 
+-1 
+
+ADVP
+CS
+@@@
+IN 
+0 
+
+PN
+他们
+@@@
+they 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 愿意
+
+P
+和
+@@@
+and 
+-1 
+
+OOV => 北韩
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+谈判
+@@@
+talks 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+JJ NN NNS 
+1 0 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+但是
+@@@
+but 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+LC
+之前
+@@@
+before 
+-1 
+
+P
+在
+@@@
+the 
+-1 
+
+OOV => 遵行
+
+DP
+DT CLP
+各|||M
+~|||项
+@@@
+various 
+-1 
+
+OOV => 协定
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+禁止
+@@@
+are prohibited 
+-1 -1 
+
+NN
+武器
+@@@
+weapons 
+-1 
+
+OOV => 核子
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBG NP PP 
+0 2 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP DP NP
+@@@
+JJ NNS SBAR 
+1 2 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P LCP
+~|||IP LC
+~|||NP VP|||~
+@@@
+IN DT NN PP 
+3 0 2 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+他们
+@@@
+they 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+会
+@@@
+will 
+-1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+考虑
+@@@
+considered 
+-1 
+
+NN
+谈判
+@@@
+negotiations 
+-1 
+
+NN
+程序
+@@@
+procedures 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+展开|||~
+@@@
+RP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+ADVP VP
+~|||VV VP
+@@@
+MD RB VP 
+1 0 2 
+
+GLUE => X X X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU IP PU
+@@@
+S : S : S . 
+0 1 2 3 4 5 
+
+49
+OOV => 鲍润石
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+国务院
+@@@
+the state council 
+-1 -1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+发言人
+@@@
+spokesman 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+愿
+@@@
+to 
+-1 
+
+OOV => 再度
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 付出
+
+OOV => 代价
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+为
+@@@
+in 
+-1 
+
+VV
+达成
+@@@
+reaching 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 以往
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 协定
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+~|||~|||VV NP
+@@@
+MD VB NP PP 
+1 2 3 0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+不|||~
+@@@
+are not ADJP 
+-1 -1 0 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+50
+OOV => 在此之前
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 布希
+
+NN
+政府
+@@@
+government 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NR PU NR|||~
+@@@
+NX CC JJ NNS 
+0 1 2 3 
+
+LC
+之前
+@@@
+before 
+-1 
+
+P
+在
+@@@
+the 
+-1 
+
+VV
+放弃
+@@@
+abandoned 
+-1 
+
+VV
+为
+@@@
+the 
+-1 
+
+NN
+基础
+@@@
+foundation 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 浓缩铀
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 钸
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+PP
+P NP
+以|||~
+@@@
+PP 
+0 
+
+VP
+PP VP
+~|||VV NP
+@@@
+IN NP PP 
+1 2 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 核子
+
+OOV => 计画
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P LCP
+~|||IP LC
+~|||NP VP|||~
+@@@
+IN DT NN PP 
+3 0 2 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 拒绝
+
+P
+和
+@@@
+and 
+-1 
+
+DP
+DT CLP
+这|||M
+~|||个
+@@@
+this 
+-1 
+
+OOV => 史达林主义
+
+NN
+国家
+@@@
+state 
+-1 
+
+NP
+DP NP
+~|||NN NN
+@@@
+DT NNS NNS 
+0 1 2 
+
+OOV => 会谈
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+PP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+51
+OOV => 美线
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+OOV => 房地产业
+
+NP
+NN
+@@@
+NN 
+0 
+
+JJ
+前
+@@@
+former 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 主管
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+SB
+被
+@@@
+be 
+-1 
+
+OOV => 控
+
+OOV => 诈欺
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 罪名
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+@@@
+NN NNS 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+OOV => 认罪
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+52
+OOV => 检方
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+OOV => 洛杉矶电
+
+NN
+）
+@@@
+) 
+-1 
+
+NP
+NP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+CD
+一
+@@@
+a 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||名
+@@@
+QP 
+0 
+
+OOV => 前任
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 主管
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+（
+@@@
+( 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+OOV => 业者
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+OOV => 房地产
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NN
+）
+@@@
+) 
+-1 
+
+OOV => Homestore
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+IP
+NP VP
+~|||VV NP
+@@@
+VBG NP NX 
+1 0 2 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP ADJP NP
+@@@
+DT JJ NN VP 
+1 2 3 0 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+SB
+被
+@@@
+be 
+-1 
+
+OOV => 控
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 诈欺
+
+OOV => 罪名
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+OOV => 认罪
+
+VP
+VV
+@@@
+VBN 
+0 
+
+CC
+并
+@@@
+and 
+-1 
+
+VV
+达成
+@@@
+reaching 
+-1 
+
+OOV => 和解
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 诉讼案
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 丑闻
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 内线
+
+NN
+交易
+@@@
+trading 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 源自
+
+NP
+CP NP
+IP|||~
+VP|||~
+VV NP|||~
+@@@
+the JJ NN NN 
+-1 2 1 0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+PP
+P NP
+针对|||DNP NP
+@@@
+NP directed at NP 
+1 -1 -1 0 
+
+VP
+PP VP
+~|||VV NP
+@@@
+IN NP PP 
+1 2 0 
+
+VP
+VP CC VP
+@@@
+JJ CC JJ 
+0 1 2 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+同意|||~
+@@@
+agreed to VP 
+-1 -1 0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+NP PU VP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+53
+OOV => 威纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+JJ
+特别
+@@@
+special 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 助理
+
+OOV => 察官
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+NP ADJP NP
+@@@
+DT ADJP NNS 
+0 1 2 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+DEG
+的
+@@@
+the 
+-1 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+DNP
+NP DEG
+NN NN|||~
+@@@
+DT NN NN 
+2 0 1 
+
+JJ
+前
+@@@
+former 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+JJ
+资深
+@@@
+senior 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 购并
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+OOV => 经理
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+OOV => 卡里纳
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP NP
+@@@
+PRP$ JJ NN 
+0 1 2 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 认罪
+
+OOV => 求情
+
+NN
+协议
+@@@
+agreement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NN NN|||~
+@@@
+JJ NN NN 
+0 1 2 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+PU
+，
+@@@
+and 
+-1 
+
+P
+对
+@@@
+for 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+a 
+-1 
+
+NN
+证券
+@@@
+securities 
+-1 
+
+OOV => 诈欺
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 内线
+
+NN
+交易
+@@@
+trading 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+涉及|||~
+@@@
+NP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+OOV => 罪名
+
+OOV => 俯首
+
+GLUE => X X 
+
+OOV => 认罪
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+同意|||~
+@@@
+agreed to VP 
+-1 -1 0 
+
+GLUE => X X X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+54
+OOV => 福克斯
+
+NP
+NR
+@@@
+NP 
+0 
+
+CD
+一
+@@@
+one 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||名
+@@@
+QP 
+0 
+
+DP
+DT QP
+另|||~
+@@@
+CD 
+0 
+
+OOV => 检察官
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VV
+支付
+@@@
+pay 
+-1 
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 七万
+
+QP
+CD CLP
+@@@
+IN NP 
+1 0 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+同意|||~
+@@@
+agreed to VP 
+-1 -1 0 
+
+OOV => 亦
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP VP
+@@@
+VBN ADVP 
+1 0 
+
+OOV => 卡里纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+P
+与
+@@@
+and 
+-1 
+
+NN
+证券
+@@@
+securities 
+-1 
+
+OOV => 交易所
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR NN NN
+@@@
+NP NN PP 
+1 2 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 桩
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+一|||~
+@@@
+IN 
+0 
+
+OOV => 民事
+
+OOV => 诉讼
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 提起
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP QP NP
+@@@
+DT NN PP 
+1 2 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VV
+达成
+@@@
+reaching 
+-1 
+
+OOV => 和解
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+GLUE => X X X 
+
+IP
+NP VP
+~|||VP PU VP
+~|||~|||，|||~
+@@@
+NP PP VP 
+1 0 2 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+55
+OOV => 威纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+证券
+@@@
+securities 
+-1 
+
+OOV => 诈欺
+
+OOV => 罪名
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NN NN|||~
+@@@
+JJ NN NN 
+0 1 2 
+
+OOV => 最高
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 判处
+
+QP
+CD CLP
+十|||M
+~|||年
+@@@
+decade 
+-1 
+
+OOV => 有期
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+徒刑
+@@@
+imprisonment 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+可|||~
+@@@
+CC 
+0 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+NP ADVP VP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+但
+@@@
+but 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 依
+
+OOV => 认罪
+
+OOV => 求情
+
+NN
+协议
+@@@
+agreement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+NN NN|||~
+@@@
+JJ NN NN 
+0 1 2 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 前述
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 刑期
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+AD
+可望
+@@@
+hopefully 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+AD
+大幅
+@@@
+by a large margin 
+-1 -1 -1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+缩短
+@@@
+shortening 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 」
+
+GLUE => X X X X 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+GLUE => X X X X X 
+
+IP
+IP PU IP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+56
+OOV => 据
+
+OOV => 检方
+
+CC
+和
+@@@
+and 
+-1 
+
+NN
+调查
+@@@
+investigation 
+-1 
+
+NP
+NN NN
+~|||人员
+@@@
+VBG 
+0 
+
+NP
+NN CC NP
+@@@
+PP CC PP 
+0 1 2 
+
+VV
+指出
+@@@
+pointed out 
+-1 -1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+金融
+@@@
+financial 
+-1 
+
+OOV => 诈欺
+
+OOV => 阴谋
+
+OOV => 卡里纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+涉及
+@@@
+involve 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+NP
+CP NP
+IP DEC|||NN NN NN
+@@@
+DT JJ NN NN VP 
+1 2 3 4 0 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+OOV => 主管
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+NP DEG|||~
+NN NN|||的|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+VV
+利用
+@@@
+using 
+-1 
+
+OOV => 灌水
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+DNP
+ADJP DEG
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 二○○一年
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+OOV => 误导
+
+OOV => 投资人
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+OOV => 营收
+
+NN
+报告
+@@@
+report 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VP VP
+VV NP|||~
+~|||NP NP|||~
+@@@
+VBG NP NNS PP 
+0 1 3 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X X X X 
+
+57
+OOV => 福克斯
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+遭
+@@@
+were 
+-1 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+为
+@@@
+as 
+-1 
+
+OOV => 灌水
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+OOV => 股价
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 卡里纳
+
+OOV => 知悉
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+IP
+NP VP
+NP NP|||~
+@@@
+JJ VBG PP 
+2 1 0 
+
+LCP
+IP LC
+~|||后
+@@@
+NN 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 出脱
+
+PN
+自己
+@@@
+their 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+持有
+@@@
+holdings 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 获利
+
+NN
+股票
+@@@
+stock 
+-1 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+NP
+NN NN NN NN
+@@@
+VBG VBN JJ NN 
+3 2 0 1 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+GLUE => X X X 
+
+PU
+「
+@@@
+" 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+关键
+@@@
+key 
+-1 
+
+OOV => 营收
+
+NN
+部分
+@@@
+of 
+-1 
+
+OOV => 华尔街
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+并
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+未
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 留意
+
+VV
+到
+@@@
+to 
+-1 
+
+NN
+商店
+@@@
+be 
+-1 
+
+OOV => 房屋
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBG NP PP 
+0 2 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+ADVP ADVP VP
+@@@
+MD ADVP VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+NP
+CP NP
+IP DEC|||NN NN NN
+@@@
+DT JJ NN NN VP 
+1 2 3 4 0 
+
+OOV => 系
+
+VV
+伪造
+@@@
+forged 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+OOV => 」
+
+IP
+PU NP VP PU
+@@@
+sort of the theory -- X NP VP X -- 
+-1 -1 -1 -1 -1 0 1 2 3 -1 
+
+IP
+IP PU IP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+58
+SB
+被
+@@@
+was 
+-1 
+
+OOV => 控
+
+JJ
+类似
+@@@
+similar 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 罪名
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 内线
+
+NN
+交易
+@@@
+trading 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+~|||NP NP
+~|||ADJP NP|||~
+@@@
+DT JJ JJ NN 
+0 1 3 2 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+NP
+CP NP
+~|||NN NN
+@@@
+JJ JJ NNS 
+0 1 2 
+
+LCP
+NP LC
+~|||前
+@@@
+PP 
+0 
+
+OOV => 副总裁
+
+OOV => 戴西莫内
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 认罪
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+GLUE => X X X 
+
+NN
+法庭
+@@@
+the court 
+-1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 预定
+
+VV
+宣判
+@@@
+pronounced 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+NT
+二十一日
+@@@
+21 
+-1 
+
+OOV => 四月
+
+NP
+NT NT
+@@@
+NN CD 
+1 0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||，|||~|||~
+@@@
+S , and S . 
+0 -1 -1 1 2 
+
+59
+OOV => 约瑟夫．休
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+OOV => 营运长
+
+OOV => 吉泽克
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+CC
+和
+@@@
+and 
+-1 
+
+JJ
+前
+@@@
+former 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+财务
+@@@
+fiscal 
+-1 
+
+OOV => 长
+
+NP
+ADJP NP
+~|||NN NN
+@@@
+JJ NN NNS 
+0 1 2 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+NP
+DNP NP
+NP DEG|||~
+NN NN|||的|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+SB
+被
+@@@
+be 
+-1 
+
+OOV => 控
+
+OOV => 阴谋
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+证券
+@@@
+securities 
+-1 
+
+OOV => 诈欺
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+进行|||~
+@@@
+VBP 
+0 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 罪名
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+@@@
+NN NNS 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+OOV => 认罪
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+60
+OOV => 检方
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 吉泽克
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 约瑟夫．休
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+CC
+与
+@@@
+and 
+-1 
+
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+公司
+@@@
+companies 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+OOV => 主管
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+VV
+涉嫌
+@@@
+was 
+-1 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 房屋
+
+NN
+商店
+@@@
+be 
+-1 
+
+OOV => 帐目
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+NP DEG|||~
+NN NN|||的|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+OOV => 动手
+
+OOV => 脚
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 灌水
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 营收
+
+OOV => 数字
+
+IP
+NP VP
+NN NN|||~
+@@@
+JJ NN NN 
+2 0 1 
+
+VP
+BA IP
+将|||~
+@@@
+S 
+0 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+61
+OOV => 死亡
+
+OOV => 交通
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NR
+欧洲
+@@@
+european 
+-1 
+
+OOV => 连日
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+OOV => 大雪
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 多
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+OOV => 中断
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+62
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 维也纳
+
+OOV => 八日
+
+NN
+电
+@@@
+) 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+NN
+）
+@@@
+, 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+OOV => 连日
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 大雪
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 西伯利亚
+
+VP
+VV PU VV
+@@@
+NN CC NN 
+0 1 2 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+NP ADVP VP 
+0 1 2 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 低温
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+CC
+以及
+@@@
+and 
+-1 
+
+NR
+欧洲
+@@@
+european 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP DP NP
+~|||DT|||NN
+~|||各|||地
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 强风
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+OOV => （
+
+NP
+NT
+@@@
+PP 
+0 
+
+VV
+造成
+@@@
+caused 
+-1 
+
+CD
+多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 死亡
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP VP
+~|||VV NP IP
+@@@
+VB NP ADVP ADVP 
+1 2 3 0 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+同时
+@@@
+at the same time 
+-1 -1 -1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 交通
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 公路
+
+PU
+、
+@@@
+, 
+-1 
+
+NN
+铁路
+@@@
+railway 
+-1 
+
+PU
+、
+@@@
+, 
+-1 
+
+NN
+空中
+@@@
+air 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 海上
+
+GLUE => X X X X X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+AD
+也
+@@@
+also 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+为
+@@@
+for 
+-1 
+
+PN
+之
+@@@
+them 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+OOV => 中断
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||~|||ADVP NP VP|||~
+@@@
+S , CC NP VP . 
+0 1 2 3 4 5 
+
+63
+NN
+首都
+@@@
+capital 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 昨夜
+
+OOV => 莫斯科
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+NR
+俄罗斯
+@@@
+russia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP
+NP NP|||~
+@@@
+NN NN PP 
+1 2 0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 气温
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+OOV => 降至
+
+OOV => 即
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+连
+@@@
+even 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+NN
+当地
+@@@
+local 
+-1 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 寒冷
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+程度
+@@@
+degree 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VV
+造成
+@@@
+by 
+-1 
+
+CD
+六
+@@@
+six 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 丧生
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+IP
+NP PU VP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+VP
+VV IP
+觉得|||~
+@@@
+VP 
+0 
+
+VP
+ADVP VP
+AD|||~
+都|||~
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+NT
+今年
+@@@
+this year 
+-1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+P
+因
+@@@
+because 
+-1 
+
+OOV => 冻
+
+OOV => 身亡
+
+VCD
+VA VA
+@@@
+JJ NN 
+0 1 
+
+VP
+VCD
+@@@
+VP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 人数
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+OOV => 增至
+
+OOV => 二百三十九
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+使|||~|||~
+@@@
+so that NP VP 
+-1 -1 0 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+GLUE => X X X X 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+其中
+@@@
+of 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+CD
+多数
+@@@
+most 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+VC
+为
+@@@
+for 
+-1 
+
+OOV => 流浪汉
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 长者
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+CD
+许多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 酒醉者
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+VV LCP
+包括|||NP LC
+~|||~|||在内
+@@@
+including NP 
+-1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU IP PU
+@@@
+S : S : S . 
+0 1 2 3 4 5 
+
+64
+OOV => 立陶宛
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 死亡
+
+VP
+VV
+@@@
+VBN 
+0 
+
+CD
+三
+@@@
+three 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+P
+在
+@@@
+in 
+-1 
+
+OOV => 昨夜
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+IP
+NP VP
+~|||PP VP
+@@@
+NP PP S 
+2 0 1 
+
+VP
+VE IP
+有|||~
+@@@
+S 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CD
+多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+P
+因为
+@@@
+because 
+-1 
+
+OOV => 冻伤
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 腿脚
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 手指
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+OOV => 截断
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+BA IP
+将|||~
+@@@
+S 
+0 
+
+VP
+VV VP
+必须|||~
+@@@
+VP 
+0 
+
+VP
+MSP VP
+而|||~
+@@@
+NN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VE IP
+有|||~
+@@@
+S 
+0 
+
+VP
+ADVP VP
+AD|||~
+还|||~
+@@@
+S 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU VP PU
+NP VP|||~|||~|||~
+@@@
+NP VP CC VP . 
+0 1 2 3 4 
+
+65
+NP
+DP NP
+DT|||NN
+该|||国
+@@@
+its 
+-1 
+
+NN
+南部
+@@@
+southern 
+-1 
+
+OOV => 瓦伦纳
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NN
+地区
+@@@
+region 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP NP
+@@@
+NP JJ NN 
+0 1 2 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 气温
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+OOV => 创下
+
+OOV => 十六
+
+LCP
+QP LC
+CD CLP|||来
+~|||M|||~
+~|||年|||~
+@@@
+JJ years 
+0 -1 
+
+JJ
+新
+@@@
+new 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 低
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 降到
+
+OOV => 三十二点六度
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 摄氏
+
+OOV => 零下
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+QP
+NP QP
+@@@
+NP PP 
+1 0 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+VP
+VP PU VP
+VV NP|||~|||~
+@@@
+VB NN CC NN 
+0 1 2 3 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+66
+OOV => 周一
+
+NP
+NT
+@@@
+PP 
+0 
+
+OOV => 斯洛伐克
+
+NP
+NR
+@@@
+NP 
+0 
+
+AD
+也
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+CD
+三
+@@@
+three 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||名
+@@@
+QP 
+0 
+
+NR
+印度
+@@@
+india 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+JJ
+非法
+@@@
+illegal 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+移民
+@@@
+immigration 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+P
+因
+@@@
+because 
+-1 
+
+OOV => 寒冷
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 疲倦
+
+NP
+NN CC NN
+@@@
+NNS CC NNS 
+0 1 2 
+
+OOV => 死亡
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+而|||~
+@@@
+NN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VE IP
+有|||~
+@@@
+S 
+0 
+
+IP
+NP VP
+~|||NP ADVP VP
+@@@
+PP , NP VBP VP 
+1 -1 0 2 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+当地
+@@@
+local 
+-1 
+
+OOV => 气温
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 降至
+
+OOV => 摄氏
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 零下
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 二十度
+
+QP
+CD
+@@@
+CD 
+0 
+
+GLUE => X X 
+
+QP
+ADVP QP
+@@@
+IN CD 
+0 1 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||~|||NP VP|||~
+@@@
+SBAR , NP VP . 
+0 1 2 3 4 
+
+67
+OOV => 与此同时
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 欧陆
+
+NP
+NR PU NR
+@@@
+NN CC NN 
+0 1 2 
+
+NP
+NP DP NP
+~|||DT|||NN
+~|||各|||地
+@@@
+NN 
+0 
+
+CC
+和
+@@@
+and 
+-1 
+
+NN
+地区
+@@@
+regional 
+-1 
+
+OOV => 以外
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 民防
+
+NN
+单位
+@@@
+units 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+OOV => 降雪
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+使
+@@@
+made 
+-1 
+
+OOV => 道路
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 封闭
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 火车
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 误点
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CC
+和
+@@@
+and 
+-1 
+
+NN
+机场
+@@@
+airport 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 瘫痪
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X X 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+NP ADVP VP 
+0 1 2 
+
+VP
+VV PU IP
+表示|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+VP
+ADVP VP
+AD|||~
+都|||~
+@@@
+VP 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+68
+NN
+铁路
+@@@
+railroad 
+-1 
+
+OOV => 沿线
+
+OOV => 冰封
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 公路
+
+OOV => 车祸
+
+NN
+事件
+@@@
+. 
+-1 
+
+GLUE => X X X X X X X 
+
+NR
+英国
+@@@
+britain 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NP
+DNP NP
+@@@
+NP PP 
+1 0 
+
+VV
+使得
+@@@
+has 
+-1 
+
+CD
+一些
+@@@
+some 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+地区
+@@@
+areas 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 交通
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+OOV => 瘫痪
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP S 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+NP
+NN NN
+东部|||地区
+@@@
+eastern china 
+-1 -1 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 降下
+
+OOV => 大雪
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+NT
+如今
+@@@
+now 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+OOV => 雪势
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+NN
+西
+@@@
+west 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P NP
+向|||~
+@@@
+NN 
+0 
+
+OOV => 移动
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X X 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU IP PU
+@@@
+S : S : S . 
+0 1 2 3 4 5 
+
+69
+OOV => 夏季
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+曾
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+出现
+@@@
+in 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+共和国
+@@@
+republic 
+-1 
+
+OOV => 捷克
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+JJ
+严重
+@@@
+serious 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 水患
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+NP NP VP
+NT|||~|||~
+去年|||~|||~
+@@@
+NP VP 
+0 1 
+
+VA
+低
+@@@
+low 
+-1 
+
+VV
+至
+@@@
+until 
+-1 
+
+GLUE => X X 
+
+VP
+VRD
+@@@
+VB 
+0 
+
+PN
+其
+@@@
+its 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 邻近
+
+OOV => 斯洛伐克
+
+NP
+NR
+@@@
+NP 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 边界
+
+NP
+NN NN
+~|||地区
+@@@
+DT 
+0 
+
+OOV => 气温
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+OOV => 摄氏
+
+OOV => 零下
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 十八度
+
+QP
+CD
+@@@
+CD 
+0 
+
+GLUE => X X 
+
+VP
+VC QP
+@@@
+VBZ NP 
+0 1 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||，|||~|||~
+@@@
+S , and S . 
+0 -1 -1 1 2 
+
+70
+OOV => 看守
+
+GLUE => X 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+中心
+@@@
+center 
+-1 
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+OOV => 称许
+
+NN
+革命
+@@@
+revolution 
+-1 
+
+NN
+环境
+@@@
+environment 
+-1 
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBG NP PP 
+0 2 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+71
+NN
+（
+@@@
+( 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+OOV => 华盛顿
+
+OOV => 九日
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 看守
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+中心
+@@@
+center 
+-1 
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+NP
+IP NP
+@@@
+NN NNS 
+0 1 
+
+NN
+（
+@@@
+( 
+-1 
+
+OOV => WorldwatchInstitute
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NN
+）
+@@@
+) 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 」
+
+GLUE => X X X X X 
+
+NN
+电
+@@@
+( 
+-1 
+
+NN
+）
+@@@
+) 
+-1 
+
+NN
+环境
+@@@
+environment 
+-1 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+组织
+@@@
+organization 
+-1 
+
+GLUE => X X X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+年度
+@@@
+annual 
+-1 
+
+NN
+报告
+@@@
+report 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+NN
+世界
+@@@
+world 
+-1 
+
+OOV => 现况
+
+OOV => 」
+
+GLUE => X X X X 
+
+NP
+NP NP
+PN|||~
+其|||~
+@@@
+PRP$ 
+0 
+
+NP
+DNP NP
+NP DEG|||NN NN
+@@@
+DT JJ NNS PP 
+1 2 3 0 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+赞扬
+@@@
+commended 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+OOV => 到来
+
+NP
+NN
+@@@
+NN 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+NN
+环境
+@@@
+environment 
+-1 
+
+NN
+革命
+@@@
+revolution 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+OOV => 乐观
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 寻常
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+不|||~
+@@@
+S 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+态度
+@@@
+attitude 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP ADJP NP
+@@@
+JJ NN NNS 
+1 0 2 
+
+PP
+P NP
+以|||~
+@@@
+PP 
+0 
+
+VP
+PP VP
+~|||VV NP
+@@@
+VB NP PP 
+1 2 0 
+
+CD
+许多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NN
+国家
+@@@
+countries 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+AD
+正
+@@@
+is 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+DVP
+VP DEV
+VA|||地
+成功|||~
+@@@
+successfully 
+-1 
+
+OOV => 遏止
+
+VP
+VV
+@@@
+VBN 
+0 
+
+CC
+和
+@@@
+and 
+-1 
+
+VV
+解决
+@@@
+solve 
+-1 
+
+NN
+环境
+@@@
+environment 
+-1 
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 卫生
+
+CC
+与
+@@@
+and 
+-1 
+
+NN
+社会
+@@@
+social 
+-1 
+
+GLUE => X X X X X 
+
+NN
+问题
+@@@
+problems 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+VP
+VP CC VP
+~|||~|||VV NP
+@@@
+VB CC VB NP 
+0 1 2 3 
+
+GLUE => X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+VP
+VV IP
+指出|||~
+@@@
+pointed out that S 
+-1 -1 -1 0 
+
+VP
+VP PU VP
+~|||，|||~
+@@@
+VP , and VP 
+0 -1 -1 1 
+
+VP
+PP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+GLUE => X X X X X X 
+
+72
+OOV => 佛莱文
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+负责人
+@@@
+responsible officials 
+-1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PU
+「
+@@@
+" 
+-1 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 看守
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+IP NP
+@@@
+NP PP 
+1 0 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+中心
+@@@
+center 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 」
+
+NP
+PU NP NP PU
+@@@
+NP NP , NP X 
+0 1 -1 2 3 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VV
+表示
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+VV
+建立
+@@@
+establish 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||个
+@@@
+a 
+-1 
+
+VV
+符合
+@@@
+meet 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+需要
+@@@
+need 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+同时
+@@@
+at the same time 
+-1 -1 -1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+让
+@@@
+let 
+-1 
+
+OOV => 下
+
+QP
+CD CLP
+一|||M
+~|||代
+@@@
+generation 
+-1 
+
+DP
+DT QP
+@@@
+DT CD 
+0 1 
+
+VV
+能
+@@@
+can 
+-1 
+
+AD
+也
+@@@
+also 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+享有
+@@@
+enjoying 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||个
+@@@
+a 
+-1 
+
+OOV => 健康
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+社会
+@@@
+social 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+ADVP VP
+~|||VV VP
+@@@
+MD RB VP 
+1 0 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+GLUE => X X X 
+
+VP
+VP PU VP
+~|||~|||ADVP VP
+@@@
+NN CC JJ NNS 
+0 1 2 3 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP CP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+M
+个
+@@@
+a 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 白日
+
+OOV => 梦
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+GLUE => X X 
+
+VP
+ADVP ADVP VP
+AD|||AD|||VC NP
+不|||再|||是|||~
+@@@
+will no longer be NP 
+-1 -1 -1 -1 0 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+OOV => 九日
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+73
+DT
+这
+@@@
+this 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||份
+@@@
+PRP 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+OOV => 现况
+
+NN
+报告
+@@@
+report 
+-1 
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NN
+人
+@@@
+people 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 振奋
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+令|||~|||~
+@@@
+NP VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+成就
+@@@
+achievements 
+-1 
+
+NN
+之一
+@@@
+of 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+NR
+德国
+@@@
+germany 
+-1 
+
+PU
+、
+@@@
+, 
+-1 
+
+NR
+日本
+@@@
+japan 
+-1 
+
+CC
+与
+@@@
+and 
+-1 
+
+NR
+西班牙
+@@@
+spain 
+-1 
+
+GLUE => X X X X X 
+
+VV
+使用
+@@@
+used 
+-1 
+
+OOV => 再生性
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NN
+能源
+@@@
+energy 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+VP
+VC NP
+是|||~
+@@@
+SBAR 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+OOV => 丨
+
+AD
+例如
+@@@
+for example 
+-1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+DEG
+的
+@@@
+the 
+-1 
+
+OOV => 情形
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 太阳能
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 风车
+
+OOV => 丨
+
+NP
+NN CC NN NN
+@@@
+NNS CC JJ NNS 
+0 1 2 3 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+OOV => 愈来愈
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 普遍
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+ADVP NP VP
+@@@
+IN NP VP 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||VV PU IP|||~
+~|||指出|||，|||IP PU IP|||~
+@@@
+NP pointed out : S : and S . 
+0 -1 -1 -1 1 2 -1 3 4 
+
+74
+OOV => 佛莱文
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+表示
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+进入
+@@@
+entered 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||个
+@@@
+a 
+-1 
+
+JJ
+新
+@@@
+new 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+时代
+@@@
+age 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+正|||~
+@@@
+NP 
+0 
+
+IP
+PU NP VP
+@@@
+X NP VP 
+0 1 2 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+VV
+谈及
+@@@
+discussed 
+-1 
+
+OOV => 推行
+
+OOV => 再生性
+
+NN
+能源
+@@@
+energy 
+-1 
+
+OOV => 策略
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+OOV => 获致
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+GLUE => X X 
+
+NN
+成功
+@@@
+success 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+@@@
+NN NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PP
+P LCP
+在|||IP LC
+~|||~|||时
+@@@
+when S 
+-1 0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+75
+OOV => 前述
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+报告
+@@@
+report 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+P
+在
+@@@
+in 
+-1 
+
+OOV => 一九九零年代
+
+QP
+CD
+@@@
+CD 
+0 
+
+PP
+P QP
+@@@
+IN NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+NN
+全球
+@@@
+global 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 生产
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+OOV => 氯氟
+
+OOV => 碳化
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 合物
+
+OOV => 丨
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+NP
+CP NP NP
+IP DEC|||~|||~
+@@@
+DT JJ NN NN 
+1 0 2 3 
+
+VV
+破坏
+@@@
+damage 
+-1 
+
+OOV => 臭氧
+
+OOV => 层
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+OOV => 元凶
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 百分之八十一
+
+QP
+CD
+@@@
+CD 
+0 
+
+VP
+VV AS QP
+减少|||了|||~
+@@@
+reduced by NP 
+-1 -1 0 
+
+VP
+VP PU VP
+VV NP|||~|||~
+@@@
+VB NN CC NN 
+0 1 2 3 
+
+IP
+PP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||VV PU IP|||~
+~|||说|||，|||~|||~
+@@@
+NP said : S . 
+0 -1 -1 1 2 
+
+76
+AD
+此外
+@@@
+in addition 
+-1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+推动
+@@@
+promoting 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+OOV => 卫生
+
+NN
+组织
+@@@
+organization 
+-1 
+
+IP
+NP VP
+NN NN NN|||~
+@@@
+JJ NN NN NN 
+3 0 1 2 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 抗
+
+OOV => 小儿麻痹
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 症
+
+NN
+运动
+@@@
+movement 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+P
+由
+@@@
+by 
+-1 
+
+OOV => 三十五万例
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 一九八八年
+
+NP
+NT
+@@@
+PP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+QP
+DNP QP
+@@@
+NP ADVP 
+1 0 
+
+PP
+P QP
+@@@
+IN NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 缩减
+
+VV
+至
+@@@
+until 
+-1 
+
+VRD
+VV VV
+@@@
+have NP PRT 
+-1 0 1 
+
+OOV => 四百八十例
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 二○○一年
+
+NP
+NT
+@@@
+PP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+QP
+DNP QP
+@@@
+NP ADVP 
+1 0 
+
+GLUE => X X 
+
+VP
+PP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+NN
+全球
+@@@
+global 
+-1 
+
+OOV => 小儿麻痹症
+
+OOV => 病例
+
+IP
+NP VP
+NN NN NN|||~
+@@@
+JJ NN NN NN 
+3 0 1 2 
+
+VP
+BA IP
+将|||~
+@@@
+S 
+0 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X X X 
+
+77
+DT
+这个
+@@@
+this 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 总部
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+设
+@@@
+are 
+-1 
+
+OOV => 华盛顿
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+在|||~
+@@@
+VBZ 
+0 
+
+VP
+VV PP
+@@@
+VBD PP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+环境
+@@@
+environment 
+-1 
+
+NN
+研究
+@@@
+research 
+-1 
+
+NN
+组织
+@@@
+organization 
+-1 
+
+NP
+NN NN NN
+@@@
+NN NN NNS 
+0 1 2 
+
+NP
+DP CP NP
+@@@
+DT JJ NNS 
+0 1 2 
+
+AD
+也
+@@@
+also 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 称许
+
+OOV => 地方性
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+DNP
+ADJP DEG
+~|||的
+@@@
+JJ 
+0 
+
+NN
+环保
+@@@
+environmental protection 
+-1 -1 
+
+NN
+成就
+@@@
+achievements 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+例如
+@@@
+for example 
+-1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 荷兰
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 创下
+
+OOV => 百分之八十六
+
+QP
+CD
+@@@
+CD 
+0 
+
+DNP
+QP DEG
+~|||的
+@@@
+CD 
+0 
+
+NN
+汽车
+@@@
+automobile 
+-1 
+
+OOV => 回收率
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+ADVP NP VP
+@@@
+IN NP VP 
+0 1 2 
+
+PU
+；
+@@@
+. 
+-1 
+
+VV
+使用
+@@@
+use 
+-1 
+
+OOV => 铝罐
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+全面
+@@@
+all 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+禁止
+@@@
+are prohibited 
+-1 -1 
+
+VP
+ADVP VP
+~|||VV IP
+~|||~|||VP
+~|||~|||VV NP
+@@@
+VB NP IN NP 
+2 3 0 1 
+
+OOV => 丹麦
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 改
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 再生性
+
+NN
+能源
+@@@
+energy 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+回收
+@@@
+recovered 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV VP
+可|||~
+@@@
+CC 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 玻璃瓶
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PU
+；
+@@@
+; 
+-1 
+
+CC
+以及
+@@@
+and 
+-1 
+
+OOV => 巴西
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 二○○一年
+
+NP
+NT
+@@@
+PP 
+0 
+
+PP
+P NP
+在|||~
+@@@
+VBZ 
+0 
+
+VP
+PP VP
+~|||VV
+~|||开始
+@@@
+PP 
+0 
+
+NN
+使用
+@@@
+used 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+IP NP
+NP VP|||~
+@@@
+JJ NN NNS 
+0 1 2 
+
+GLUE => X X X X 
+
+PP
+P NP
+以|||~
+@@@
+PP 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+MD VB NP PP 
+0 2 3 1 
+
+IP
+NP VP
+~|||VP PU VP
+~|||~|||，|||~
+@@@
+NP PP VP 
+1 0 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU IP PU
+@@@
+S : S : S . 
+0 1 2 3 4 5 
+
+78
+DT
+该
+@@@
+the 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NP
+DP NP
+~|||NN
+~|||组织
+@@@
+DT 
+0 
+
+NN
+报告
+@@@
+report 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+成就
+@@@
+successes 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NT
+过去
+@@@
+in the past 
+-1 -1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+VV
+带来
+@@@
+bring 
+-1 
+
+NN
+希望
+@@@
+hopes 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+P
+为
+@@@
+for 
+-1 
+
+OOV => 解除
+
+VA
+严重
+@@@
+serious 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN NN
+全球|||~
+@@@
+IN 
+0 
+
+VP
+VV NP
+~|||CP NP
+@@@
+VBN ADVP VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+PP
+P IP
+@@@
+IN S 
+0 1 
+
+VP
+PP VP
+~|||VV AS NP
+~|||~|||了|||~
+@@@
+VB NP PP 
+1 2 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+DT
+这些
+@@@
+these 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+威胁
+@@@
+threat 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+VV
+包括
+@@@
+including 
+-1 
+
+DT
+每
+@@@
+every 
+-1 
+
+M
+天
+@@@
+day 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 夺去
+
+OOV => 七千
+
+QP
+CD CLP
+~|||M
+~|||条
+@@@
+CD 
+0 
+
+OOV => 人命
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+DP VP
+DT CLP|||~
+@@@
+DT JJ NN 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 疟疾
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+以及
+@@@
+and 
+-1 
+
+DT
+每
+@@@
+every 
+-1 
+
+M
+天
+@@@
+day 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+DP
+DT CLP
+@@@
+DT NN 
+0 1 
+
+OOV => 不幸
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 夭折
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+OOV => 五千五百
+
+QP
+CD CLP
+~|||M
+~|||名
+@@@
+QP 
+0 
+
+OOV => 孩童
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+VV IP
+导致|||NP VP
+@@@
+causes a corresponding NN PP 
+-1 -1 -1 1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 空气
+
+PU
+、
+@@@
+, 
+-1 
+
+OOV => 食物
+
+NN
+水
+@@@
+water 
+-1 
+
+NP
+NN PU NN CC NN
+~|||~|||~|||和|||~
+@@@
+JJ , JJ , and JJ 
+0 1 2 -1 -1 3 
+
+NP
+DP CP NP
+@@@
+DT JJ NNS 
+0 1 2 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NN
+污染
+@@@
+pollution 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+GLUE => X X X X 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV PU IP
+说|||，|||IP PU IP
+~|||~|||~|||，|||~
+@@@
+said that S , and that S 
+-1 -1 0 -1 -1 -1 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+NP NP|||~|||~
+@@@
+NP NP VP . 
+0 1 2 3 
+
+79
+OOV => 五月
+
+OOV => 凯斯
+
+NP
+NT NT
+@@@
+NN CD 
+1 0 
+
+NN
+董事长
+@@@
+the board of directors 
+-1 -1 -1 -1 
+
+OOV => 华纳
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+NN
+时代
+@@@
+times 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VV
+辞职
+@@@
+based 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+80
+NR
+（
+@@@
+( 
+-1 
+
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+NT
+十二日
+@@@
+12 
+-1 
+
+NN
+电
+@@@
+( 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+NN
+）
+@@@
+) 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 华盛顿
+
+NP
+NR
+@@@
+NP 
+0 
+
+NP
+NP NP NP
+@@@
+JJ NN PP 
+1 2 0 
+
+OOV => 华纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+NN
+时代
+@@@
+times 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NN
+董事长
+@@@
+the board of directors 
+-1 -1 -1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+JJ NNS 
+0 1 
+
+OOV => 凯斯
+
+NP
+NR
+@@@
+NP 
+0 
+
+GLUE => X X X X 
+
+VV
+宣布
+@@@
+announced 
+-1 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 五月
+
+NP
+NT
+@@@
+PP 
+0 
+
+PP
+P NP
+在|||~
+@@@
+VBZ 
+0 
+
+VV
+辞职
+@@@
+resignation 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+NT
+今晚
+@@@
+this evening 
+-1 -1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 举
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+PU
+「
+@@@
+" 
+-1 
+
+P
+对
+@@@
+for 
+-1 
+
+NN
+公司
+@@@
+companies 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+~|||MSP VP
+~|||而|||VV
+~|||~|||言
+@@@
+PP 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+VP
+ADVP VP
+AD|||VA
+最|||好
+@@@
+best 
+-1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+OOV => 」
+
+GLUE => X X X X X 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+NP VP|||~|||NP VP|||~
+@@@
+NP VP . NP VP . 
+0 1 2 3 4 5 
+
+81
+OOV => 凯斯
+
+NP
+NR
+@@@
+NP 
+0 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+决定
+@@@
+decided 
+-1 
+
+VV
+要
+@@@
+to 
+-1 
+
+VV
+采取
+@@@
+take 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+步骤
+@@@
+steps 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+MSP
+以
+@@@
+to 
+-1 
+
+VV
+避免
+@@@
+avoided 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+批评
+@@@
+criticism 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 股东
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+~|||NP DNP NP
+~|||~|||PP DEG|||~
+~|||~|||P NP|||~|||~
+@@@
+VB DT NN PP TO NP 
+0 4 5 3 2 1 
+
+VP
+MSP VP
+@@@
+TO VP 
+0 1 
+
+VP
+VP PU VP
+ADVP VP|||~|||~
+@@@
+VBG NNS CC NNS 
+0 1 2 3 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+「
+@@@
+" 
+-1 
+
+PN
+我们
+@@@
+our 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 受阻
+
+VP
+VV
+@@@
+VBN 
+0 
+
+P
+如
+@@@
+if 
+-1 
+
+VV
+合作
+@@@
+cooperation 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+OOV => 般
+
+VP
+VA
+@@@
+JJ 
+0 
+
+CD
+一
+@@@
+one 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 团队
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+能力
+@@@
+capability 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+使|||~|||~
+@@@
+so that NP VP 
+-1 -1 0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+焦点
+@@@
+of 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+完全
+@@@
+all 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PN
+我们
+@@@
+our 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NN
+业务
+@@@
+business 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||上
+@@@
+on NP 
+-1 0 
+
+VP
+VV PP
+放|||~
+@@@
+S 
+0 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+NP ADVP VP 
+0 1 2 
+
+VP
+BA IP
+将|||~
+@@@
+S 
+0 
+
+VP
+MSP VP
+而|||~
+@@@
+NN 
+0 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+IP
+IP PU IP
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+NN
+决定
+@@@
+decision 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 解释
+
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+VP
+VV NP
+~|||DNP NP
+@@@
+VB NP PP 
+2 0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+LCP
+IP LC
+~|||时
+@@@
+S 
+0 
+
+VP
+LCP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+82
+NT
+一月
+@@@
+january 
+-1 
+
+OOV => 督导二○○一年
+
+NP
+NT NT
+@@@
+NN CD 
+1 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NN
+联邦
+@@@
+federation 
+-1 
+
+NN
+委员会
+@@@
+council 
+-1 
+
+NP
+NR NN NN
+@@@
+DT NN NN 
+0 1 2 
+
+OOV => 同意
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+OOV => 线上
+
+NP
+NR NR
+@@@
+NP NN 
+0 1 
+
+CC
+与
+@@@
+and 
+-1 
+
+OOV => 华纳
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+时代
+@@@
+age 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NP
+NP CC NP
+@@@
+NP CC NP 
+0 1 2 
+
+CD
+两
+@@@
+two 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||家
+@@@
+CD 
+0 
+
+NN
+公司
+@@@
+companies 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+PP
+P NP
+由|||~
+@@@
+FW 
+0 
+
+OOV => 合并案
+
+VP
+VV
+@@@
+VBN 
+0 
+
+GLUE => X X X 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 凯斯
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+AD
+仍
+@@@
+still 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VC
+是
+@@@
+is 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+OOV => 董事
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+OOV => 线上
+
+CC
+与
+@@@
+and 
+-1 
+
+NN
+时代
+@@@
+age 
+-1 
+
+OOV => 华纳
+
+OOV => 董事会
+
+GLUE => X X X X X X 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||ADVP ADVP VP|||~
+@@@
+NP ADVP ADVP VP . 
+0 1 2 3 4 
+
+83
+OOV => 合并案
+
+NP
+NN
+@@@
+NN 
+0 
+
+DP
+DT CLP
+这|||M
+~|||项
+@@@
+this 
+-1 
+
+NP
+DP NP
+@@@
+PDT DT 
+1 0 
+
+NT
+一月
+@@@
+january 
+-1 
+
+OOV => 二○○○年
+
+NP
+NT NT
+@@@
+NN CD 
+1 0 
+
+VV
+宣布
+@@@
+announced 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+LCP
+IP LC
+~|||时
+@@@
+S 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 一千五百五十亿
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+VP
+QP
+@@@
+NP 
+0 
+
+IP
+NP VP
+NN|||~
+价值|||~
+@@@
+ADJP 
+0 
+
+NN
+案
+@@@
+case 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+DT
+该
+@@@
+the 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+OOV => 稍后
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP DP NP
+@@@
+NP PP PP 
+2 1 0 
+
+NT
+当年
+@@@
+former 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+OOV => 同意
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+获得
+@@@
+got 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NR
+欧洲
+@@@
+european 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 决策者
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+NP NP|||~
+@@@
+DT NN NN 
+2 0 1 
+
+VP
+VV NP
+~|||DNP NP
+@@@
+VB NP PP 
+2 0 1 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+IP
+IP PU IP
+~|||，|||~
+@@@
+NP VP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+84
+OOV => 凯斯
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+AD
+如
+@@@
+as 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PN
+你
+@@@
+you 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 预期
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+MSP VP
+所|||~
+@@@
+NNS 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+DP
+DT CLP
+这|||M
+~|||项
+@@@
+this 
+-1 
+
+NN
+决定
+@@@
+decision 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+P
+对
+@@@
+to 
+-1 
+
+NN
+个人
+@@@
+individuals 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+PN|||~
+我|||~
+@@@
+POS 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+~|||MSP VP
+~|||而|||VV
+~|||~|||言
+@@@
+PP 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VC
+是
+@@@
+is 
+-1 
+
+AD
+非常
+@@@
+very 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VA
+困难
+@@@
+difficult 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+VC NP
+@@@
+VBZ NP 
+0 1 
+
+GLUE => X X X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 由于
+
+ADVP
+CS
+@@@
+IN 
+0 
+
+PN
+我
+@@@
+i 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+希望
+@@@
+hope 
+-1 
+
+NT
+未来
+@@@
+next 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+CD
+数
+@@@
+few 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||年
+@@@
+CD years ago 
+0 -1 -1 
+
+VV
+能
+@@@
+to 
+-1 
+
+NN
+董事长
+@@@
+the board of directors 
+-1 -1 -1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+担任
+@@@
+as 
+-1 
+
+DT
+这
+@@@
+the 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||家
+@@@
+DT 
+0 
+
+JJ
+大
+@@@
+major 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+公司
+@@@
+companies 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP ADJP NP
+@@@
+DT JJ NN 
+0 1 2 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+VP
+VV NP
+~|||DNP NP
+@@@
+VB NP PP 
+2 0 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+都|||~
+@@@
+VP 
+0 
+
+GLUE => X X X 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+CP
+ADVP IP
+@@@
+IN S 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+而
+@@@
+but 
+-1 
+
+PN
+我
+@@@
+i 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 制造者
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 身为
+
+OOV => 合并案
+
+NP
+NN
+@@@
+NN 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+VP
+VV NP
+~|||DNP NP
+@@@
+VB NP PP 
+2 0 1 
+
+VP
+ADVP VP
+AD|||~
+又|||~
+@@@
+VBN 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+我
+@@@
+i 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+AD
+一直
+@@@
+have 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PN
+我
+@@@
+china 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 留下
+
+VV
+担任
+@@@
+as 
+-1 
+
+NN
+董事长
+@@@
+the board of directors 
+-1 -1 -1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+CC
+并
+@@@
+and 
+-1 
+
+VV
+协助
+@@@
+assist 
+-1 
+
+OOV => 轨道
+
+NP
+NN
+@@@
+NN 
+0 
+
+NN
+事情
+@@@
+things 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+NP
+LCP NP
+@@@
+NP PP 
+1 0 
+
+VP
+VP CC VP
+~|||~|||VV NP
+@@@
+VB CC VB NP 
+0 1 2 3 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VA
+重要
+@@@
+important 
+-1 
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+ADVP VP
+AD|||~
+很|||~
+@@@
+is very JJ 
+-1 -1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NP
+CP
+@@@
+VP 
+0 
+
+VP
+VC NP
+是|||~
+@@@
+SBAR 
+0 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+VP
+ADVP VP
+~|||VV IP
+~|||认为|||~
+@@@
+ADVP held that S 
+0 -1 -1 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+QP
+CD CLP
+一|||M
+~|||项
+@@@
+a 
+-1 
+
+NN
+声明
+@@@
+statement 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||中
+@@@
+in S 
+-1 0 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+85
+PN
+他
+@@@
+he 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+强调
+@@@
+stressed 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+AD
+首先
+@@@
+first of all 
+-1 -1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+DT
+这
+@@@
+the 
+-1 
+
+DP
+DT CLP
+~|||M
+~|||家
+@@@
+DT 
+0 
+
+NN
+公司
+@@@
+company 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+需要
+@@@
+to 
+-1 
+
+OOV => 不安
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+P
+在
+@@@
+in 
+-1 
+
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+关键
+@@@
+crucial 
+-1 
+
+NN
+时刻
+@@@
+moment 
+-1 
+
+NP
+DP NP
+~|||NN NN
+@@@
+DT NNS NNS 
+0 1 2 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+@@@
+ADVP VBN PP 
+1 2 0 
+
+IP
+ADVP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 而且
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 若干
+
+QP
+CD
+@@@
+CD 
+0 
+
+OOV => 股东
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+AD
+仍
+@@@
+still 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+LC
+后
+@@@
+after 
+-1 
+
+P
+在
+@@@
+the 
+-1 
+
+OOV => 合并
+
+VP
+VV
+@@@
+VBN 
+0 
+
+NN
+公司
+@@@
+company 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+PP
+P LCP
+~|||IP LC
+~|||NP VP|||~
+@@@
+IN DT NN PP 
+3 0 2 1 
+
+BA
+把
+@@@
+to 
+-1 
+
+OOV => 失望
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 营运
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+PP DEG|||~
+P NP|||的|||~
+对|||~|||~|||~
+@@@
+the NN PP 
+-1 1 0 
+
+VV
+聚集
+@@@
+gathered 
+-1 
+
+P
+在
+@@@
+in 
+-1 
+
+NN
+个人
+@@@
+individuals 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+NP NP
+PN|||~
+我|||~
+@@@
+POS 
+0 
+
+LC
+上
+@@@
+on 
+-1 
+
+NN
+身
+@@@
+their death 
+-1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+@@@
+IN NP 
+1 0 
+
+LCP
+NP LCP
+@@@
+PRP$ NN 
+0 1 
+
+PP
+P LCP
+@@@
+IN NP 
+0 1 
+
+VP
+VV PP
+@@@
+VBD PP 
+0 1 
+
+VP
+BA IP
+~|||NP VP
+@@@
+VB NP PP 
+0 1 2 
+
+GLUE => X X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PP
+P IP
+由于|||~
+@@@
+NP 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+因此
+@@@
+therefore 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+PN
+我
+@@@
+i 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+决定
+@@@
+decided 
+-1 
+
+PN
+我们
+@@@
+we 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+应
+@@@
+should 
+-1 
+
+VV
+采取
+@@@
+take 
+-1 
+
+NN
+行动
+@@@
+action 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+NT
+现在
+@@@
+now 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+避免
+@@@
+avoided 
+-1 
+
+OOV => 阻碍
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+受到|||~
+@@@
+VP 
+0 
+
+PN
+我们
+@@@
+us 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+P
+如
+@@@
+if 
+-1 
+
+QP
+CD CLP
+一|||M
+~|||个
+@@@
+a 
+-1 
+
+OOV => 团队
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 般
+
+VP
+VA
+@@@
+JJ 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+合作
+@@@
+cooperation 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+并
+@@@
+and 
+-1 
+
+NN
+焦点
+@@@
+of 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+完全
+@@@
+all 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+DNP
+NP DEG
+PN|||的
+我们|||~
+@@@
+the 
+-1 
+
+NN
+业务
+@@@
+business 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+PP
+P LCP
+在|||NP LC
+~|||~|||上
+@@@
+on NP 
+-1 0 
+
+VP
+VV PP
+放|||~
+@@@
+S 
+0 
+
+IP
+NP VP
+~|||ADVP VP
+@@@
+NP ADVP VP 
+0 1 2 
+
+VP
+BA IP
+将|||~
+@@@
+S 
+0 
+
+GLUE => X X X X X X 
+
+GLUE => X X X X X X 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
+86
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+公司
+@@@
+company 
+-1 
+
+OOV => 华纳
+
+NP
+NR NN
+@@@
+NN NN 
+1 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+NN
+时代
+@@@
+age 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 网路
+
+NN
+公司
+@@@
+company 
+-1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 预期
+
+OOV => 二○○二年
+
+NP
+NT
+@@@
+PP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 广告
+
+CC
+与
+@@@
+and 
+-1 
+
+NN
+商业
+@@@
+commercial 
+-1 
+
+OOV => 销售
+
+NP
+NN CC NN NN
+@@@
+NNS CC JJ NNS 
+0 1 2 3 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+由
+@@@
+by 
+-1 
+
+OOV => 二十七亿
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+OOV => 二○○一年
+
+NP
+NT
+@@@
+PP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+QP
+DNP QP
+@@@
+NP ADVP 
+1 0 
+
+PP
+P QP
+@@@
+IN NP 
+0 1 
+
+VV
+减少
+@@@
+reduced 
+-1 
+
+VV
+到
+@@@
+to 
+-1 
+
+VRD
+VV VV
+@@@
+have NP PRT 
+-1 0 1 
+
+OOV => 十五亿
+
+QP
+CD
+@@@
+CD 
+0 
+
+CC
+至
+@@@
+to 
+-1 
+
+OOV => 十六亿
+
+M
+美元
+@@@
+dollars 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+GLUE => X X X 
+
+GLUE => X X 
+
+GLUE => X X X 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+VP
+VV PU IP
+~|||，|||~
+@@@
+VBD SBAR 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+GLUE => X X X X 
+
+87
+AD
+而
+@@@
+while 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 销售
+
+NN
+总额
+@@@
+the total amount 
+-1 -1 -1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VC
+是
+@@@
+is 
+-1 
+
+M
+美元
+@@@
+$ 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+OOV => 八十八亿
+
+QP
+CD CLP
+@@@
+IN NP 
+1 0 
+
+CC
+至
+@@@
+to 
+-1 
+
+OOV => 九十亿
+
+M
+美元
+@@@
+dollars 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+GLUE => X X X 
+
+VP
+VC QP
+@@@
+VBZ NP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+IP
+ADVP NP VP
+@@@
+IN NP VP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 前
+
+M
+年
+@@@
+years 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+一|||~
+@@@
+IN 
+0 
+
+DP
+DT QP
+@@@
+DT CD 
+0 1 
+
+VC
+为
+@@@
+for 
+-1 
+
+OOV => 八十七亿一千八百万
+
+M
+美元
+@@@
+dollars 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+CD CLP
+@@@
+CD NNS 
+0 1 
+
+VP
+VC QP
+@@@
+VBZ NP 
+0 1 
+
+GLUE => X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+@@@
+S : S . 
+0 1 2 3 
+
+88
+AD
+几乎
+@@@
+almost 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+没有
+@@@
+no 
+-1 
+
+VV
+改变
+@@@
+change 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+P
+与
+@@@
+with 
+-1 
+
+OOV => 二○○二年
+
+NP
+NT
+@@@
+PP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP ADVP VP
+@@@
+RBR VBN PP 
+1 2 0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+线
+@@@
+expenditure 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+LCP
+NP LC
+~|||上
+@@@
+NP 
+0 
+
+OOV => 二○○三年
+
+NP
+NT
+@@@
+PP 
+0 
+
+GLUE => X X X 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 销售
+
+NN
+总额
+@@@
+the total amount 
+-1 -1 -1 
+
+NP
+DNP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+IP
+NP VP
+@@@
+JJ NN 
+1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+而
+@@@
+while 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 广告
+
+CC
+与
+@@@
+and 
+-1 
+
+NN
+商业
+@@@
+commercial 
+-1 
+
+OOV => 销售
+
+NP
+NN CC NN NN
+@@@
+NNS CC JJ NNS 
+0 1 2 3 
+
+VV
+减少
+@@@
+reduced 
+-1 
+
+OOV => 百分之四十
+
+CC
+至
+@@@
+to 
+-1 
+
+CD
+五十
+@@@
+50 
+-1 
+
+GLUE => X X X 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+IP
+ADVP NP VP
+@@@
+IN NP VP 
+0 1 2 
+
+IP
+IP PU IP
+@@@
+NP CC NP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+DT
+该
+@@@
+the 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+公司
+@@@
+company 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+VV
+预料
+@@@
+is unexpected 
+-1 -1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||VV PU IP|||~
+@@@
+S , NP VP . 
+3 2 0 1 4 
+
+89
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 北韩
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 退出
+
+GLUE => X 
+
+CP
+IP
+@@@
+ADJP 
+0 
+
+OOV => 核子
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+OOV => 扩散
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+JJ|||~
+非|||~
+@@@
+NNS 
+0 
+
+OOV => 条约
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X X 
+
+OOV => 为敌
+
+VP
+VV
+@@@
+VBN 
+0 
+
+P
+与
+@@@
+and 
+-1 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+DT|||~
+全|||~
+@@@
+across the NN 
+-1 -1 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+IP
+NP VP
+~|||ADVP PP VP
+@@@
+VBZ NP VB ADVP 
+1 0 3 2 
+
+90
+NR
+法新社
+@@@
+by 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 华盛顿
+
+NP
+NR
+@@@
+NP 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 北韩
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+VV
+）
+@@@
+) 
+-1 
+
+VP
+VV NP
+@@@
+JJ PP 
+1 0 
+
+NT
+十五日
+@@@
+15 
+-1 
+
+NN
+电
+@@@
+( 
+-1 
+
+NP
+NT NN
+@@@
+JJ NNS 
+0 1 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 摊牌
+
+NP
+NN
+@@@
+NN 
+0 
+
+GLUE => X X X 
+
+OOV => （
+
+NP
+NT
+@@@
+PP 
+0 
+
+AD
+已
+@@@
+already 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 提升
+
+VV
+成为
+@@@
+become 
+-1 
+
+VRD
+VV VV
+@@@
+have NP PRT 
+-1 0 1 
+
+P
+从
+@@@
+from 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 邪恶
+
+OOV => 轴心
+
+OOV => 」
+
+GLUE => X X X X 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+OOV => 支节
+
+NP
+NN NN
+~|||问题
+@@@
+NN 
+0 
+
+NP
+DNP NP
+@@@
+NP NN 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+NN
+危机
+@@@
+crisis 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+ADVP PP VP
+~|||~|||VRD NP
+@@@
+has ADVP VBN PP NP 
+-1 0 2 1 3 
+
+IP
+NP NP VP
+@@@
+NP NP VP 
+1 0 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 核子
+
+NP
+NN NN
+全球|||~
+@@@
+IN 
+0 
+
+OOV => 数十
+
+LCP
+QP LC
+CD CLP|||来
+~|||M|||~
+~|||年|||~
+@@@
+JJ years 
+0 -1 
+
+DNP
+LCP DEG
+~|||的
+@@@
+PP 
+0 
+
+NP
+DNP NP
+@@@
+NP PP 
+1 0 
+
+VC
+非
+@@@
+a 
+-1 
+
+OOV => 扩散
+
+NN
+努力
+@@@
+efforts 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+AD
+将
+@@@
+will 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 恐
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 功亏
+
+OOV => 一篑
+
+QP
+CD
+@@@
+CD 
+0 
+
+VP
+VV QP
+@@@
+VBD PP 
+0 1 
+
+VP
+ADVP ADVP VP
+@@@
+TO be IN NP 
+1 -1 0 2 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBD NP S 
+0 1 2 
+
+VP
+VC VP
+@@@
+VBZ S 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+~|||~|||NP VP|||~
+@@@
+SBAR , NP VP . 
+0 1 2 3 4 
+
+91
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 核子
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+退出|||~
+@@@
+withdraw from NP 
+-1 -1 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VC
+非
+@@@
+a 
+-1 
+
+OOV => 扩散
+
+OOV => 条约
+
+NP
+NN
+@@@
+NN 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 投下
+
+P
+和
+@@@
+and 
+-1 
+
+OOV => 华盛顿
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 对峙
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+PP VP
+P NP|||~
+@@@
+IN JJ NNS 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+OOV => 局面
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+~|||CP NP
+@@@
+VBN ADVP VP 
+0 1 2 
+
+VP
+VP PU VP
+VV NP|||~|||~
+@@@
+VB NN CC NN 
+0 1 2 3 
+
+VP
+VC VP
+@@@
+VBZ S 
+0 1 
+
+IP
+IP VP
+@@@
+S VP 
+0 1 
+
+VP
+VV IP
+宣布|||~
+@@@
+announced that it VP 
+-1 -1 -1 0 
+
+OOV => 十日
+
+NP
+NT
+@@@
+PP 
+0 
+
+NP
+DP NP
+DT|||NN
+本|||月
+@@@
+february 
+-1 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VP
+NP VP
+@@@
+VBN PP 
+1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+92
+NT
+现在
+@@@
+now 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+NN
+世界
+@@@
+world 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+DT|||~
+全|||~
+@@@
+POS 
+0 
+
+OOV => 企图
+
+OOV => 遏阻
+
+OOV => 核子
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+OOV => 扩散
+
+NN
+武器
+@@@
+weapons 
+-1 
+
+VP
+VV NP
+~|||NP NP
+~|||~|||NN NN
+@@@
+VBG JJ NN PP 
+0 1 3 2 
+
+NN
+努力
+@@@
+efforts 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+IP DEC|||~
+NP VP|||的|||~
+@@@
+NP VBD NP 
+0 1 2 
+
+OOV => 恐
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+DEC
+之
+@@@
+the 
+-1 
+
+VV
+失败
+@@@
+failure 
+-1 
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 虞
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+IP DEC|||~
+@@@
+DT JJ NN 
+1 0 2 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+VP
+ADVP VP
+@@@
+RB JJ 
+0 1 
+
+IP
+NP PU NP VP
+~|||，|||~|||~
+@@@
+NP NP VP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+NR
+印度
+@@@
+india 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 巴基斯坦
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+OOV => 签约
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+JJ|||~
+非|||~
+@@@
+NNS 
+0 
+
+NP
+NP NP
+~|||NN
+~|||国
+@@@
+ADJP 
+0 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+OOV => 核子
+
+OOV => 俱乐部
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VV NP
+进入|||~
+@@@
+FW 
+0 
+
+P
+在
+@@@
+in 
+-1 
+
+NT
+一九九八年
+@@@
+1998 
+-1 
+
+NP
+NT
+@@@
+PP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+PP VP
+@@@
+VBN PP 
+1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+LCP
+IP LC
+~|||时
+@@@
+S 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+DP
+DT CLP
+这|||M
+~|||个
+@@@
+this 
+-1 
+
+OOV => 条约
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+AD
+已
+@@@
+has 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+AD
+严重
+@@@
+seriously 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 受损
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+ADVP ADVP VP
+@@@
+MD ADVP VP 
+0 1 2 
+
+IP
+LCP PU NP VP
+@@@
+PP , NP VP 
+0 1 2 3 
+
+IP
+IP PU IP
+@@@
+NP CC NP 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+NN
+分析家
+@@@
+analysts 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||VV PU IP|||~
+@@@
+S , NP VP . 
+3 2 0 1 4 
+
+93
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+采取
+@@@
+taking 
+-1 
+
+JJ
+上述
+@@@
+such 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+行动
+@@@
+action 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+ADJP NP
+@@@
+JJ NNS 
+0 1 
+
+OOV => 之后
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+CD
+四
+@@@
+four 
+-1 
+
+M
+天
+@@@
+days 
+-1 
+
+CLP
+M
+@@@
+NNS 
+0 
+
+QP
+ADVP QP
+~|||CD CLP
+@@@
+RB CD NNS 
+0 1 2 
+
+GLUE => X X X 
+
+PU
+，
+@@@
+, 
+-1 
+
+QP
+CD CLP
+五|||M
+~|||个
+@@@
+five 
+-1 
+
+OOV => 常任
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+OOV => 理事国
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+联合国
+@@@
+un 
+-1 
+
+NN
+安全
+@@@
+security 
+-1 
+
+NN
+理事会
+@@@
+council 
+-1 
+
+NP
+NR NN NN
+@@@
+NP JJ NN 
+0 1 2 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+NP
+DNP QP ADJP NP
+@@@
+DT JJ NN PP 
+1 2 3 0 
+
+AD
+都
+@@@
+have 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+采取
+@@@
+adopted 
+-1 
+
+OOV => 预防性
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+外交
+@@@
+diplomatic 
+-1 
+
+NN
+行动
+@@@
+action 
+-1 
+
+NP
+ADJP NP
+~|||NN NN
+@@@
+JJ NN NNS 
+0 1 2 
+
+P
+为
+@@@
+for 
+-1 
+
+DT
+此
+@@@
+this 
+-1 
+
+DP
+DT QP
+~|||CD
+~|||一
+@@@
+DT 
+0 
+
+NN
+危机
+@@@
+crisis 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+MD VB NP PP 
+0 2 3 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+IP PU IP PU
+NP VP|||~|||NP VP|||~
+@@@
+NP VP . NP VP . 
+0 1 2 3 4 5 
+
+94
+NR
+俄罗斯
+@@@
+russia 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+派遣
+@@@
+sent 
+-1 
+
+CD
+一
+@@@
+a 
+-1 
+
+QP
+CD CLP
+~|||M
+~|||名
+@@@
+QP 
+0 
+
+NN
+特使
+@@@
+special envoy 
+-1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP
+@@@
+CD NN 
+0 1 
+
+OOV => 前往
+
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+VP
+ADVP VP
+AD|||~
+将|||~
+@@@
+X 
+0 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+建议
+@@@
+proposed 
+-1 
+
+VV
+结束
+@@@
+the 
+-1 
+
+OOV => 场
+
+CLP
+M
+@@@
+NNS 
+0 
+
+DP
+DT CLP
+这|||~
+@@@
+IN 
+0 
+
+NN
+僵局
+@@@
+deadlock 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+VP PU VP
+@@@
+VP CC VP 
+0 1 2 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+而
+@@@
+but 
+-1 
+
+NR
+中国
+@@@
+china 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+VV
+建议
+@@@
+proposed 
+-1 
+
+DEC
+的
+@@@
+the 
+-1 
+
+OOV => 妥协
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+主持
+@@@
+presided over the sessions 
+-1 -1 -1 -1 
+
+LC
+之间
+@@@
+between 
+-1 
+
+NR
+美国
+@@@
+the united states 
+-1 -1 -1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 北韩
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+LCP
+NP LC
+@@@
+IN NP 
+1 0 
+
+VP
+VV LCP
+@@@
+IN NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+NP
+CP NP
+IP DEC|||~
+@@@
+DT NN PP 
+1 2 0 
+
+OOV => 对话
+
+VP
+VV
+@@@
+VBN 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+VP
+ADVP VP
+AD|||~
+则|||~
+@@@
+VP 
+0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+说|||，|||~
+@@@
+said that S 
+-1 -1 0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+95
+NR
+英国
+@@@
+britain 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 法国
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+AD
+则
+@@@
+, 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 商讨
+
+DP
+DT CLP
+这|||M
+~|||次
+@@@
+this 
+-1 
+
+NN
+危机
+@@@
+crisis 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+P
+在
+@@@
+in 
+-1 
+
+OOV => 伦敦
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+~|||ADVP PP VP|||~
+~|||~|||~|||VV NP|||~
+@@@
+NP ADVP VBD NP SBAR . 
+0 1 3 4 2 5 
+
+96
+NN
+总署
+@@@
+of 
+-1 
+
+NN
+国际
+@@@
+international 
+-1 
+
+OOV => 原子能
+
+NP
+NN NN NN
+@@@
+JJ JJ NN 
+2 0 1 
+
+OOV => 警告
+
+OOV => 假如
+
+ADVP
+CS
+@@@
+IN 
+0 
+
+OOV => 平壤
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 拒绝
+
+VV
+放弃
+@@@
+abandoned 
+-1 
+
+OOV => 核子
+
+NN
+计划
+@@@
+program 
+-1 
+
+VP
+VV NP
+~|||NN NN
+@@@
+VBN JJ NN 
+0 1 2 
+
+IP
+VP
+@@@
+VP 
+0 
+
+IP
+NP VP
+~|||VV IP
+@@@
+VBG NP PP 
+0 1 2 
+
+CP
+ADVP IP
+@@@
+IN S 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+它
+@@@
+it 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+要求
+@@@
+on 
+-1 
+
+OOV => 安理会
+
+NP
+NN
+@@@
+NN 
+0 
+
+VV
+采取
+@@@
+taking 
+-1 
+
+NN
+行动
+@@@
+action 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV NP IP
+@@@
+VB NP VP 
+0 1 2 
+
+VP
+VV VP
+可能|||~
+@@@
+may be VP 
+-1 -1 0 
+
+GLUE => X X X X 
+
+VP
+VV PU IP
+~|||，|||~
+@@@
+VBD SBAR 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+已|||~
+@@@
+SBAR 
+0 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+97
+P
+对于
+@@@
+for 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+NN
+行动
+@@@
+actions 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NR
+俄罗斯
+@@@
+russia 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+NR
+中国
+@@@
+china 
+-1 
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+NP
+@@@
+of NP 
+-1 0 
+
+NP
+DNP NP
+NP DEG|||~
+@@@
+DT NN PP 
+1 2 0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+CD
+许多
+@@@
+many 
+-1 
+
+QP
+CD
+@@@
+CD 
+0 
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+OOV => 观察家
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+QP NP NP
+@@@
+JJ NN NNS 
+0 1 2 
+
+VV
+认为
+@@@
+said 
+-1 
+
+DP
+DT CLP
+这|||M
+~|||种
+@@@
+such 
+-1 
+
+NN
+会谈
+@@@
+talks 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NNS 
+0 1 
+
+VV
+可能
+@@@
+could 
+-1 
+
+VV
+迫使
+@@@
+force 
+-1 
+
+VV
+决定
+@@@
+decided 
+-1 
+
+AD
+是否
+@@@
+whether 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+P
+对
+@@@
+to 
+-1 
+
+OOV => 北韩
+
+NP
+NR
+@@@
+NP 
+0 
+
+PP
+P NP
+@@@
+IN NP 
+0 1 
+
+OOV => 投下
+
+OOV => 否决票
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP PP VP
+~|||~|||VV NP
+@@@
+MD PP VB NP 
+0 1 2 3 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+OOV => 莫斯科
+
+CC
+和
+@@@
+and 
+-1 
+
+NR
+北京
+@@@
+beijing 
+-1 
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+VP
+VV NP IP
+@@@
+VBZ NP PP 
+0 2 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+VV IP
+~|||NP VP
+@@@
+VBG NP S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+PP PU NP VP PU
+@@@
+PP , NP VP . 
+0 1 2 3 4 
+
+98
+DT
+其他
+@@@
+other 
+-1 
+
+DP
+DT
+@@@
+DT 
+0 
+
+VV
+可能
+@@@
+possible 
+-1 
+
+OOV => 核子
+
+NN
+能力
+@@@
+to 
+-1 
+
+NP
+NN NN
+@@@
+JJ NN 
+0 1 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+国家
+@@@
+state 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP CP NP
+@@@
+DT JJ NNS 
+0 1 2 
+
+PU
+，
+@@@
+, 
+-1 
+
+AD
+例如
+@@@
+for example 
+-1 -1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+NR
+伊朗
+@@@
+iran 
+-1 
+
+CC
+和
+@@@
+and 
+-1 
+
+OOV => 利比亚
+
+NP
+NR CC NR
+@@@
+NP CC NP 
+0 1 2 
+
+NP
+NP PU NP
+~|||~|||ADVP NP
+@@@
+NP , ADVP NP 
+0 1 2 3 
+
+PU
+，
+@@@
+, 
+-1 
+
+OOV => 必定
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VV
+会
+@@@
+will 
+-1 
+
+DEG
+的
+@@@
+the 
+-1 
+
+OOV => 北韩
+
+NN
+危机
+@@@
+crisis 
+-1 
+
+DNP
+NP DEG
+NN NN|||~
+@@@
+DT NN NN 
+2 0 1 
+
+NP
+DNP NP
+~|||NN
+~|||发展
+@@@
+NN 
+0 
+
+VP
+VV NP
+注意|||~
+@@@
+pay attention to NP 
+-1 -1 -1 0 
+
+AD
+密切
+@@@
+closely 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+VP
+ADVP VP
+@@@
+VBN ADVP 
+1 0 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP PU VP PU
+~|||~|||ADVP VP|||~
+@@@
+NP VBP ADVP VP . 
+0 1 2 3 4 
+
+99
+PN
+它们
+@@@
+them 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 非
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 扩散
+
+OOV => 条约
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+CC
+而
+@@@
+but 
+-1 
+
+VV
+会
+@@@
+will 
+-1 
+
+AD
+不
+@@@
+not 
+-1 
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 惩罚
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+受到|||~
+@@@
+VP 
+0 
+
+VP
+ADVP VP
+~|||VV VP
+@@@
+MD RB VP 
+1 0 2 
+
+VP
+VP CC VP
+@@@
+JJ CC JJ 
+0 1 2 
+
+OOV => 核子
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+退出|||~
+@@@
+withdraw from NP 
+-1 -1 0 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+VP
+VV IP
+注意|||~
+@@@
+pay attention to S 
+-1 -1 -1 0 
+
+VP
+ADVP VP
+AD|||VV VP
+将|||会|||~
+@@@
+will VP 
+-1 0 
+
+PU
+，
+@@@
+, 
+-1 
+
+CC
+或者
+@@@
+or 
+-1 
+
+OOV => 获取
+
+NR
+美国
+@@@
+us 
+-1 
+
+NP
+NR
+@@@
+NP 
+0 
+
+DNP
+NP DEG
+~|||的
+@@@
+PRP$ 
+0 
+
+JJ
+巨额
+@@@
+huge 
+-1 
+
+ADJP
+JJ
+@@@
+JJ 
+0 
+
+NN
+资金
+@@@
+funding 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DNP ADJP NP
+@@@
+PRP$ JJ NN 
+0 1 2 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+VV
+交换
+@@@
+exchange 
+-1 
+
+VV
+停止
+@@@
+to 
+-1 
+
+OOV => 核子
+
+NN
+武器
+@@@
+weapons 
+-1 
+
+VV
+发展
+@@@
+development 
+-1 
+
+VP
+VV NP
+~|||NN NN
+@@@
+NP JJ NN 
+1 2 0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+MSP VP
+以|||~
+@@@
+so as to VP 
+-1 -1 -1 0 
+
+GLUE => X X X X X X 
+
+PU
+。
+@@@
+. 
+-1 
+
+IP
+NP VP PU
+@@@
+NP VP . 
+0 1 2 
+
+100
+OOV => 艾恩宏
+
+NP
+NR
+@@@
+NP 
+0 
+
+NN
+武器
+@@@
+weapons 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 前
+
+DP
+DT
+@@@
+DT 
+0 
+
+NN
+国务院
+@@@
+the state council 
+-1 -1 -1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+DP NP
+@@@
+DT NN 
+0 1 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+OOV => 管制
+
+NN
+官员
+@@@
+officials 
+-1 
+
+NP
+NP NP
+~|||NN NN
+@@@
+NP NN NN 
+0 1 2 
+
+NP
+NP NP
+@@@
+NP PP 
+1 0 
+
+VV
+说
+@@@
+said 
+-1 
+
+PU
+：
+@@@
+: 
+-1 
+
+PU
+「
+@@@
+" 
+-1 
+
+OOV => 假如
+
+ADVP
+CS
+@@@
+IN 
+0 
+
+OOV => 北韩
+
+NP
+NN
+@@@
+NN 
+0 
+
+OOV => 非
+
+ADVP
+AD
+@@@
+RB 
+0 
+
+OOV => 扩散
+
+OOV => 条约
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+ADVP VP
+~|||VV NP
+@@@
+ADVP VB NP 
+0 1 2 
+
+SB
+被
+@@@
+was 
+-1 
+
+VV
+认为
+@@@
+said 
+-1 
+
+NN
+能力
+@@@
+to 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VE NP
+有|||~
+@@@
+TO 
+0 
+
+OOV => 核子
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+退出|||~
+@@@
+withdraw from NP 
+-1 -1 0 
+
+VP
+VP VP
+@@@
+MD VP 
+0 1 
+
+IP
+VP
+@@@
+VP 
+0 
+
+VP
+VV IP
+@@@
+VBD NP 
+0 1 
+
+VP
+SB VP
+@@@
+VBD VP 
+0 1 
+
+VP
+VP VP
+@@@
+JJR S 
+1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+CP
+ADVP IP
+@@@
+IN S 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+它们
+@@@
+them 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+OOV => 盘算
+
+VP
+VV
+@@@
+VBN 
+0 
+
+VP
+VV VP
+可能|||VV VP
+~|||会|||~
+@@@
+could be VP 
+-1 -1 0 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+PU
+，
+@@@
+, 
+-1 
+
+PN
+它们
+@@@
+countries 
+-1 
+
+NP
+PN
+@@@
+PRP 
+0 
+
+VV
+可以
+@@@
+can 
+-1 
+
+VV
+采取
+@@@
+adopt 
+-1 
+
+OOV => 必
+
+OOV => 付出
+
+OOV => 代价
+
+NP
+NN
+@@@
+NN 
+0 
+
+VP
+VV NP
+@@@
+VB NP 
+0 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+VP
+ADVP VP
+AD|||~
+不|||~
+@@@
+S 
+0 
+
+VP
+MSP VP
+而|||~
+@@@
+NN 
+0 
+
+OOV => 相同
+
+VP
+VA
+@@@
+JJ 
+0 
+
+IP
+VP
+@@@
+VP 
+0 
+
+CP
+IP DEC
+~|||的
+@@@
+JJ 
+0 
+
+NN
+行动
+@@@
+action 
+-1 
+
+NP
+NN
+@@@
+NN 
+0 
+
+NP
+CP NP
+@@@
+ADJP NNS 
+0 1 
+
+VP
+VP VP
+VV NP|||~
+@@@
+VBZ NP PP 
+0 2 1 
+
+VP
+VV VP
+@@@
+MD VP 
+0 1 
+
+IP
+NP VP
+@@@
+NP VP 
+0 1 
+
+GLUE => X X X X X X 
+
+VP
+VV PU IP
+@@@
+VBN IN S 
+0 1 2 
+
+PU
+。
+@@@
+. 
+-1 
+
+OOV => 」
+
+GLUE => X X X X 
+
