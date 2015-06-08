@@ -6,6 +6,14 @@
 #include "lm.h"
 #include "myutils.h"
 
+struct RuleSrcUnit
+{
+	int type;
+	string word;
+	string tag;
+	int idx;
+};
+
 struct Models
 {
 	Vocab *src_vocab;
@@ -14,37 +22,24 @@ struct Models
 	LanguageModel *lm_model;
 };
 
-// 记录规则匹配信息, 包括规则Trie树的节点, 以及输入句子句法树片段的头节点和叶子节点等信息
-struct RuleMatchInfo
-{
-	RuleTrieNode* rule_node;
-	SyntaxNode* syntax_root;
-	vector<SyntaxNode*> syntax_leaves;
-};
-
 class SentenceTranslator
 {
 	public:
 		SentenceTranslator(const Models &i_models, const Parameter &i_para, const Weight &i_weight, const string &input_sen);
-		~SentenceTranslator();
 		string translate_sentence();
 		vector<TuneInfo> get_tune_info(size_t sen_id);
 		vector<string> get_applied_rules(size_t sen_id);
 	private:
-		void generate_kbest_for_node(SyntaxNode* node);
-		void add_cand_for_oov(SyntaxNode *node);
-		void add_best_cand_to_pq_with_normal_rule(Candpq &candpq, RuleMatchInfo &rule_match_info);
-		Cand* generate_cand_from_normal_rule(vector<TgtRule> &tgt_rules,int rule_rank,vector<vector<Cand*> > &cands_of_leaves,vector<int> &cand_rank_vec);
-		void add_best_cand_to_pq_with_glue_rule(Candpq &candpq,SyntaxNode* node);
-		Cand* generate_cand_from_glue_rule(vector<vector<Cand*> > &cands_of_leaves, vector<int> &cand_rank_vec);
-		void extend_cand_by_cube_pruning(Candpq &candpq,SyntaxNode* node);
-		void add_neighbours_to_pq(Candpq &candpq, Cand* cur_cand, set<vector<int> > &duplicate_set);
-		void extend_cand_with_unary_rule(RuleMatchInfo &rule_match_info);
+		void translate_subtree(int sub_root_idx);
+		void generate_kbest_for_node(int node_idx);
+		void fill_cand_orgnizer_with_head_rule(int node_idx);
+		bool generalize_rule_src(vector<RuleSrcUnit> &rule_src,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx);
+		void generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge);
+		void generate_cand_with_glue_rule_and_add_to_pq(vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge);
+		void add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_merge);
+		bool is_config_valid(vector<RuleSrcUnit> &rule_src,string &config);
 		void dump_rules(vector<string> &applied_rules, Cand *cand);
 		string words_to_str(vector<int> &wids, bool drop_unk);
-
-		vector<RuleMatchInfo> find_matched_rules_for_syntax_node(SyntaxNode* cur_node);
-		void push_matched_rules_at_next_level(vector<RuleMatchInfo> &match_info_vec, size_t cur_pos);
 
 	private:
 		Vocab *src_vocab;
@@ -56,4 +51,7 @@ class SentenceTranslator
 
 		SyntaxTree* src_tree;
 		size_t src_sen_len;
+		set<string> open_tags;
+		int tgt_nt_id;
+		int src_nt_id;
 };

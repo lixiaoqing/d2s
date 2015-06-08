@@ -35,8 +35,7 @@ class SyntaxTree
 	public:
 		int root_idx;
 		int sen_len;
-		vector<string> words;
-		vector<string> tags;
+		vector<SyntaxNode> nodes;
 };
 
 #endif

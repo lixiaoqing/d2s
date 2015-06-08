@@ -1,14 +1,16 @@
 #include "syntaxtree.h"
 
-SyntaxTree::SyntaxTree(const string &line_of_tree)
+SyntaxTree::SyntaxTree(const string &line_tree)
 {
-	build_tree_from_str(line_of_tree);
-	update_attrib(root);
+	build_tree_from_str(line_tree);
 }
 
-void TreeStrPair::build_tree_from_str(const vector<string> &wt_hidx_vec)
+void SyntaxTree::build_tree_from_str(const string &line_tree)
 {
-	for (int i=0;i<src_sen_len;i++)
+	vector<string> wt_hidx_vec = Split(line_tree);
+	sen_len = wt_hidx_vec.size();
+	nodes.resize(sen_len);
+	for (int i=0;i<sen_len;i++)
 	{
 		const string &wt_hidx = wt_hidx_vec.at(i);
 		int sep = wt_hidx.rfind('_');
@@ -17,18 +19,18 @@ void TreeStrPair::build_tree_from_str(const vector<string> &wt_hidx_vec)
 		sep = wt.rfind('_');
 		string word = wt.substr(0,sep);
 		string tag = wt.substr(sep+1);
-		src_nodes.at(i).word = word;
-		src_nodes.at(i).tag = tag;
-		src_nodes.at(i).idx = i;
-		src_nodes.at(i).father = hidx;
+		nodes.at(i).word = word;
+		nodes.at(i).tag = tag;
+		nodes.at(i).idx = i;
+		nodes.at(i).father = hidx;
 		if (hidx == -1)
 		{
 			root_idx = i;
-			src_nodes.at(i).father = i;			//TODO 检查是否必要
+			nodes.at(i).father = i;			//TODO 检查是否必要
 		}
 		else
 		{
-			src_nodes.at(hidx).children.push_back(i);
+			nodes.at(hidx).children.push_back(i);
 		}
 	}
 }

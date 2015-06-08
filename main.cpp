@@ -53,15 +53,15 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 			getline(fin,line);
 			para.BEAM_SIZE = stoi(line);
 		}
+		else if (line == "[CUBE-SIZE]")
+		{
+			getline(fin,line);
+			para.CUBE_SIZE = stoi(line);
+		}
 		else if (line == "[SEN-THREAD-NUM]")
 		{
 			getline(fin,line);
 			para.SEN_THREAD_NUM = stoi(line);
-		}
-		else if (line == "[SPAN-THREAD-NUM]")
-		{
-			getline(fin,line);
-			para.SPAN_THREAD_NUM = stoi(line);
 		}
 		else if (line == "[NBEST-NUM]")
 		{
@@ -83,10 +83,10 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 			getline(fin,line);
 			para.DUMP_RULE = stoi(line);
 		}
-		else if (line == "[LOAD-ALIGNMENT]")
+		else if (line == "[DROP-OOV]")
 		{
 			getline(fin,line);
-			para.LOAD_ALIGNMENT = stoi(line);
+			para.DROP_OOV = stoi(line);
 		}
 		else if (line == "[weight]")
 		{
@@ -114,6 +114,10 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 				else if(feature == "rule-num")
 				{
 					ss>>weight.rule_num;
+				}
+				else if(feature == "glue")
+				{
+					ss>>weight.glue;
 				}
 			}
 		}
@@ -158,6 +162,11 @@ void translate_file(const Models &models, const Parameter &para, const Weight &w
 	{
 		TrimLine(line);
 		input_sen.push_back(line);
+		vector<string> vs = Split(line);
+		for (const auto &word : vs)
+		{
+			models.src_vocab->get_id(word);                                 //避免并行时同时修改vocab发生冲突
+		}
 	}
 	int sen_num = input_sen.size();
 	output_sen.resize(sen_num);
@@ -213,11 +222,13 @@ void translate_file(const Models &models, const Parameter &para, const Weight &w
 		size_t n=0;
 		for (const auto &applied_rules : applied_rules_list)
 		{
-			frules<<++n<<endl;
+			//frules<<++n<<endl;
 			for (const auto &applied_rule : applied_rules)
 			{
-				frules<<applied_rule<<endl;
+				//frules<<applied_rule<<endl;
+				frules<<applied_rule;
 			}
+			frules<<endl;
 		}
 	}
 }
@@ -235,7 +246,7 @@ int main( int argc, char *argv[])
 
 	Vocab *src_vocab = new Vocab(fns.src_vocab_file);
 	Vocab *tgt_vocab = new Vocab(fns.tgt_vocab_file);
-	RuleTable *ruletable = new RuleTable(para.RULE_NUM_LIMIT,para.LOAD_ALIGNMENT,weight,fns.rule_table_file,src_vocab,tgt_vocab);
+	RuleTable *ruletable = new RuleTable(para.RULE_NUM_LIMIT,weight,fns.rule_table_file);
 	LanguageModel *lm_model = new LanguageModel(fns.lm_file,tgt_vocab);
 
 	b = clock();

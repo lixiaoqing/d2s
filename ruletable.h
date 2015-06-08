@@ -14,7 +14,7 @@ struct TgtRule
 	vector<int> tgt_nt_idx_to_src_nt_idx;		// 记录每个目标端非终结符对应于源端的第几个非终结符
 };
 
-class RuleTrieNode 
+struct RuleTrieNode 
 {
 	vector<TgtRule> tgt_rules;                  // 一个规则源端对应的所有目标端
 	map <int, RuleTrieNode*> id2subtrie_map;    // 当前规则节点到下个规则节点的转换表
@@ -30,6 +30,7 @@ class RuleTable
 			root=new RuleTrieNode;
 			load_rule_table(rule_table_file);
 		};
+		vector<TgtRule>* find_matched_rules(const vector<int> &src_wids);
 
 	private:
 		void load_rule_table(const string &rule_table_file);

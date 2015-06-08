@@ -14,9 +14,11 @@ class LanguageModel
 		double cal_final_increased_lm_score(Cand* cand);
 
 	private:
-			lm::WordIndex convert_to_kenlm_id(int wid);
+		lm::WordIndex convert_to_kenlm_id(int wid);
+
 	private:
 		Model *kenlm;
 		vector<lm::WordIndex> ori_to_kenlm_id;
 		lm::WordIndex EOS;
+		int nonterminal_wid;
 };

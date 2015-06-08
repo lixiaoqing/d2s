@@ -24,6 +24,7 @@ LanguageModel::LanguageModel(const string &lm_file, Vocab *tgt_vocab)
 	conf.enumerate_vocab = &id_converter;
 	kenlm = new Model(lm_file.c_str(), conf);
 	EOS = convert_to_kenlm_id(tgt_vocab->get_id("</s>"));
+	nonterminal_wid = tgt_vocab->get_id("[X]");
 	cout<<"load language model file "<<lm_file<<" over\n";
 };
 
@@ -38,35 +39,26 @@ lm::WordIndex LanguageModel::convert_to_kenlm_id(int wid)
 double LanguageModel::cal_increased_lm_score(Cand* cand) 
 {
 	RuleScore<Model> rule_score(*kenlm,cand->lm_state);
-	if ( cand->type == OOV || ( cand->type == NORMAL && cand->cands_of_nt_leaves.empty() ) )  // OOV候选或者由不含非终结符的规则生成的候选
+	if (cand->applied_rule.nt_num > 0 && cand->applied_rule.tgt_rule == NULL)            //OOV候选
 	{
-		for (const auto wid : cand->tgt_wids)
-		{
-			rule_score.Terminal( convert_to_kenlm_id(wid) );
-		}
+		const lm::WordIndex ken_lm_id = convert_to_kenlm_id(cand->tgt_wids.at(0));
+		rule_score.Terminal(ken_lm_id);
 	}
-	else if (cand->type == NORMAL)                                                            // 由含非终结符的规则生成的候选
+	else
 	{
-		TgtRule &applied_rule = cand->matched_tgt_rules->at(cand->rule_rank);
 		size_t nt_idx = 0;
-		for (size_t i=0; i<applied_rule.aligned_src_positions.size(); i++)
+		for (auto wid : cand->applied_rule.tgt_rule->wids)
 		{
-			if (applied_rule.aligned_src_positions[i] == -1)
+			if (wid == nonterminal_wid)
 			{
-				rule_score.Terminal( convert_to_kenlm_id(applied_rule.tgt_leaves[i]) );
+				rule_score.NonTerminal(cand->cands_of_nt_leaves.at(nt_idx).at(cand->cand_rank_vec.at(nt_idx))->lm_state);
+				nt_idx++;
 			}
 			else
 			{
-				rule_score.NonTerminal(cand->cands_of_nt_leaves[nt_idx][cand->cand_rank_vec[nt_idx]]->lm_state);
-				nt_idx++;
+				const lm::WordIndex ken_lm_id = convert_to_kenlm_id(wid);
+				rule_score.Terminal(ken_lm_id);
 			}
-		}
-	}
-	else if (cand->type == GLUE)                                                              // glue候选
-	{
-		for (size_t nt_idx=0; nt_idx<cand->cands_of_nt_leaves.size(); nt_idx++)
-		{
-			rule_score.NonTerminal(cand->cands_of_nt_leaves[nt_idx][cand->cand_rank_vec[nt_idx]]->lm_state);
 		}
 	}
 	double increased_lm_score = rule_score.Finish();

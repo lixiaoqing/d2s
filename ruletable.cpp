@@ -45,28 +45,42 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		tgt_rule.nt_num = nt_num;
 		tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
 		fin.read((char*)&(tgt_rule.tgt_nt_idx_to_src_nt_idx[0]),sizeof(int)*nt_num);
+		add_rule_to_trie(src_wids,tgt_rule);
 	}
 	fin.close();
 	cout<<"load rule table file "<<rule_table_file<<" over\n";
 }
 
-void RuleTable::add_rule_to_trie(const vector<int> &rulenode_ids, const TgtRule &tgt_rule)
+vector<TgtRule>* RuleTable::find_matched_rules(const vector<int> &src_wids)
 {
 	RuleTrieNode* current = root;
-	for (const auto &node_id : rulenode_ids)
+	for (auto wid : src_wids)
+	{
+		auto it = current->id2subtrie_map.find(wid);
+		if (it != current->id2subtrie_map.end())
+		{
+			current = it->second;
+		}
+		else
+			return NULL;
+	}
+	return &(current->tgt_rules);
+}
+
+void RuleTable::add_rule_to_trie(const vector<int> &src_wids, const TgtRule &tgt_rule)
+{
+	RuleTrieNode* current = root;
+	for (const auto &wid : src_wids)
 	{        
-		string node_str = src_vocab->get_word(node_id);
-		auto it = current->subtrie_map.find(node_str);
-		if ( it != current->subtrie_map.end() )
+		auto it = current->id2subtrie_map.find(wid);
+		if ( it != current->id2subtrie_map.end() )
 		{
 			current = it->second;
 		}
 		else
 		{
 			RuleTrieNode* tmp = new RuleTrieNode();
-			tmp->father = current;
-			tmp->rule_level_str = node_str;
-			current->subtrie_map.insert(make_pair(node_str,tmp));
+			current->id2subtrie_map.insert(make_pair(wid,tmp));
 			current = tmp;
 		}
 	}
@@ -83,4 +97,3 @@ void RuleTable::add_rule_to_trie(const vector<int> &rulenode_ids, const TgtRule 
 		}
 	}
 }
-

@@ -5,6 +5,11 @@ bool larger( const Cand *pl, const Cand *pr )
 	return pl->score > pr->score;
 }
 
+bool smaller( const Cand *pl, const Cand *pr )
+{
+	return pl->score < pr->score;
+}
+
 /************************************************************************
  1. 函数功能: 将翻译候选加入列表中, 并进行假设重组
  2. 入口参数: 翻译候选的指针
@@ -16,7 +21,7 @@ bool larger( const Cand *pl, const Cand *pr )
               b) 如果当前候选与优先级队列中的所有候选的目标端边界词不同,
 	         则将当前候选加入列表
  * **********************************************************************/
-void CandBeam::add(Cand *&cand_ptr,int beam_size)
+void CandOrganizer::add(Cand *&cand_ptr,int beam_size)
 { 
 	for (auto &e_cand_ptr : data)
 	{
@@ -57,7 +62,7 @@ bool CandOrganizer::is_bound_same(const Cand *a, const Cand *b)
 	return true;
 }
 
-void CandBeam::free()
+void CandOrganizer::free()
 {
 	for (auto cand : data)
 	{

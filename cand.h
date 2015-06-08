@@ -4,6 +4,16 @@
 #include "ruletable.h"
 #include "lm/left.hh"
 
+//生成候选所使用的规则信息
+struct Rule
+{
+	int nt_num;				  //规则中非终结符个数
+	vector<int> src_ids;      //规则源端符号（包括终结符和非终结符）id序列
+	TgtRule *tgt_rule;        //规则目标端
+	int tgt_rule_rank;		  //该目标端在源端相同的所有目标端中的排名
+	vector<int> tgt_nt_idx_to_src_sen_idx;  //目标端变量的位置在源端句子中对应的位置
+};
+
 //存储翻译候选
 struct Cand	                
 {
@@ -21,11 +31,9 @@ struct Cand
 	double lm_prob;
 
 	//来源信息, 记录候选是如何生成的
-	RuleTrieNode* rule_node;                       // 生成当前候选的规则的源端
-	vector<TgtRule>* matched_tgt_rules;            // 目标端非终结符个数及对齐相同的一组规则 TODO 为何要分组
-	int rule_rank;                                 // 当前候选所用的规则在matched_tgt_rules中的排名
-	vector<vector<Cand*> > cands_of_nt_leaves;     // 规则源端非终结符叶节点的翻译候选(glue规则所有叶节点均为非终结符)
-	vector<int> cand_rank_vec;                     // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
+	Rule applied_rule;          					//生成当前候选所使用的规则
+	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(glue规则所有叶节点均为非终结符)
+	vector<int> cand_rank_vec;                      // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
 
 	//语言模型状态信息
 	lm::ngram::ChartState lm_state;
@@ -42,15 +50,14 @@ struct Cand
 		trans_probs.clear();
 		lm_prob = 0.0;
 
-		rule_node = NULL;
-		matched_tgt_rules = NULL;
-		rule_rank = 0;
 		cands_of_nt_leaves.clear();
 		cand_rank_vec.clear();
 	}
 };
 
-struct smaller
+bool smaller( const Cand *pl, const Cand *pr );
+
+struct cmp
 {
 	bool operator() ( const Cand *pl, const Cand *pr )
 	{
@@ -78,6 +85,6 @@ class CandOrganizer
 		vector<Cand*> data;                         // 当前节点所有的翻译候选
 };
 
-typedef priority_queue<Cand*, vector<Cand*>, smaller> Candpq;
+typedef priority_queue<Cand*, vector<Cand*>, cmp> Candpq;
 
 #endif
