@@ -94,12 +94,12 @@ void ruletable2bin(string rule_filename)
 			prob_vec.push_back(log_prob);
 		}
 
-		int ch_rule_len = src_wids.size();
-		int en_rule_len = tgt_wids.size();
-		fout.write((char*)&ch_rule_len,sizeof(int));
-		fout.write((char*)&src_wids[0],sizeof(int)*ch_rule_len);
-		fout.write((char*)&en_rule_len,sizeof(int));
-		fout.write((char*)&tgt_wids[0],sizeof(int)*en_rule_len);
+		int rule_src_len = src_wids.size();
+		int rule_tgt_len = tgt_wids.size();
+		fout.write((char*)&rule_src_len,sizeof(int));
+		fout.write((char*)&src_wids[0],sizeof(int)*rule_src_len);
+		fout.write((char*)&rule_tgt_len,sizeof(int));
+		fout.write((char*)&tgt_wids[0],sizeof(int)*rule_tgt_len);
 		fout.write((char*)&tgt_nt_idx_to_src_nt_idx[0],sizeof(int)*tgt_nt_idx_to_src_nt_idx.size());
 		fout.write((char*)&prob_vec[0],sizeof(double)*prob_vec.size());
 	}

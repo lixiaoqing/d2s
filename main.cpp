@@ -246,14 +246,14 @@ int main( int argc, char *argv[])
 
 	Vocab *src_vocab = new Vocab(fns.src_vocab_file);
 	Vocab *tgt_vocab = new Vocab(fns.tgt_vocab_file);
-	RuleTable *ruletable = new RuleTable(para.RULE_NUM_LIMIT,weight,fns.rule_table_file);
+	RuleTable *ruletable = new RuleTable(para.RULE_NUM_LIMIT,weight,fns.rule_table_file,src_vocab,tgt_vocab);
 	LanguageModel *lm_model = new LanguageModel(fns.lm_file,tgt_vocab);
 
 	b = clock();
 	cout<<"loading time: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
 
 	Models models = {src_vocab,tgt_vocab,ruletable,lm_model};
-	translate_file(models,para,weight,fns.input_file,fns.output_file);
+	//translate_file(models,para,weight,fns.input_file,fns.output_file);
 	b = clock();
 	cout<<"time cost: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
 	return 0;

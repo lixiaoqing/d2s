@@ -23,8 +23,10 @@ struct RuleTrieNode
 class RuleTable
 {
 	public:
-		RuleTable(const size_t size_limit,const Weight &i_weight,const string &rule_table_file)
+		RuleTable(const size_t size_limit,const Weight &i_weight,const string &rule_table_file,Vocab *svoc,Vocab *tvoc)
 		{
+			src_vocab = svoc;
+			tgt_vocab = tvoc;
 			RULE_NUM_LIMIT=size_limit;
 			weight=i_weight;
 			root=new RuleTrieNode;
@@ -40,6 +42,8 @@ class RuleTable
 		int RULE_NUM_LIMIT;                      // 每个规则源端最多加载的目标端个数 
 		RuleTrieNode *root;                      // 规则Trie树根节点
 		Weight weight;                           // 特征权重
+		Vocab *src_vocab;
+		Vocab *tgt_vocab;
 };
 
 #endif

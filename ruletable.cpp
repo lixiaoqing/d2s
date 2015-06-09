@@ -25,8 +25,11 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		int nt_num;
 		fin.read((char*)&nt_num,sizeof(int));
 		tgt_rule.nt_num = nt_num;
-		tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
-		fin.read((char*)&(tgt_rule.tgt_nt_idx_to_src_nt_idx[0]),sizeof(int)*nt_num);  //TODO if nt_num > 0
+		if (nt_num > 0)
+		{
+			tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
+			fin.read((char*)&(tgt_rule.tgt_nt_idx_to_src_nt_idx[0]),sizeof(int)*nt_num);
+		}
 
 		tgt_rule.probs.resize(PROB_NUM);
 		fin.read((char*)&(tgt_rule.probs[0]),sizeof(double)*PROB_NUM);
@@ -42,6 +45,30 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		}
 
 		add_rule_to_trie(src_wids,tgt_rule);
+
+		/*
+		for (int src_wid : src_wids)
+		{
+			cout<<src_vocab->get_word(src_wid)<<" ";
+		}
+		cout<<"||| ";
+		for (int tgt_wid : tgt_rule.wids)
+		{
+			cout<<tgt_vocab->get_word(tgt_wid)<<" ";
+		}
+		cout<<"||| ";
+		cout<<tgt_rule.tgt_nt_idx_to_src_nt_idx.size()<<" ";
+		for (int src_nt_idx : tgt_rule.tgt_nt_idx_to_src_nt_idx)
+		{
+			cout<<src_nt_idx<<" ";
+		}
+		cout<<"||| ";
+		for (double prob : tgt_rule.probs)
+		{
+			cout<<prob<<" ";
+		}
+		cout<<endl;
+		*/
 	}
 	fin.close();
 	cout<<"load rule table file "<<rule_table_file<<" over\n";
