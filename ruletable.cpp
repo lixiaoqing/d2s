@@ -8,24 +8,25 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		cerr<<"cannot open rule table file!\n";
 		return;
 	}
-	short int src_rule_len=0;
-	while(fin.read((char*)&src_rule_len,sizeof(short int)))
+	int src_rule_len=0;
+	while(fin.read((char*)&src_rule_len,sizeof(int)))
 	{
 		vector<int> src_wids;
 		src_wids.resize(src_rule_len);
 		fin.read((char*)&src_wids[0],sizeof(int)*src_rule_len);
 
-		short int tgt_rule_len=0;
-		fin.read((char*)&tgt_rule_len,sizeof(short int));
-		if (tgt_rule_len > RULE_LEN_MAX)
-		{
-			cout<<"error, rule length exceed, bye\n";
-			exit(EXIT_FAILURE);
-		}
+		int tgt_rule_len=0;
+		fin.read((char*)&tgt_rule_len,sizeof(int));
 		TgtRule tgt_rule;
 		tgt_rule.word_num = tgt_rule_len;
 		tgt_rule.wids.resize(tgt_rule_len);
 		fin.read((char*)&(tgt_rule.wids[0]),sizeof(int)*tgt_rule_len);
+
+		int nt_num;
+		fin.read((char*)&nt_num,sizeof(int));
+		tgt_rule.nt_num = nt_num;
+		tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
+		fin.read((char*)&(tgt_rule.tgt_nt_idx_to_src_nt_idx[0]),sizeof(int)*nt_num);  //TODO if nt_num > 0
 
 		tgt_rule.probs.resize(PROB_NUM);
 		fin.read((char*)&(tgt_rule.probs[0]),sizeof(double)*PROB_NUM);
@@ -40,11 +41,6 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 			tgt_rule.score += tgt_rule.probs[i]*weight.trans[i];
 		}
 
-		short int nt_num;
-		fin.read((char*)&nt_num,sizeof(short int));
-		tgt_rule.nt_num = nt_num;
-		tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
-		fin.read((char*)&(tgt_rule.tgt_nt_idx_to_src_nt_idx[0]),sizeof(int)*nt_num);
 		add_rule_to_trie(src_wids,tgt_rule);
 	}
 	fin.close();
