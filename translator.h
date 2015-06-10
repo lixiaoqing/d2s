@@ -33,6 +33,7 @@ class SentenceTranslator
 	private:
 		void translate_subtree(int sub_root_idx);
 		void generate_kbest_for_node(int node_idx);
+		vector<Rule> get_applicable_rules(int node_idx);
 		void generate_cand_with_head_rule(int node_idx);
 		bool generalize_rule_src(vector<RuleSrcUnit> &rule_src,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx);
 		void generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge);

@@ -103,68 +103,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		return;
 	}
 
-	vector<RuleSrcUnit> rule_src;
-	for (auto child_idx : node.children)
-	{
-		auto &child = src_tree->nodes.at(child_idx);
-		if (child.children.empty())
-		{
-			RuleSrcUnit unit = {2,child.word,child.tag,child.idx};
-			rule_src.push_back(unit);
-		}
-		else
-		{
-			RuleSrcUnit unit = {1,child.word,child.tag,child.idx};
-			rule_src.push_back(unit);
-		}
-	}
-	RuleSrcUnit unit = {0,node.word,node.tag,node.idx};
-	rule_src.push_back(unit);
-
-	vector<vector<int> > generalized_rule_src_vec;
-	vector<vector<int> > src_nt_idx_to_src_sen_idx_vec;
-	vector<string> configs = {"lll","llg","lgl","gll","lgg","glg","ggl","ggg"};
-	for (string &config : configs)
-	{
-		vector<int> generalized_rule_src;
-		vector<int>src_nt_idx_to_src_sen_idx;
-		bool flag = generalize_rule_src(rule_src,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
-		if (flag == false)
-			continue;
-		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
-		if (it == generalized_rule_src_vec.end())
-		{
-			generalized_rule_src_vec.push_back(generalized_rule_src);
-			src_nt_idx_to_src_sen_idx_vec.push_back(src_nt_idx_to_src_sen_idx);
-		}
-	}
-	//cout<<"genearlize rule src over\n";
-
-	vector<Rule> applicable_rules;
-	for (int i=0; i<generalized_rule_src_vec.size(); i++)
-	{
-		auto &generalized_rule_src = generalized_rule_src_vec.at(i);
-		auto &src_nt_idx_to_src_sen_idx = src_nt_idx_to_src_sen_idx_vec.at(i);
-		vector<TgtRule>* matched_rules = ruletable->find_matched_rules(generalized_rule_src);
-		if (matched_rules == NULL)
-			continue;
-		for (int j=0;j<matched_rules->size();j++)
-		{
-			Rule rule;
-			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
-			rule.src_ids = generalized_rule_src;
-			rule.tgt_rule = &(matched_rules->at(j));
-			rule.tgt_rule_rank = j;
-			//规则目标端变量位置到句子源端位置的映射
-			for (int src_nt_idx : matched_rules->at(j).tgt_nt_idx_to_src_nt_idx)
-			{
-				rule.tgt_nt_idx_to_src_sen_idx.push_back(src_nt_idx_to_src_sen_idx[src_nt_idx]);
-			}
-			applicable_rules.push_back(rule);
-		}
-	}
-	//cout<<"get applied rules over\n";
-
+	vector<Rule> applicable_rules = get_applicable_rules(node_idx);
 	Candpq candpq_merge;			//优先级队列,用来临时存储通过合并得到的候选
 	for(auto &rule : applicable_rules)
 	{
@@ -236,6 +175,73 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		candpq_merge.pop();
 	}
 	//cout<<"cube prunning over\n";
+}
+
+vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
+{
+	SyntaxNode &node = src_tree->nodes.at(node_idx);
+	vector<RuleSrcUnit> rule_src;
+	for (auto child_idx : node.children)
+	{
+		auto &child = src_tree->nodes.at(child_idx);
+		if (child.children.empty())
+		{
+			RuleSrcUnit unit = {2,child.word,child.tag,child.idx};
+			rule_src.push_back(unit);
+		}
+		else
+		{
+			RuleSrcUnit unit = {1,child.word,child.tag,child.idx};
+			rule_src.push_back(unit);
+		}
+	}
+	RuleSrcUnit unit = {0,node.word,node.tag,node.idx};
+	rule_src.push_back(unit);
+
+	vector<vector<int> > generalized_rule_src_vec;
+	vector<vector<int> > src_nt_idx_to_src_sen_idx_vec;
+	vector<string> configs = {"lll","llg","lgl","gll","lgg","glg","ggl","ggg"};
+	for (string &config : configs)
+	{
+		vector<int> generalized_rule_src;
+		vector<int>src_nt_idx_to_src_sen_idx;
+		bool flag = generalize_rule_src(rule_src,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
+		if (flag == false)
+			continue;
+		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
+		if (it == generalized_rule_src_vec.end())
+		{
+			generalized_rule_src_vec.push_back(generalized_rule_src);
+			src_nt_idx_to_src_sen_idx_vec.push_back(src_nt_idx_to_src_sen_idx);
+		}
+	}
+	//cout<<"genearlize rule src over\n";
+
+	vector<Rule> applicable_rules;
+	for (int i=0; i<generalized_rule_src_vec.size(); i++)
+	{
+		auto &generalized_rule_src = generalized_rule_src_vec.at(i);
+		auto &src_nt_idx_to_src_sen_idx = src_nt_idx_to_src_sen_idx_vec.at(i);
+		vector<TgtRule>* matched_rules = ruletable->find_matched_rules(generalized_rule_src);
+		if (matched_rules == NULL)
+			continue;
+		for (int j=0;j<matched_rules->size();j++)
+		{
+			Rule rule;
+			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
+			rule.src_ids = generalized_rule_src;
+			rule.tgt_rule = &(matched_rules->at(j));
+			rule.tgt_rule_rank = j;
+			//规则目标端变量位置到句子源端位置的映射
+			for (int src_nt_idx : matched_rules->at(j).tgt_nt_idx_to_src_nt_idx)
+			{
+				rule.tgt_nt_idx_to_src_sen_idx.push_back(src_nt_idx_to_src_sen_idx[src_nt_idx]);
+			}
+			applicable_rules.push_back(rule);
+		}
+	}
+	//cout<<"get applicable rules over\n";
+	return applicable_rules;
 }
 
 void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
