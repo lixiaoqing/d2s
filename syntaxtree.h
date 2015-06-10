@@ -13,13 +13,11 @@ struct SyntaxNode
 	string word;                                    // 该节点的词
 	string tag;                                     // 该节点的词性
 	int idx;										// 该节点在句子中的位置
-	int father;										// 该节点的父节点在句子中的位置
 	vector<int> children;							// 该节点的孩子节点在句子中的位置
 	CandOrganizer cand_organizer;                   // 组织该节点的翻译候选
 	
 	SyntaxNode ()
 	{
-		father = -1;
 		idx = -1;
 	}
 };

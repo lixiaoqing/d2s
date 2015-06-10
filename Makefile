@@ -5,7 +5,7 @@ objs=lm/*.o util/*.o util/double-conversion/*.o
 
 all: d2s ruletable2bin
 d2s: main.o translator.o lm.o ruletable.o vocab.o cand.o myutils.o syntaxtree.o $(objs)
-	$(CXX) -o t2s main.o translator.o lm.o ruletable.o vocab.o myutils.o cand.o syntaxtree.o $(objs) $(CXXFLAGS)
+	$(CXX) -o d2s main.o translator.o lm.o ruletable.o vocab.o myutils.o cand.o syntaxtree.o $(objs) $(CXXFLAGS)
 ruletable2bin: ruletable2bin.o myutils.o
 	$(CXX) -o ruletable2bin ruletable2bin.o myutils.o $(CXXFLAGS)
 

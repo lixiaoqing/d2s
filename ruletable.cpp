@@ -74,22 +74,6 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 	cout<<"load rule table file "<<rule_table_file<<" over\n";
 }
 
-vector<TgtRule>* RuleTable::find_matched_rules(const vector<int> &src_wids)
-{
-	RuleTrieNode* current = root;
-	for (auto wid : src_wids)
-	{
-		auto it = current->id2subtrie_map.find(wid);
-		if (it != current->id2subtrie_map.end())
-		{
-			current = it->second;
-		}
-		else
-			return NULL;
-	}
-	return &(current->tgt_rules);
-}
-
 void RuleTable::add_rule_to_trie(const vector<int> &src_wids, const TgtRule &tgt_rule)
 {
 	RuleTrieNode* current = root;
@@ -119,4 +103,22 @@ void RuleTable::add_rule_to_trie(const vector<int> &src_wids, const TgtRule &tgt
 			(*it) = tgt_rule;
 		}
 	}
+}
+
+vector<TgtRule>* RuleTable::find_matched_rules(const vector<int> &src_wids)
+{
+	RuleTrieNode* current = root;
+	for (auto wid : src_wids)
+	{
+		auto it = current->id2subtrie_map.find(wid);
+		if (it != current->id2subtrie_map.end())
+		{
+			current = it->second;
+		}
+		else
+			return NULL;
+	}
+	if (current->tgt_rules.empty())
+		return NULL;
+	return &(current->tgt_rules);
 }

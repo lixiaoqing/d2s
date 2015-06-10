@@ -163,9 +163,16 @@ void translate_file(const Models &models, const Parameter &para, const Weight &w
 		TrimLine(line);
 		input_sen.push_back(line);
 		vector<string> vs = Split(line);
-		for (const auto &word : vs)
+		for (const auto &wt_hidx : vs)
 		{
+			int sep = wt_hidx.rfind('_');
+			string wt = wt_hidx.substr(0,sep);
+			sep = wt.rfind('_');
+			string word = wt.substr(0,sep);
+			string tag = wt.substr(sep+1);
 			models.src_vocab->get_id(word);                                 //避免并行时同时修改vocab发生冲突
+			models.src_vocab->get_id("[x]"+word);
+			models.src_vocab->get_id("[x]"+tag);
 		}
 	}
 	int sen_num = input_sen.size();
@@ -253,7 +260,7 @@ int main( int argc, char *argv[])
 	cout<<"loading time: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
 
 	Models models = {src_vocab,tgt_vocab,ruletable,lm_model};
-	//translate_file(models,para,weight,fns.input_file,fns.output_file);
+	translate_file(models,para,weight,fns.input_file,fns.output_file);
 	b = clock();
 	cout<<"time cost: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
 	return 0;

@@ -22,11 +22,9 @@ void SyntaxTree::build_tree_from_str(const string &line_tree)
 		nodes.at(i).word = word;
 		nodes.at(i).tag = tag;
 		nodes.at(i).idx = i;
-		nodes.at(i).father = hidx;
 		if (hidx == -1)
 		{
 			root_idx = i;
-			nodes.at(i).father = i;			//TODO 检查是否必要
 		}
 		else
 		{

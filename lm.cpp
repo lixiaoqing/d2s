@@ -24,7 +24,8 @@ LanguageModel::LanguageModel(const string &lm_file, Vocab *tgt_vocab)
 	conf.enumerate_vocab = &id_converter;
 	kenlm = new Model(lm_file.c_str(), conf);
 	EOS = convert_to_kenlm_id(tgt_vocab->get_id("</s>"));
-	nonterminal_wid = tgt_vocab->get_id("[X]");
+	null_klm_id = convert_to_kenlm_id(tgt_vocab->get_id("NULL"));
+	nonterminal_wid = tgt_vocab->get_id("[x]");
 	cout<<"load language model file "<<lm_file<<" over\n";
 };
 
@@ -39,10 +40,20 @@ lm::WordIndex LanguageModel::convert_to_kenlm_id(int wid)
 double LanguageModel::cal_increased_lm_score(Cand* cand) 
 {
 	RuleScore<Model> rule_score(*kenlm,cand->lm_state);
-	if (cand->applied_rule.nt_num > 0 && cand->applied_rule.tgt_rule == NULL)            //OOV候选
+	if (cand->applied_rule.tgt_rule == NULL)
 	{
-		const lm::WordIndex ken_lm_id = convert_to_kenlm_id(cand->tgt_wids.at(0));
-		rule_score.Terminal(ken_lm_id);
+		if (cand->applied_rule.nt_num == 0)            //OOV候选
+		{
+			rule_score.Terminal(null_klm_id);
+		}
+		else
+		{
+			for (int nt_idx=0; nt_idx<cand->applied_rule.nt_num;nt_idx++)
+			{
+				rule_score.NonTerminal(cand->cands_of_nt_leaves.at(nt_idx).at(cand->cand_rank_vec.at(nt_idx))->lm_state);
+				nt_idx++;
+			}
+		}
 	}
 	else
 	{

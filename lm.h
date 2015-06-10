@@ -20,5 +20,6 @@ class LanguageModel
 		Model *kenlm;
 		vector<lm::WordIndex> ori_to_kenlm_id;
 		lm::WordIndex EOS;
+		lm::WordIndex null_klm_id;
 		int nonterminal_wid;
 };
