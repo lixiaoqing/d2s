@@ -23,7 +23,7 @@ bool smaller( const Cand *pl, const Cand *pr )
  * **********************************************************************/
 void CandOrganizer::add(Cand *&cand_ptr,int beam_size)
 { 
-	for (auto &e_cand_ptr : data)
+	for (auto &e_cand_ptr : cands)
 	{
 		if (is_bound_same(cand_ptr,e_cand_ptr))
 		{
@@ -35,13 +35,13 @@ void CandOrganizer::add(Cand *&cand_ptr,int beam_size)
 			return;
 		}
 	}
-	if (data.size() >= beam_size)
+	if (cands.size() >= beam_size)
 	{
-		swap(*min_element(data.begin(),data.end(),smaller),cand_ptr);
+		swap(*min_element(cands.begin(),cands.end(),smaller),cand_ptr);
 		delete cand_ptr;
 		return;
 	}
-	data.push_back(cand_ptr); 
+	cands.push_back(cand_ptr); 
 }
 
 bool CandOrganizer::is_bound_same(const Cand *a, const Cand *b)
@@ -62,10 +62,3 @@ bool CandOrganizer::is_bound_same(const Cand *a, const Cand *b)
 	return true;
 }
 
-void CandOrganizer::free()
-{
-	for (auto cand : data)
-	{
-		delete cand;
-	}
-}

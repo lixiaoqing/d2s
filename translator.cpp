@@ -37,7 +37,7 @@ string SentenceTranslator::words_to_str(vector<int> &wids, int drop_oov)
 vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 {
 	vector<TuneInfo> nbest_tune_info;
-	vector<Cand*> &final_cands = src_tree->nodes.at(src_tree->root_idx).cand_organizer.data;
+	vector<Cand*> &final_cands = src_tree->nodes.at(src_tree->root_idx).cand_organizer.cands;
 	for (size_t i=0;i< min(final_cands.size(),(size_t)para.NBEST_NUM);i++)
 	{
 		TuneInfo tune_info;
@@ -73,7 +73,7 @@ string SentenceTranslator::translate_sentence()
 	if (src_sen_len == 0)
 		return "";
 	translate_subtree(src_tree->root_idx);
-	return words_to_str(src_tree->nodes.at(src_tree->root_idx).cand_organizer.data[0]->tgt_wids,0);
+	return words_to_str(src_tree->nodes.at(src_tree->root_idx).cand_organizer.cands[0]->tgt_wids,0);
 }
 
 void SentenceTranslator::translate_subtree(int sub_root_idx)
@@ -94,15 +94,11 @@ void SentenceTranslator::translate_subtree(int sub_root_idx)
 void SentenceTranslator::generate_kbest_for_node(int node_idx)
 {
 	SyntaxNode &node = src_tree->nodes.at(node_idx);
-	vector<Cand*> cands;			//当前节点由head规则生成的候选
-	generate_cand_with_head_rule(node_idx,cands);
+	generate_cand_with_head_rule(node_idx);
 	//cout<<"generate cand with head rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	if ( node.children.empty() )                                                          // 叶节点
 	{
-		for (auto cand : cands)
-		{
-			node.cand_organizer.add(cand,para.BEAM_SIZE);
-		}
+		swap(node.cand_organizer.cands, node.cand_organizer.head_cands);
 		//cout<<"generate cand for leaf node "<<src_tree->nodes.at(node_idx).word<<endl;
 		return;
 	}
@@ -178,11 +174,11 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		{
 			if (idx != node_idx)
 			{
-				cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.data);
+				cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.cands);
 			}
 			else
 			{
-				cands_of_nt_leaves.push_back(cands);
+				cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.head_cands);
 			}
 			//cout<<src_tree->nodes.at(idx).word<<" "<<cands_of_nt_leaves.back().size()<<endl;
 		}
@@ -196,10 +192,10 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		vector<vector<Cand*> > cands_of_nt_leaves;
 		for (int idx : node.children)
 		{
-			cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.data);
+			cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.cands);
 		}
 
-		cands_of_nt_leaves.push_back(cands);
+		cands_of_nt_leaves.push_back(src_tree->nodes.at(node_idx).cand_organizer.head_cands);
 		generate_cand_with_glue_rule_and_add_to_pq(cands_of_nt_leaves,cand_rank_vec,candpq_merge);
 		//cout<<"generate cand with glue rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
@@ -242,8 +238,9 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 	//cout<<"cube prunning over\n";
 }
 
-void SentenceTranslator::generate_cand_with_head_rule(int node_idx,vector<Cand*> &cands)
+void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
+	auto &node = src_tree->nodes.at(node_idx);
 	int src_wid = src_vocab->get_id(src_tree->nodes.at(node_idx).word);
 	vector<int> src_wids = {src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
@@ -259,8 +256,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx,vector<Cand*>
 		cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 		cand->score += feature_weight.rule_num*cand->rule_num 
 					+ feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
-		//src_tree->nodes.at(node_idx).cand_organizer.add(cand,para.BEAM_SIZE);
-		cands.push_back(cand);
+		node.cand_organizer.head_cands.push_back(cand);
 	}
 	else
 	{
@@ -276,8 +272,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx,vector<Cand*>
 			cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 			cand->score += feature_weight.rule_num*cand->rule_num 
 				+ feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
-			//src_tree->nodes.at(node_idx).cand_organizer.add(cand,para.BEAM_SIZE);
-			cands.push_back(cand);
+			node.cand_organizer.head_cands.push_back(cand);
 		}
 	}
 }
@@ -459,7 +454,6 @@ void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_mer
 		{
 			vector<int> new_cand_rank_vec = cur_cand->cand_rank_vec;
 			new_cand_rank_vec[i]++;                        // 考虑当前非终结符叶节点候选的下一位
-			Cand *new_cand;
 			if (cur_cand->applied_rule.tgt_rule != NULL)              // 普通规则生成的候选
 			{
 				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge);

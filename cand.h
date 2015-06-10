@@ -71,18 +71,29 @@ bool larger( const Cand *pl, const Cand *pr );
 class CandOrganizer
 {
 	public:
+		~CandOrganizer() 
+		{
+			for (auto cand : cands)
+			{
+				delete cand;
+			}
+			for (auto cand : head_cands)
+			{
+				delete cand;
+			}
+		};
 		void add(Cand *&cand_ptr,int beam_size);
-		Cand* top() { return data.front(); }
-		Cand* at(size_t i) { return data.at(i);}
-		int size() { return data.size();  }
-		void sort() { std::sort(data.begin(),data.end(),larger); }
-		void free();
+		Cand* top() { return cands.front(); }
+		Cand* at(size_t i) { return cands.at(i);}
+		int size() { return cands.size();  }
+		void sort() { std::sort(cands.begin(),cands.end(),larger); }
 	
 	private:
 		bool is_bound_same(const Cand *a, const Cand *b);
 
 	public:
-		vector<Cand*> data;                         // 当前节点所有的翻译候选
+		vector<Cand*> cands;                         // 当前节点所有的翻译候选
+		vector<Cand*> head_cands;                    // 当前节点由head rule生成的候选的翻译候选
 };
 
 typedef priority_queue<Cand*, vector<Cand*>, cmp> Candpq;
