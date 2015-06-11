@@ -57,7 +57,19 @@ vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 }
 
 vector<string> SentenceTranslator::get_applied_rules(size_t sen_id)  //TODO
-{}
+{
+	vector<string> applied_rules;
+	Cand *best_cand = src_tree->nodes.at(src_tree->root_idx).cand_organizer.cands[0];
+	dump_rules(applied_rules,best_cand);
+	applied_rules.push_back(" ||||| ");
+	string src_sen;
+	for (auto &node : src_tree->nodes)
+	{
+		src_sen += node.word + " ";
+	}
+	applied_rules.push_back(src_sen);
+	return applied_rules;
+}
 
 /**************************************************************************************
  1. 函数功能: 获取当前候选所使用的规则
@@ -66,7 +78,91 @@ vector<string> SentenceTranslator::get_applied_rules(size_t sen_id)  //TODO
  4. 算法简介: 通过递归的方式自顶向下回溯, 查找所使用的规则
 ***************************************************************************************/
 void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
-{}
+{
+	applied_rules.push_back(" ");
+	string rule;
+	int nt_num = cand->applied_rule.nt_num;
+	assert(nt_num==cand->cands_of_nt_leaves.size());
+	assert(nt_num==cand->cand_rank_vec.size());
+	if (nt_num > 0)
+	{
+		applied_rules.push_back(" ( ");						//OOV生成的候选
+	}
+	int nt_idx = 0;
+	for (auto src_wid : cand->applied_rule.src_ids)
+	{
+		string src_unit = src_vocab->get_word(src_wid)+"_";
+		if (src_unit.substr(0,3) == "[x]")
+		{
+			rule += "[x"+to_string(nt_idx)+"]"+src_unit.substr(3);
+			nt_idx++;
+		}
+		else
+		{
+			rule += src_unit;
+		}
+	}
+
+	rule += "|||_";
+	if (cand->applied_rule.tgt_rule == NULL)
+	{
+		if (nt_num == 0)
+		{
+			rule += "NULL_";
+		}
+		else
+		{
+			for (int i=0; i<nt_num; i++)
+			{
+				rule += "[x"+to_string(i)+"]_";
+			}
+		}
+	}
+	else
+	{
+		nt_idx = 0;
+		auto &applied_tgt_rule = cand->applied_rule.tgt_rule;
+		for (auto tgt_wid : applied_tgt_rule->wids)
+		{
+			if (tgt_wid == tgt_nt_id)
+			{
+				rule += "[x"+to_string(applied_tgt_rule->tgt_nt_idx_to_src_nt_idx.at(nt_idx))+"]_";
+				nt_idx++;
+			}
+			else
+			{
+				rule += tgt_vocab->get_word(tgt_wid)+"_";
+			}
+		}
+	}
+	rule.erase(rule.end()-1);
+	applied_rules.push_back(rule);
+	if (nt_num > 0)
+	{
+		auto &applied_tgt_rule = cand->applied_rule.tgt_rule;
+		if (applied_tgt_rule == NULL)
+		{
+		   for (int i=0;i<nt_num;i++)
+		   {
+			   dump_rules(applied_rules,cand->cands_of_nt_leaves.at(i).at(cand->cand_rank_vec.at(i)));
+		   }
+		}
+		else
+		{
+			vector<int> src_nt_idx_to_tgt_nt_idx(nt_num,0);
+			for (int i=0; i<nt_num; i++)
+			{
+				src_nt_idx_to_tgt_nt_idx.at(applied_tgt_rule->tgt_nt_idx_to_src_nt_idx.at(i)) = i;
+			}
+			for (int i=0;i<nt_num;i++)
+			{
+				int j = src_nt_idx_to_tgt_nt_idx.at(i);
+				dump_rules(applied_rules,cand->cands_of_nt_leaves.at(j).at(cand->cand_rank_vec.at(j)));
+			}
+		}
+		applied_rules.push_back(" ) ");
+	}
+}
 
 string SentenceTranslator::translate_sentence()
 {
@@ -204,7 +300,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 	for (string &config : configs)
 	{
 		vector<int> generalized_rule_src;
-		vector<int>src_nt_idx_to_src_sen_idx;
+		vector<int> src_nt_idx_to_src_sen_idx;
 		bool flag = generalize_rule_src(rule_src,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		if (flag == false)
 			continue;
@@ -273,8 +369,10 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 			cand->tgt_wids = tgt_rule.wids;
 			cand->trans_probs = tgt_rule.probs;
 			cand->score = tgt_rule.score;
+			cand->applied_rule.nt_num = 0;
 			cand->applied_rule.src_ids.push_back(src_wid);
 			cand->applied_rule.tgt_rule = &tgt_rule;
+			cand->applied_rule.tgt_rule_rank = 0;
 			cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 			cand->score += feature_weight.rule_num*cand->rule_num 
 				+ feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
