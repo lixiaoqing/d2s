@@ -195,6 +195,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 	if ( node.children.empty() )                                                          // 叶节点
 	{
 		swap(node.cand_organizer.cands, node.cand_organizer.head_cands);
+		node.cand_organizer.sort();
 		//cout<<"generate cand for leaf node "<<src_tree->nodes.at(node_idx).word<<endl;
 		return;
 	}
@@ -270,6 +271,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		delete candpq_merge.top();
 		candpq_merge.pop();
 	}
+	node.cand_organizer.sort();
 	//cout<<"cube prunning over\n";
 }
 
