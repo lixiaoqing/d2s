@@ -51,13 +51,14 @@ vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 		tune_info.feature_values.push_back(final_cands.at(i)->lm_prob);
 		tune_info.feature_values.push_back(final_cands.at(i)->tgt_wids.size() );
 		tune_info.feature_values.push_back(final_cands.at(i)->rule_num);
+		tune_info.feature_values.push_back(final_cands.at(i)->glue_num);
 		tune_info.total_score = final_cands.at(i)->score;
 		nbest_tune_info.push_back(tune_info);
 	}
 	return nbest_tune_info;
 }
 
-vector<string> SentenceTranslator::get_applied_rules(size_t sen_id)  //TODO
+vector<string> SentenceTranslator::get_applied_rules(size_t sen_id)
 {
 	vector<string> applied_rules;
 	Cand *best_cand = src_tree->nodes.at(src_tree->root_idx).cand_organizer.cands[0];
@@ -83,11 +84,9 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 	applied_rules.push_back(" ");
 	string rule;
 	int nt_num = cand->applied_rule.nt_num;
-	assert(nt_num==cand->cands_of_nt_leaves.size());
-	assert(nt_num==cand->cand_rank_vec.size());
 	if (nt_num > 0)
 	{
-		applied_rules.push_back(" ( ");						//OOV生成的候选
+		applied_rules.push_back(" ( ");
 	}
 	int nt_idx = 0;
 	for (auto src_wid : cand->applied_rule.src_ids)
@@ -109,7 +108,7 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 	{
 		if (nt_num == 0)
 		{
-			rule += "NULL_";
+			rule += "OOV_";
 		}
 		else
 		{
@@ -479,12 +478,10 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 		}
 		else
 		{
-			assert(cands_of_nt_leaves.size()>nt_idx);
-			assert(cand_rank_vec.size()>nt_idx);
-			assert(cands_of_nt_leaves.at(nt_idx).size()>cand_rank_vec[nt_idx]);
 			Cand* subcand = cands_of_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
 			cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
-			cand->rule_num  += subcand->rule_num;                                                            // 累加所用的规则数量
+			cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
+			cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量
 			for (size_t j=0; j<PROB_NUM; j++)
 			{
 				cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -495,10 +492,9 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 		}
 	}
 	double increased_lm_score = lm_model->cal_increased_lm_score(cand);                                      // 计算语言模型增量
-	cand->rule_num  += 1;
-	cand->lm_prob   += increased_lm_score;
-	cand->score     += rule.tgt_rule->score + feature_weight.lm*increased_lm_score + feature_weight.len*rule.tgt_rule->word_num
-                       + feature_weight.rule_num*1;
+	cand->lm_prob += increased_lm_score;
+	cand->score   += rule.tgt_rule->score + feature_weight.lm*increased_lm_score + feature_weight.len*rule.tgt_rule->word_num
+                     + feature_weight.rule_num*1;
 	candpq_merge.push(cand);
 	/*
 	for (int wid : rule.src_ids)
@@ -530,23 +526,23 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
 	cand->cand_rank_vec = cand_rank_vec;
 	
 	cand->trans_probs.resize(PROB_NUM,0.0);                                                              // 初始化当前候选的翻译概率
-	for (int nt_idx=0;nt_idx<cand_rank_vec.size();nt_idx++)
+	for (int nt_idx=0;nt_idx<nt_num;nt_idx++)
 	{
 		Cand* subcand = cands_of_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
 		cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
 		cand->rule_num  += subcand->rule_num;                                                            // 累加所用的规则数量
+		cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量
 		for (size_t j=0; j<PROB_NUM; j++)
 		{
 			cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
 		}
 		cand->lm_prob += subcand->lm_prob;                                                               // 累加语言模型得分
 		cand->score   += subcand->score;                                                                 // 累加候选得分
-		nt_idx++;
 	}
 	double increased_lm_score = lm_model->cal_increased_lm_score(cand);                                      // 计算语言模型增量
-	cand->glue_num  += 1;
-	cand->lm_prob   += increased_lm_score;
-	cand->score     += feature_weight.lm*increased_lm_score + feature_weight.glue*1;
+	cand->glue_num += 1;
+	cand->lm_prob  += increased_lm_score;
+	cand->score    += feature_weight.lm*increased_lm_score + feature_weight.glue*1;
 	candpq_merge.push(cand);
 }
 
