@@ -54,6 +54,7 @@ class SentenceTranslator
 		SyntaxTree* src_tree;
 		size_t src_sen_len;
 		set<string> open_tags;
-		int tgt_nt_id;
 		int src_nt_id;
+		int tgt_nt_id;
+		int tgt_null_id;
 };

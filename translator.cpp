@@ -14,6 +14,7 @@ SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &
 	src_sen_len = src_tree->sen_len;
 	src_nt_id = src_vocab->get_id("[x]");
 	tgt_nt_id = tgt_vocab->get_id("[x]");
+	tgt_null_id = tgt_vocab->get_id("NULL");
 }
 
 string SentenceTranslator::words_to_str(vector<int> &wids, int drop_oov)
@@ -365,8 +366,15 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 		for (auto &tgt_rule : *matched_rules)
 		{
 			Cand* cand = new Cand;
-			cand->tgt_word_num = tgt_rule.word_num;
-			cand->tgt_wids = tgt_rule.wids;
+			if (tgt_rule.word_num == 1 && tgt_rule.wids.at(0) == tgt_null_id)
+			{
+				cand->tgt_word_num = 0;
+			}
+			else
+			{
+				cand->tgt_word_num = tgt_rule.word_num;
+				cand->tgt_wids = tgt_rule.wids;
+			}
 			cand->trans_probs = tgt_rule.probs;
 			cand->score = tgt_rule.score;
 			cand->applied_rule.nt_num = 0;
