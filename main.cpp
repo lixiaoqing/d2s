@@ -119,6 +119,14 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 				{
 					ss>>weight.glue;
 				}
+				else if(feature == "non-lex-src")
+				{
+					ss>>weight.non_lex_src;
+				}
+				else if(feature == "non-lex-tgt")
+				{
+					ss>>weight.non_lex_tgt;
+				}
 			}
 		}
 	}

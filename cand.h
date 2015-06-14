@@ -20,6 +20,8 @@ struct Cand
 	//源端信息
 	int rule_num;				//生成当前候选所使用的规则数目
 	int glue_num;				//生成当前候选所使用的glue规则数目
+	int non_lex_src_num;
+	int non_lex_tgt_num;
 
 	//目标端信息
 	int tgt_word_num;			//当前候选目标端的单词数
@@ -42,6 +44,8 @@ struct Cand
 	{
 		rule_num = 1;
 		glue_num = 0;
+		non_lex_src_num = 0;
+		non_lex_tgt_num = 0;
 
 		tgt_word_num = 1;
 		tgt_wids.clear();

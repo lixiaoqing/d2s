@@ -52,6 +52,8 @@ vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 		tune_info.feature_values.push_back(final_cands.at(i)->tgt_wids.size() );
 		tune_info.feature_values.push_back(final_cands.at(i)->rule_num);
 		tune_info.feature_values.push_back(final_cands.at(i)->glue_num);
+		tune_info.feature_values.push_back(final_cands.at(i)->non_lex_src_num);
+		tune_info.feature_values.push_back(final_cands.at(i)->non_lex_tgt_num);
 		tune_info.total_score = final_cands.at(i)->score;
 		nbest_tune_info.push_back(tune_info);
 	}
@@ -484,6 +486,8 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 			cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
 			cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
 			cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量
+			cand->non_lex_src_num += subcand->non_lex_src_num;
+			cand->non_lex_tgt_num += subcand->non_lex_tgt_num;
 			for (size_t j=0; j<PROB_NUM; j++)
 			{
 				cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -493,10 +497,22 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 			nt_idx++;
 		}
 	}
+
 	double increased_lm_score = lm_model->cal_increased_lm_score(cand);                                      // 计算语言模型增量
 	cand->lm_prob += increased_lm_score;
 	cand->score   += rule.tgt_rule->score + feature_weight.lm*increased_lm_score + feature_weight.len*rule.tgt_rule->word_num
                      + feature_weight.rule_num*1;
+	//if (cands_of_nt_leaves.size() == rule.src_ids.size() || nt_idx == rule.tgt_rule->wids.size())
+	if (rule.tgt_rule->probs[2] == 0.0)
+	{
+		cand->non_lex_src_num++;
+		cand->score += feature_weight.non_lex_src*1;
+	}
+	if (rule.tgt_rule->probs[3] == 0.0)
+	{
+		cand->non_lex_tgt_num++;
+		cand->score += feature_weight.non_lex_tgt*1;
+	}
 	candpq_merge.push(cand);
 	/*
 	for (int wid : rule.src_ids)
@@ -534,6 +550,8 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
 		cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
 		cand->rule_num  += subcand->rule_num;                                                            // 累加所用的规则数量
 		cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量
+		cand->non_lex_src_num += subcand->non_lex_src_num;
+		cand->non_lex_tgt_num += subcand->non_lex_tgt_num;
 		for (size_t j=0; j<PROB_NUM; j++)
 		{
 			cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率

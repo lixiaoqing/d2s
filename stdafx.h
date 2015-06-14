@@ -73,6 +73,8 @@ struct Weight
 	double len;							//译文的单词数
 	double rule_num;
 	double glue;
+	double non_lex_src;						//源端不含词汇的翻译规则的个数
+	double non_lex_tgt;						//目标端不含词汇的翻译规则的个数
 };
 
 #endif
