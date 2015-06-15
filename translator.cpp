@@ -221,7 +221,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge);
 		//cout<<"generate cand with head-modifier rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
-	if (candpq_merge.empty())
+	//if (candpq_merge.empty())
 	{
 		int nt_num = node.children.size() + 1;
 		vector<int> cand_rank_vec(nt_num,0);
