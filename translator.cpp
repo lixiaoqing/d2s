@@ -221,17 +221,26 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge);
 		//cout<<"generate cand with head-modifier rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
-	//if (candpq_merge.empty())
+	if (candpq_merge.empty())
 	{
 		int nt_num = node.children.size() + 1;
 		vector<int> cand_rank_vec(nt_num,0);
 		vector<vector<Cand*> > cands_of_nt_leaves;
+		bool flag = false;						//检查中心词节点的候选是否已经被加入
 		for (int idx : node.children)
 		{
+			if (idx > node_idx && flag == false)
+			{
+				cands_of_nt_leaves.push_back(src_tree->nodes.at(node_idx).cand_organizer.head_cands);
+				flag = true;
+			}
 			cands_of_nt_leaves.push_back(src_tree->nodes.at(idx).cand_organizer.cands);
 		}
+		if (flag == false)
+		{
+			cands_of_nt_leaves.push_back(src_tree->nodes.at(node_idx).cand_organizer.head_cands);
+		}
 
-		cands_of_nt_leaves.push_back(src_tree->nodes.at(node_idx).cand_organizer.head_cands);
 		generate_cand_with_glue_rule_and_add_to_pq(cands_of_nt_leaves,cand_rank_vec,candpq_merge);
 		//cout<<"generate cand with glue rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
