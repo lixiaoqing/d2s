@@ -18,13 +18,13 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		int tgt_rule_len=0;
 		fin.read((char*)&tgt_rule_len,sizeof(int));
 		TgtRule tgt_rule;
-		tgt_rule.word_num = tgt_rule_len;
 		tgt_rule.wids.resize(tgt_rule_len);
 		fin.read((char*)&(tgt_rule.wids[0]),sizeof(int)*tgt_rule_len);
 
 		int nt_num;
 		fin.read((char*)&nt_num,sizeof(int));
 		tgt_rule.nt_num = nt_num;
+		tgt_rule.word_num = tgt_rule_len-nt_num;
 		if (nt_num > 0)
 		{
 			tgt_rule.tgt_nt_idx_to_src_nt_idx.resize(nt_num);
