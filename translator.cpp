@@ -447,22 +447,12 @@ bool SentenceTranslator::generalize_rule_src(vector<RuleSrcUnit> &rule_src,strin
 
 bool SentenceTranslator::is_config_valid(vector<RuleSrcUnit> &rule_src,string &config)
 {
-	bool is_leaf_config_valid = false;
-	bool is_inner_config_valid = false;
-	for (auto &unit : rule_src)
-	{
-		if (config[2] == 'l' || (config[2] == 'g' && unit.type == 2 && open_tags.find(unit.tag) != open_tags.end() ) )
-		{
-			is_leaf_config_valid = true;
-		}
-		if (config[1] == 'l' || (config[1] == 'g' && unit.type == 1) )
-		{
-			is_inner_config_valid = true;
-		}
-	}
-	if (is_leaf_config_valid == false || is_inner_config_valid == false)
-		return false;
-	return true;
+    for (auto &unit : rule_src)
+    {
+        if (unit.type == 2 && config[2] == 'g' && open_tags.find(unit.tag) == open_tags.end())
+            return false;
+    }
+    return true;
 }
 
 /**************************************************************************************
