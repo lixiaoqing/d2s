@@ -51,7 +51,6 @@ double LanguageModel::cal_increased_lm_score(Cand* cand)
 			for (int nt_idx=0; nt_idx<cand->applied_rule.nt_num;nt_idx++)
 			{
 				rule_score.NonTerminal(cand->cands_of_nt_leaves.at(nt_idx).at(cand->cand_rank_vec.at(nt_idx))->lm_state);
-				nt_idx++;
 			}
 		}
 	}

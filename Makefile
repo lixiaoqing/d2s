@@ -3,7 +3,8 @@ CXXFLAGS=-std=c++0x -O3 -fopenmp -lz -I. -DKENLM_MAX_ORDER=6
 #CXXFLAGS=-std=c++0x -g -fopenmp -lz -I. -DKENLM_MAX_ORDER=6
 objs=lm/*.o util/*.o util/double-conversion/*.o
 
-all: d2s ruletable2bin
+#all: d2s ruletable2bin
+all: d2s
 d2s: main.o translator.o lm.o ruletable.o vocab.o cand.o myutils.o syntaxtree.o $(objs)
 	$(CXX) -o d2s main.o translator.o lm.o ruletable.o vocab.o myutils.o cand.o syntaxtree.o $(objs) $(CXXFLAGS)
 ruletable2bin: ruletable2bin.o myutils.o

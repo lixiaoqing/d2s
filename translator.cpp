@@ -204,7 +204,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 	Candpq candpq_merge;			//优先级队列,用来临时存储通过合并得到的候选
 	for(auto &rule : applicable_rules)
 	{
-		vector<int> cand_rank_vec(rule.tgt_nt_idx_to_src_sen_idx.size(),0);
+		vector<int> cand_rank_vec(rule.nt_num,0);
 		vector<vector<Cand*> > cands_of_nt_leaves;
 		for (int idx : rule.tgt_nt_idx_to_src_sen_idx)
 		{
@@ -221,7 +221,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge);
 		//cout<<"generate cand with head-modifier rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
-	if (candpq_merge.empty())
+	if (candpq_merge.empty())       //使用glue规则生成候选
 	{
 		int nt_num = node.children.size() + 1;
 		vector<int> cand_rank_vec(nt_num,0);
@@ -354,13 +354,13 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
-	int src_wid = src_vocab->get_id(src_tree->nodes.at(node_idx).word);
+	int src_wid = src_vocab->get_id(node.word);
 	vector<int> src_wids = {src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
 		Cand* cand = new Cand;
-		cand->tgt_wids.push_back(0 - src_wid);
+		cand->tgt_wids.push_back(0 - src_wid);                                          //源端单词id取反，输出译文时使用
 		cand->trans_probs.resize(PROB_NUM,0.0);
 		cand->applied_rule.nt_num = 0;
 		cand->applied_rule.src_ids.push_back(src_wid);
@@ -376,7 +376,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 		for (auto &tgt_rule : *matched_rules)
 		{
 			Cand* cand = new Cand;
-			if (tgt_rule.word_num == 1 && tgt_rule.wids.at(0) == tgt_null_id)
+			if (tgt_rule.word_num == 1 && tgt_rule.wids.at(0) == tgt_null_id)           //deletion规则
 			{
 				cand->tgt_word_num = 0;
 			}
@@ -393,7 +393,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 			cand->applied_rule.tgt_rule_rank = 0;
 			cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 			cand->score += feature_weight.rule_num*cand->rule_num 
-				+ feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
+				         + feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
 			node.cand_organizer.head_cands.push_back(cand);
 		}
 	}
@@ -469,7 +469,7 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 	cand->cands_of_nt_leaves = cands_of_nt_leaves;
 	cand->cand_rank_vec = cand_rank_vec;
 	
-	cand->trans_probs = rule.tgt_rule->probs;                                                              // 初始化当前候选的翻译概率
+	cand->trans_probs = rule.tgt_rule->probs;                                             // 初始化当前候选的翻译概率
 	size_t nt_idx = 0;
 	for (int tgt_wid : rule.tgt_rule->wids)
 	{
@@ -531,7 +531,7 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
 	{
 		Cand* subcand = cands_of_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
 		cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
-		cand->rule_num  += subcand->rule_num;                                                            // 累加所用的规则数量
+		cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
 		cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量
 		for (size_t j=0; j<PROB_NUM; j++)
 		{
@@ -562,7 +562,7 @@ void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_mer
 		if ( cur_cand->cand_rank_vec[i]+1 < cur_cand->cands_of_nt_leaves[i].size() )
 		{
 			vector<int> new_cand_rank_vec = cur_cand->cand_rank_vec;
-			new_cand_rank_vec[i]++;                        // 考虑当前非终结符叶节点候选的下一位
+			new_cand_rank_vec[i]++;                                   // 考虑当前非终结符叶节点候选的下一位
 			if (cur_cand->applied_rule.tgt_rule != NULL)              // 普通规则生成的候选
 			{
 				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge);
