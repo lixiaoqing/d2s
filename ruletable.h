@@ -12,6 +12,7 @@ struct TgtRule
 	vector<double> probs;                       // 翻译概率和词汇权重
 	int nt_num;									// 非终结符个数
 	vector<int> tgt_nt_idx_to_src_nt_idx;		// 记录每个目标端非终结符对应于源端的第几个非终结符
+    int rule_type;                              // 记录规则类型
 };
 
 struct RuleTrieNode 

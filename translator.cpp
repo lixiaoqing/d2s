@@ -3,6 +3,7 @@
 SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &i_para, const Weight &i_weight, const string &input_sen)
 {
 	open_tags = {"CD","OD","DT","JJ","NN","NR","NT","AD","FW","PN"};
+    type2id = {{"lll",0},{"gll",1},{"lgl",2},{"llg",3},{"lgg",4},{"glg",5},{"ggl",6},{"ggg",7}};
 	src_vocab = i_models.src_vocab;
 	tgt_vocab = i_models.tgt_vocab;
 	ruletable = i_models.ruletable;
@@ -310,7 +311,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 	vector<string> configs = {"lll","llg","lgl","gll","lgg","glg","ggl","ggg"};
 	for (string &config : configs)
 	{
-		vector<int> generalized_rule_src;
+		vector<int> generalized_rule_src = {type2id[config]};
 		vector<int> src_nt_idx_to_src_sen_idx;
 		bool flag = generalize_rule_src(rule_src,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		if (flag == false)
@@ -336,7 +337,8 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 		{
 			Rule rule;
 			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
-			rule.src_ids = generalized_rule_src;
+            vector<int> src_ids(generalized_rule_src.begin()+1,generalized_rule_src.end());
+			rule.src_ids = src_ids;
 			rule.tgt_rule = &(matched_rules->at(j));
 			rule.tgt_rule_rank = j;
 			//规则目标端变量位置到句子源端位置的映射
@@ -355,7 +357,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
 	int src_wid = src_vocab->get_id(node.word);
-	vector<int> src_wids = {src_wid};
+	vector<int> src_wids = {type2id["lll"],src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
