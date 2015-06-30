@@ -42,11 +42,11 @@ double LanguageModel::cal_increased_lm_score(Cand* cand)
 	RuleScore<Model> rule_score(*kenlm,cand->lm_state);
 	if (cand->applied_rule.tgt_rule == NULL)
 	{
-		if (cand->applied_rule.nt_num == 0)            //OOV候选
+		if (cand->applied_rule.nt_num == 0)             //OOV候选
 		{
 			rule_score.Terminal(null_klm_id);
 		}
-		else
+		else                                            //GLUE候选
 		{
 			for (int nt_idx=0; nt_idx<cand->applied_rule.nt_num;nt_idx++)
 			{

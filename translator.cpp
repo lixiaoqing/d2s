@@ -118,6 +118,7 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 				rule += "[x"+to_string(i)+"]_";
 			}
 		}
+        //rule += "0.0";
 	}
 	else
 	{
@@ -135,6 +136,7 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 				rule += tgt_vocab->get_word(tgt_wid)+"_";
 			}
 		}
+        //rule += to_string(applied_tgt_rule->score);
 	}
 	rule.erase(rule.end()-1);
 	applied_rules.push_back(rule);
@@ -180,6 +182,18 @@ void SentenceTranslator::translate_subtree(int sub_root_idx)
 		translate_subtree(idx);
 	}
 	generate_kbest_for_node(sub_root_idx);
+    /*
+    cout<<"cands for node "<<src_tree->nodes.at(sub_root_idx).word<<endl;
+    for (auto cand : src_tree->nodes.at(sub_root_idx).cand_organizer.cands)
+    {
+        cout<<words_to_str(cand->tgt_wids,0)<<"\t"<<cand->score<<endl;
+    }
+    cout<<"head cands for node "<<src_tree->nodes.at(sub_root_idx).word<<endl;
+    for (auto cand : src_tree->nodes.at(sub_root_idx).cand_organizer.head_cands)
+    {
+        cout<<words_to_str(cand->tgt_wids,0)<<"\t"<<cand->score<<endl;
+    }
+    */
 }
 
 /**************************************************************************************
@@ -192,11 +206,12 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 {
 	SyntaxNode &node = src_tree->nodes.at(node_idx);
 	generate_cand_with_head_rule(node_idx);
+    node.cand_organizer.sort_head();
 	//cout<<"generate cand with head rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	if ( node.children.empty() )                                                          // 叶节点
 	{
 		swap(node.cand_organizer.cands, node.cand_organizer.head_cands);
-		node.cand_organizer.sort();
+		//node.cand_organizer.sort();
 		//cout<<"generate cand for leaf node "<<src_tree->nodes.at(node_idx).word<<endl;
 		return;
 	}
