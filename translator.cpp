@@ -202,7 +202,9 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 	}
 
 	vector<Rule> applicable_rules = get_applicable_rules(node_idx);
-	Candpq candpq_merge;			//优先级队列,用来临时存储通过合并得到的候选
+	Candpq candpq_merge;			    //优先级队列,用来临时存储通过合并得到的候选
+	set<vector<int> > duplicate_set;	//用来记录候选是否已经被加入candpq_merge中
+	duplicate_set.clear();
 	for(auto &rule : applicable_rules)
 	{
 		vector<int> cand_rank_vec(rule.nt_num,0);
@@ -219,7 +221,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 			}
 			//cout<<src_tree->nodes.at(idx).word<<" "<<cands_of_nt_leaves.back().size()<<endl;
 		}
-		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge);
+		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
 		//cout<<"generate cand with head-modifier rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
 	if (candpq_merge.empty())       //使用glue规则生成候选
@@ -242,11 +244,9 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 			cands_of_nt_leaves.push_back(src_tree->nodes.at(node_idx).cand_organizer.head_cands);
 		}
 
-		generate_cand_with_glue_rule_and_add_to_pq(cands_of_nt_leaves,cand_rank_vec,candpq_merge);
+		generate_cand_with_glue_rule_and_add_to_pq(cands_of_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
 		//cout<<"generate cand with glue rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
-	set<vector<int> > duplicate_set;	//用来记录candpq_merge中的候选是否已经被扩展过
-	duplicate_set.clear();
 	//立方体剪枝,每次从candpq_merge中取出最好的候选加入span2cands中,并将该候选的邻居加入candpq_merge中
 	int added_cand_num = 0;
 	while (added_cand_num<para.CUBE_SIZE)
@@ -261,18 +261,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 			best_cand->lm_prob += increased_lm_prob;
 			best_cand->score += feature_weight.lm*increased_lm_prob;
 		}
-		
-		//key包含规则中变量的个数，每个目标端变量在源端句子中对应的位置，子候选在每个变量中的排名，以及规则目标端在源端相同的所有目标端的排名
-		vector<int> key;
-		key.push_back(best_cand->applied_rule.nt_num);
-		key.insert(key.end(),best_cand->applied_rule.tgt_nt_idx_to_src_sen_idx.begin(),best_cand->applied_rule.tgt_nt_idx_to_src_sen_idx.end());
-		key.insert(key.end(),best_cand->cand_rank_vec.begin(),best_cand->cand_rank_vec.end());
-		key.push_back(best_cand->applied_rule.tgt_rule_rank);
-		if (duplicate_set.find(key) == duplicate_set.end())
-		{
-			add_neighbours_to_pq(best_cand,candpq_merge);
-			duplicate_set.insert(key);
-		}
+        add_neighbours_to_pq(best_cand,candpq_merge,duplicate_set);
 		node.cand_organizer.add(best_cand,para.BEAM_SIZE);
 		added_cand_num++;
 	}
@@ -464,8 +453,20 @@ bool SentenceTranslator::is_config_valid(vector<RuleSrcUnit> &rule_src,string &c
  3. 出口参数: 指向新生成的候选的指针
  4. 算法简介: 见注释
 ***************************************************************************************/
-void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge)
+void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
 {
+    //key包含规则中变量的个数，每个目标端变量在源端句子中对应的位置（用来检查规则源端是否相同）
+    //规则目标端在源端相同的所有目标端的排名（检查规则目标端是否相同），以及子候选在每个个变量中的排名（检查子候选是否相同）
+    vector<int> key;
+    key.push_back(rule.nt_num);
+    key.insert(key.end(),rule.tgt_nt_idx_to_src_sen_idx.begin(),rule.tgt_nt_idx_to_src_sen_idx.end());
+    key.push_back(rule.tgt_rule_rank);
+    key.insert(key.end(),cand_rank_vec.begin(),cand_rank_vec.end());
+    if (duplicate_set.find(key) != duplicate_set.end())
+    {
+        return;
+    }
+    duplicate_set.insert(key);
 	Cand *cand = new Cand;
 	cand->applied_rule = rule;
 	cand->cands_of_nt_leaves = cands_of_nt_leaves;
@@ -517,8 +518,17 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
  3. 出口参数: 指向新生成的候选的指针
  4. 算法简介: 将当前句法节点的所有子节点的翻译候选顺序拼接即可
 ***************************************************************************************/
-void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge)
+void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
 {
+    //key包含规则中变量的个数（变量个数可以唯一确定glue规则），以及子候选在每个个变量中的排名（检查子候选是否相同）
+    vector<int> key;
+    key.push_back(cand_rank_vec.size());
+    key.insert(key.end(),cand_rank_vec.begin(),cand_rank_vec.end());
+    if (duplicate_set.find(key) != duplicate_set.end())
+    {
+        return;
+    }
+    duplicate_set.insert(key);
 	Cand *cand = new Cand;
 	int nt_num = cands_of_nt_leaves.size();
 	vector<int> src_ids(nt_num,src_nt_id);
@@ -556,7 +566,7 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
  4. 算法简介: a) 对于glue规则生成的候选, 考虑它所有非终结符叶节点的下一位候选
               b) 对于普通规则生成的候选, 考虑叶节点候选的下一位以及规则的下一位
 ***************************************************************************************/
-void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_merge)
+void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_merge, set<vector<int> > &duplicate_set)
 {
     // 遍历所有非终结符叶节点, 若候选所用规则目标端无非终结符则不会进入此循环
 	for (size_t i=0; i<cur_cand->cands_of_nt_leaves.size(); i++)
@@ -567,11 +577,11 @@ void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_mer
 			new_cand_rank_vec[i]++;                                   // 考虑当前非终结符叶节点候选的下一位
 			if (cur_cand->applied_rule.tgt_rule != NULL)              // 普通规则生成的候选
 			{
-				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge);
+				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
 			}
 			else         // glue规则生成的候选
 			{
-				generate_cand_with_glue_rule_and_add_to_pq(cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge);
+				generate_cand_with_glue_rule_and_add_to_pq(cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
 			}
 		}
 	}
