@@ -407,8 +407,6 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 
 bool SentenceTranslator::generalize_rule_src(vector<RuleSrcUnit> &rule_src,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx)
 {
-	if (is_config_valid(rule_src,config) == false)
-		return false;
 	for (auto &unit : rule_src)
 	{
 		if (unit.type == 2)													//叶节点
@@ -449,16 +447,6 @@ bool SentenceTranslator::generalize_rule_src(vector<RuleSrcUnit> &rule_src,strin
 		}
 	}
 	return true;
-}
-
-bool SentenceTranslator::is_config_valid(vector<RuleSrcUnit> &rule_src,string &config)
-{
-    for (auto &unit : rule_src)
-    {
-        if (unit.type == 2 && config[2] == 'g' && open_tags.find(unit.tag) == open_tags.end())
-            return false;
-    }
-    return true;
 }
 
 /**************************************************************************************
