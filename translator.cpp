@@ -292,24 +292,6 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 {
 	SyntaxNode &node = src_tree->nodes.at(node_idx);
-	vector<RuleSrcUnit> rule_src;
-	for (auto child_idx : node.children)
-	{
-		auto &child = src_tree->nodes.at(child_idx);
-		if (child.children.empty())
-		{
-			RuleSrcUnit unit = {2,child.word,child.tag,child.idx};
-			rule_src.push_back(unit);
-		}
-		else
-		{
-			RuleSrcUnit unit = {1,child.word,child.tag,child.idx};
-			rule_src.push_back(unit);
-		}
-	}
-	RuleSrcUnit unit = {0,node.word,node.tag,node.idx};
-	rule_src.push_back(unit);
-
 	vector<vector<int> > generalized_rule_src_vec;
 	vector<vector<int> > src_nt_idx_to_src_sen_idx_vec;
 	vector<string> configs = {"lll","llg","lgl","gll","lgg","glg","ggl","ggg"};
@@ -317,9 +299,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 	{
 		vector<int> generalized_rule_src = {type2id[config]};
 		vector<int> src_nt_idx_to_src_sen_idx;
-		bool flag = generalize_rule_src(rule_src,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
-		if (flag == false)
-			continue;
+		generalize_rule_src(node,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
 		if (it == generalized_rule_src_vec.end())
 		{
@@ -405,48 +385,46 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 	}
 }
 
-bool SentenceTranslator::generalize_rule_src(vector<RuleSrcUnit> &rule_src,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx)
+void SentenceTranslator::generalize_rule_src(SyntaxNode &node,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx)
 {
-	for (auto &unit : rule_src)
+	for (int child_idx : node.children)
 	{
-		if (unit.type == 2)													//叶节点
+        SyntaxNode &child = src_tree->nodes.at(child_idx);
+		if (child.children.empty())													//叶节点
 		{
-			if (config[2] == 'g' && open_tags.find(unit.tag) != open_tags.end() )
+			if (config[2] == 'g' && open_tags.find(child.tag) != open_tags.end() )
 			{
-				generalized_rule_src.push_back(src_vocab->get_id("[x]"+unit.tag));
-				src_nt_idx_to_src_sen_idx.push_back(unit.idx);
+				generalized_rule_src.push_back(src_vocab->get_id("[x]"+child.tag));
+				src_nt_idx_to_src_sen_idx.push_back(child.idx);
 			}
 			else
 			{
-				generalized_rule_src.push_back(src_vocab->get_id(unit.word));
+				generalized_rule_src.push_back(src_vocab->get_id(child.word));
 			}
 		}
-		else if (unit.type == 1)											//内部节点
-		{
-			if (config[1] == 'g')
-			{
-				generalized_rule_src.push_back(src_vocab->get_id("[x]"+unit.tag));
-			}
-			else
-			{
-				generalized_rule_src.push_back(src_vocab->get_id("[x]"+unit.word));
-			}
-			src_nt_idx_to_src_sen_idx.push_back(unit.idx);
-		}
-		else if (unit.type == 0)											//中心词节点
+		else	                              										//内部节点
 		{
 			if (config[1] == 'g')
 			{
-				generalized_rule_src.push_back(src_vocab->get_id("[x]"+unit.tag));
-				src_nt_idx_to_src_sen_idx.push_back(unit.idx);
+				generalized_rule_src.push_back(src_vocab->get_id("[x]"+child.tag));
 			}
 			else
 			{
-				generalized_rule_src.push_back(src_vocab->get_id(unit.word));
+				generalized_rule_src.push_back(src_vocab->get_id("[x]"+child.word));
 			}
+			src_nt_idx_to_src_sen_idx.push_back(child.idx);
 		}
-	}
-	return true;
+    }
+    //中心词节点
+    if (config[1] == 'g')
+    {
+        generalized_rule_src.push_back(src_vocab->get_id("[x]"+node.tag));
+        src_nt_idx_to_src_sen_idx.push_back(node.idx);
+    }
+    else
+    {
+        generalized_rule_src.push_back(src_vocab->get_id(node.word));
+    }
 }
 
 /**************************************************************************************
