@@ -90,7 +90,7 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 		applied_rules.push_back(" ( ");
 	}
 	int nt_idx = 0;
-	for (int src_wid : cand->applied_rule.src_ids)
+	for (auto src_wid : cand->applied_rule.src_ids)
 	{
 		string src_unit = src_vocab->get_word(src_wid)+"_";
 		if (src_unit.substr(0,3) == "[x]")
@@ -239,7 +239,7 @@ void SentenceTranslator::generate_kbest_for_node(int node_idx)
 		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
 		//cout<<"generate cand with head-modifier rule for node "<<src_tree->nodes.at(node_idx).word<<endl;
 	}
-	if (candpq_merge.empty())       //使用glue规则生成候选
+	//if (candpq_merge.empty())       //使用glue规则生成候选
 	{
 		int nt_num = node.children.size() + 1;
 		vector<int> cand_rank_vec(nt_num,0);
@@ -297,7 +297,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 	vector<string> configs = {"lll","llg","lgl","gll","lgg","glg","ggl","ggg"};
 	for (string &config : configs)
 	{
-		vector<int> generalized_rule_src = {type2id[config]};
+		vector<int> generalized_rule_src;
 		vector<int> src_nt_idx_to_src_sen_idx;
 		generalize_rule_src(node,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
@@ -321,8 +321,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 		{
 			Rule rule;
 			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
-            vector<int> src_ids(generalized_rule_src.begin()+2,generalized_rule_src.end());
-			rule.src_ids = src_ids;
+			rule.src_ids = generalized_rule_src;
 			rule.tgt_rule = &(matched_rules->at(j));
 			rule.tgt_rule_rank = j;
 			//规则目标端变量位置到句子源端位置的映射
@@ -341,7 +340,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
 	int src_wid = src_vocab->get_id(node.word);
-	vector<int> src_wids = {type2id["lll"],0,src_wid};
+	vector<int> src_wids = {src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
@@ -387,13 +386,8 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 
 void SentenceTranslator::generalize_rule_src(SyntaxNode &node,string &config,vector<int> &generalized_rule_src, vector<int> &src_nt_idx_to_src_sen_idx)
 {
-    int head_rel_pos = 0;                                                   //记录中心词节点在规则中的相对位置，用中心词左右的孩子数表示
 	for (int child_idx : node.children)
 	{
-        if (child_idx < node.idx)
-        {
-            head_rel_pos++;
-        }
         SyntaxNode &child = src_tree->nodes.at(child_idx);
 		if (child.children.empty())													//叶节点
 		{
@@ -430,7 +424,6 @@ void SentenceTranslator::generalize_rule_src(SyntaxNode &node,string &config,vec
     {
         generalized_rule_src.push_back(src_vocab->get_id(node.word));
     }
-    generalized_rule_src.insert(generalized_rule_src.begin()+1,head_rel_pos);
 }
 
 /**************************************************************************************

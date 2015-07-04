@@ -34,13 +34,6 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		tgt_rule.probs.resize(PROB_NUM);
 		fin.read((char*)&(tgt_rule.probs[0]),sizeof(double)*PROB_NUM);
 
-        int rule_type_id;
-		fin.read((char*)&rule_type_id,sizeof(int));
-        tgt_rule.rule_type = rule_type_id;
-
-        int head_rel_pos;
-		fin.read((char*)&head_rel_pos,sizeof(int));
-
 		tgt_rule.score = 0;
 		if( tgt_rule.probs.size() != weight.trans.size() )
 		{
@@ -51,8 +44,6 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 			tgt_rule.score += tgt_rule.probs[i]*weight.trans[i];
 		}
 
-        src_wids.insert(src_wids.begin(),head_rel_pos);
-        src_wids.insert(src_wids.begin(),rule_type_id);
 		add_rule_to_trie(src_wids,tgt_rule);
 
 		/*
