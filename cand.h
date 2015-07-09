@@ -10,7 +10,6 @@ struct Rule
 	int nt_num;				  //规则中非终结符个数
 	vector<int> src_ids;      //规则源端符号（包括终结符和非终结符）id序列
 	TgtRule *tgt_rule;        //规则目标端
-	int tgt_rule_rank;		  //该目标端在源端相同的所有目标端中的排名
 	vector<int> tgt_nt_idx_to_src_sen_idx;  //目标端变量的位置在源端句子中对应的位置
 };
 
