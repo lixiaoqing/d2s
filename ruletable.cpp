@@ -34,10 +34,6 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 		tgt_rule.probs.resize(PROB_NUM);
 		fin.read((char*)&(tgt_rule.probs[0]),sizeof(double)*PROB_NUM);
 
-        int rule_type_id;
-		fin.read((char*)&rule_type_id,sizeof(int));
-        tgt_rule.rule_type = rule_type_id;
-
 		tgt_rule.score = 0;
 		if( tgt_rule.probs.size() != weight.trans.size() )
 		{
@@ -48,13 +44,12 @@ void RuleTable::load_rule_table(const string &rule_table_file)
 			tgt_rule.score += tgt_rule.probs[i]*weight.trans[i];
 		}
 
-        src_wids.insert(src_wids.begin(),rule_type_id);
 		add_rule_to_trie(src_wids,tgt_rule);
 
 		/*
-		for (int i=1;i<src_wids.size();i++)
+		for (int src_wid : src_wids)
 		{
-			cout<<src_vocab->get_word(src_wids.at(i))<<" ";
+			cout<<src_vocab->get_word(src_wid)<<" ";
 		}
 		cout<<"||| ";
 		for (int tgt_wid : tgt_rule.wids)

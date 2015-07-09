@@ -284,7 +284,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
     //对源端进行泛化
 	for (string &config : configs)
 	{
-		vector<int> generalized_rule_src = {type2id[config]};
+		vector<int> generalized_rule_src;
 		vector<int> src_nt_idx_to_src_sen_idx;
 		generalize_rule_src(node,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
@@ -304,36 +304,19 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 		vector<TgtRule>* matched_rules = ruletable->find_matched_rules(generalized_rule_src);
 		if (matched_rules == NULL)
 			continue;
-		for (auto &tgt_rule : *matched_rules)
+		for (int j=0;j<matched_rules->size();j++)
 		{
 			Rule rule;
 			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
-            vector<int> src_ids(generalized_rule_src.begin()+1,generalized_rule_src.end());
-			rule.src_ids = src_ids;
-			//rule.src_ids = generalized_rule_src;
-			rule.tgt_rule = &(tgt_rule);
+			rule.src_ids = generalized_rule_src;
+			rule.tgt_rule = &(matched_rules->at(j));
+			rule.tgt_rule_rank = j;
 			//规则目标端变量位置到句子源端位置的映射
-			for (int src_nt_idx : tgt_rule.tgt_nt_idx_to_src_nt_idx)
+			for (int src_nt_idx : matched_rules->at(j).tgt_nt_idx_to_src_nt_idx)
 			{
 				rule.tgt_nt_idx_to_src_sen_idx.push_back(src_nt_idx_to_src_sen_idx[src_nt_idx]);
 			}
-            bool flag = false;
-            for (auto &e_rule : applicable_rules)
-            {
-                if (e_rule.src_ids == rule.src_ids && e_rule.tgt_nt_idx_to_src_sen_idx == rule.tgt_nt_idx_to_src_sen_idx
-                    && e_rule.tgt_rule->wids == rule.tgt_rule->wids)
-                {
-                    flag = true;
-                    if (e_rule.tgt_rule->score < rule.tgt_rule->score)
-                    {
-                        e_rule = rule;
-                    }
-                }
-            }
-            if (flag == false)
-            {
-                applicable_rules.push_back(rule);
-            }
+			applicable_rules.push_back(rule);
 		}
 	}
 	return applicable_rules;
@@ -349,7 +332,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
 	int src_wid = src_vocab->get_id(node.word);
-	vector<int> src_wids = {type2id["lll"],src_wid};
+	vector<int> src_wids = {src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
@@ -359,6 +342,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 		cand->applied_rule.nt_num = 0;
 		cand->applied_rule.src_ids.push_back(src_wid);
 		cand->applied_rule.tgt_rule = NULL;
+		cand->applied_rule.tgt_rule_rank = 0;
 		cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 		cand->score += feature_weight.rule_num*cand->rule_num 
 					+ feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
@@ -366,8 +350,9 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 	}
 	else
 	{
-        for (auto &tgt_rule : *matched_rules)
+        for (int i=0;i<matched_rules->size();i++)
 		{
+            auto &tgt_rule = matched_rules->at(i);
 			Cand* cand = new Cand;
 			if (tgt_rule.wids.at(0) == tgt_null_id)                                     //deletion规则
 			{
@@ -383,6 +368,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 			cand->applied_rule.nt_num = 0;
 			cand->applied_rule.src_ids.push_back(src_wid);
 			cand->applied_rule.tgt_rule = &tgt_rule;
+			cand->applied_rule.tgt_rule_rank = i;
 			cand->lm_prob = lm_model->cal_increased_lm_score(cand);
 			cand->score += feature_weight.rule_num*cand->rule_num 
 				         + feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
@@ -448,11 +434,12 @@ void SentenceTranslator::generalize_rule_src(SyntaxNode &node,string &config,vec
 ***************************************************************************************/
 void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
 {
-    //key包含规则源端id序列，（用来检查规则源端是否相同），每个目标端变量在源端句子中对应的位置，
-    //规则目标端id序列（检查规则目标端是否相同），以及子候选在每个个变量中的排名（检查子候选是否相同）
-    vector<int> key = rule.src_ids;
+    //key包含规则中变量的个数，每个目标端变量在源端句子中对应的位置（用来检查规则源端是否相同）
+    //规则目标端在源端相同的所有目标端的排名（检查规则目标端是否相同），以及子候选在每个个变量中的排名（检查子候选是否相同）
+    vector<int> key;
+    key.push_back(rule.nt_num);
     key.insert(key.end(),rule.tgt_nt_idx_to_src_sen_idx.begin(),rule.tgt_nt_idx_to_src_sen_idx.end());
-    key.insert(key.end(),rule.tgt_rule->wids.begin(),rule.tgt_rule->wids.end());
+    key.push_back(rule.tgt_rule_rank);
     key.insert(key.end(),cand_rank_vec.begin(),cand_rank_vec.end());
     if (duplicate_set.insert(key).second == false)
         return;
@@ -512,7 +499,7 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
 	int nt_num = cands_of_nt_leaves.size();
 	vector<int> src_ids(nt_num,src_nt_id);
 	vector<int> tgt_nt_idx_to_src_sen_idx(nt_num,0);
-	Rule glue_rule = {nt_num,src_ids,NULL,tgt_nt_idx_to_src_sen_idx};
+	Rule glue_rule = {nt_num,src_ids,NULL,0,tgt_nt_idx_to_src_sen_idx};
 	cand->applied_rule = glue_rule;
 	cand->cands_of_nt_leaves = cands_of_nt_leaves;
 	cand->cand_rank_vec = cand_rank_vec;
