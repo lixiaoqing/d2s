@@ -284,7 +284,7 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
     //对源端进行泛化
 	for (string &config : configs)
 	{
-		vector<int> generalized_rule_src;
+		vector<int> generalized_rule_src = {type2id[config]};
 		vector<int> src_nt_idx_to_src_sen_idx;
 		generalize_rule_src(node,config,generalized_rule_src,src_nt_idx_to_src_sen_idx);
 		auto it = find(generalized_rule_src_vec.begin(),generalized_rule_src_vec.end(),generalized_rule_src);
@@ -308,6 +308,8 @@ vector<Rule> SentenceTranslator::get_applicable_rules(int node_idx)
 		{
 			Rule rule;
 			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
+            //vector<int> src_ids(generalized_rule_src.begin()+1,generalized_rule_src.end());
+			//rule.src_ids = src_ids;
 			rule.src_ids = generalized_rule_src;
 			rule.tgt_rule = &(matched_rules->at(j));
 			rule.tgt_rule_rank = j;
@@ -332,7 +334,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
 	int src_wid = src_vocab->get_id(node.word);
-	vector<int> src_wids = {src_wid};
+	vector<int> src_wids = {type2id["lll"],src_wid};
 	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
@@ -436,12 +438,12 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 {
     //key包含规则中变量的个数，每个目标端变量在源端句子中对应的位置（用来检查规则源端是否相同）
     //规则目标端在源端相同的所有目标端的排名（检查规则目标端是否相同），以及子候选在每个个变量中的排名（检查子候选是否相同）
-    vector<int> key;
-    key.push_back(rule.nt_num);
-    key.insert(key.end(),rule.tgt_nt_idx_to_src_sen_idx.begin(),rule.tgt_nt_idx_to_src_sen_idx.end());
+    vector<int> key = rule.src_ids;
+    //key.push_back(rule.nt_num);
+    //key.insert(key.end(),rule.tgt_nt_idx_to_src_sen_idx.begin(),rule.tgt_nt_idx_to_src_sen_idx.end());
     key.push_back(rule.tgt_rule_rank);
     key.insert(key.end(),cand_rank_vec.begin(),cand_rank_vec.end());
-    if (duplicate_set.insert(key).second != false)
+    if (duplicate_set.insert(key).second == false)
         return;
 
 	Cand *cand = new Cand;
@@ -492,7 +494,7 @@ void SentenceTranslator::generate_cand_with_glue_rule_and_add_to_pq(vector<vecto
     vector<int> key;
     key.push_back(cand_rank_vec.size());
     key.insert(key.end(),cand_rank_vec.begin(),cand_rank_vec.end());
-    if (duplicate_set.insert(key).second != false)
+    if (duplicate_set.insert(key).second == false)
         return;
 
 	Cand *cand = new Cand;
