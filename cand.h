@@ -68,10 +68,10 @@ struct cmp
 bool larger( const Cand *pl, const Cand *pr );
 
 //组织每个句法节点翻译候选的类
-class CandOrganizer
+class CandBeam
 {
 	public:
-		~CandOrganizer() 
+		~CandBeam() 
 		{
 			for (auto cand : cands)
 			{
