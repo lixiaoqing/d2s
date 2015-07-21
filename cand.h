@@ -34,6 +34,8 @@ struct Cand
 	Rule applied_rule;          					//生成当前候选所使用的规则
 	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(glue规则所有叶节点均为非终结符)
 	vector<int> cand_rank_vec;                      // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
+    int span_lhs;                                   // 由btg规则生成的候选在源端对应的第一个子跨度
+    int sub_cand_order;                             // btg候选的合并顺序，0为顺序，1为逆序，-1为非btg候选
 
 	//语言模型状态信息
 	lm::ngram::ChartState lm_state;
@@ -52,6 +54,8 @@ struct Cand
 
 		cands_of_nt_leaves.clear();
 		cand_rank_vec.clear();
+        span_lhs = -1;
+        sub_cand_order = -1;
 	}
 };
 
@@ -77,24 +81,18 @@ class CandBeam
 			{
 				delete cand;
 			}
-			for (auto cand : head_cands)
-			{
-				delete cand;
-			}
 		};
 		void add(Cand *&cand_ptr,int beam_size);
 		Cand* top() { return cands.front(); }
 		Cand* at(size_t i) { return cands.at(i);}
 		int size() { return cands.size();  }
 		void sort() { std::sort(cands.begin(),cands.end(),larger); }
-		void sort_head() { std::sort(head_cands.begin(),head_cands.end(),larger); }
 	
 	private:
 		bool is_bound_same(const Cand *a, const Cand *b);
 
 	public:
 		vector<Cand*> cands;                         // 当前节点所有的翻译候选
-		vector<Cand*> head_cands;                    // 当前节点由head rule生成的候选的翻译候选
 };
 
 typedef priority_queue<Cand*, vector<Cand*>, cmp> Candpq;

@@ -5,8 +5,6 @@
 #include "cand.h"
 #include "vocab.h"
 
-typedef pair<int,int> Span;			//由起始位置和span长度表示（span长度为实际长度减1）
-
 // 源端句法树节点
 struct SyntaxNode
 {
@@ -31,7 +29,6 @@ class SyntaxTree
 	private:
 		void build_tree_from_str(const string &line_of_tree);
 		void cal_span_for_each_node(int sub_root_idx);
-        Span merge_span(Span span1,Span span2);
 
 	public:
 		int root_idx;
