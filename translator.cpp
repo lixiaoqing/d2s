@@ -128,10 +128,14 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 		}
 		else
 		{
-			for (int i=0; i<nt_num; i++)
-			{
-				rule += "[x"+to_string(i)+"]_";
-			}
+            if (cand->sub_cand_order == 0)
+            {
+                rule += "[x0]_[x1]_";
+            }
+            else
+            {
+                rule += "[x1]_[x0]_";
+            }
 		}
         //rule += "0.0";
 	}
@@ -159,12 +163,12 @@ void SentenceTranslator::dump_rules(vector<string> &applied_rules, Cand *cand)
 	{
 		auto &applied_tgt_rule = cand->applied_rule.tgt_rule;
 		if (applied_tgt_rule == NULL)
-		{
-		   for (int i=0;i<nt_num;i++)
-		   {
-			   dump_rules(applied_rules,cand->cands_of_nt_leaves.at(i).at(cand->cand_rank_vec.at(i)));
-		   }
-		}
+        {
+            for (int i=0;i<nt_num;i++)
+            {
+                dump_rules(applied_rules,cand->cands_of_nt_leaves.at(i).at(cand->cand_rank_vec.at(i)));
+            }
+        }
 		else
 		{
 			vector<int> src_nt_idx_to_tgt_nt_idx(nt_num,0);
@@ -312,6 +316,7 @@ void SentenceTranslator::generate_rules(SyntaxNode &node,int first_child_idx,int
 			rule.nt_num = src_nt_idx_to_src_sen_idx.size();
 			rule.src_ids = generalized_rule_src;
 			rule.tgt_rule = &(matched_rules->at(j));
+            //assert(rule.nt_num==rule.tgt_rule->nt_num);
 			rule.tgt_rule_rank = j;
 			//规则目标端变量位置到句子源端位置的映射
 			for (int src_nt_idx : matched_rules->at(j).tgt_nt_idx_to_src_nt_idx)
@@ -565,24 +570,25 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
         int nt_num = cands_of_src_nt_leaves.size();
         vector<int> src_ids(nt_num,src_nt_id);
         vector<int> tgt_nt_idx_to_src_sen_idx(nt_num,0);
-        Rule glue_rule = {nt_num,src_ids,NULL,0,tgt_nt_idx_to_src_sen_idx};
-        cand->applied_rule = glue_rule;
+        Rule btg_rule = {nt_num,src_ids,NULL,0,tgt_nt_idx_to_src_sen_idx};
+        cand->applied_rule = btg_rule;
         cand->cands_of_nt_leaves = cands_of_src_nt_leaves;
-        vector<vector<Cand*> > cands_of_tgt_nt_leaves = cands_of_src_nt_leaves;
         cand->cand_rank_vec = cand_rank_vec;
         cand->sub_cand_order = 0;
+        Cand* subcand_lhs = cands_of_src_nt_leaves[0][cand_rank_vec[0]];
+        Cand* subcand_rhs = cands_of_src_nt_leaves[1][cand_rank_vec[1]];
         if (order == "swap")
         {
-            reverse(cands_of_tgt_nt_leaves.begin(),cands_of_tgt_nt_leaves.end());
-            reverse(cand_rank_vec.begin(),cand_rank_vec.end());
+            swap(subcand_lhs,subcand_rhs);
             cand->sub_cand_order = 1;
         }
         cand->span_lhs = span_lhs;
 
+        vector<Cand*> subcands = {subcand_lhs,subcand_rhs};
         cand->trans_probs.resize(PROB_NUM,0.0);                                                              // 初始化当前候选的翻译概率
         for (int nt_idx=0;nt_idx<nt_num;nt_idx++)
         {
-            Cand* subcand = cands_of_tgt_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
+            Cand* subcand = subcands.at(nt_idx);
             cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
             cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
             cand->glue_num += subcand->glue_num;                                                             // 累加所用的glue规则数量

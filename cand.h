@@ -33,6 +33,7 @@ struct Cand
 	//来源信息, 记录候选是如何生成的
 	Rule applied_rule;          					//生成当前候选所使用的规则
 	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(glue规则所有叶节点均为非终结符)
+                                                    // 注意排列顺序为规则目标端的非终结符顺序，btg规则除外
 	vector<int> cand_rank_vec;                      // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
     int span_lhs;                                   // 由btg规则生成的候选在源端对应的第一个子跨度
     int sub_cand_order;                             // btg候选的合并顺序，0为顺序，1为逆序，-1为非btg候选
