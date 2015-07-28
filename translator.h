@@ -25,10 +25,12 @@ class SentenceTranslator
 	private:
         void fill_span2rules();
         void fill_span2cands_with_head_rule();
+        void fill_span2cands_with_syntactic_phrase_rule();
         void fill_span2rules_for_node(int node_idx);
         void generate_rules(SyntaxNode &node,int first_child_idx,int children_num,string struct_type);
         Span cal_src_span(SyntaxNode &node,int first_child_idx,int children_num,string struct_type);
 		void generate_cand_with_head_rule(int node_idx);
+        void generate_cand_with_syntactic_phrase_rule(int node_idx);
         void generate_kbest_for_span(int beg, int span);
 		vector<Rule> get_applicable_rules(int node_idx);
         void generalize_rule_src(SyntaxNode &node,int first_child_idx,int children_num,string config,string struct_type,vector<int> &generalized_rule_src,vector<int> &src_nt_idx_to_src_sen_idx);

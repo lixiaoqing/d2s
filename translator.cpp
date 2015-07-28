@@ -31,6 +31,8 @@ SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &
 	fill_span2rules();
     //为每个节点生成head候选
 	fill_span2cands_with_head_rule();
+    //为每个节点生成syntactic-phrase候选
+	fill_span2cands_with_syntactic_phrase_rule();
 }
 
 string SentenceTranslator::words_to_str(vector<int> &wids, int drop_oov)
@@ -248,6 +250,53 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
         }
 	}
     span2cands.at(node_idx).at(0).sort();
+}
+
+void SentenceTranslator::fill_span2cands_with_syntactic_phrase_rule()
+{
+    for (int node_idx=0;node_idx<src_sen_len;node_idx++)
+    {
+        generate_cand_with_syntactic_phrase_rule(node_idx);
+    }
+}
+
+/**************************************************************************************
+ 1. 函数功能: 根据syntactic-phrase规则为当前节点生成候选
+ 2. 入口参数: 当前节点的序号
+ 3. 出口参数: 无
+ 4. 算法简介: 见注释
+***************************************************************************************/
+void SentenceTranslator::generate_cand_with_syntactic_phrase_rule(int node_idx)
+{
+	auto &node = src_tree->nodes.at(node_idx);
+    if (node.children.empty() || node.src_span.second > 7)
+        return;
+	vector<int> src_wids;
+    for (int idx=node.src_span.first;idx<=node.src_span.first+node.src_span.second;idx++)
+    {
+        src_wids.push_back(src_vocab->get_id(src_tree->nodes.at(idx).word));
+    }
+	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
+	if (matched_rules == NULL)
+        return;
+    for (int i=0;i<matched_rules->size();i++)
+    {
+        auto &tgt_rule = matched_rules->at(i);
+        Cand* cand = new Cand;
+        cand->tgt_word_num = tgt_rule.word_num;
+        cand->tgt_wids = tgt_rule.wids;
+        cand->trans_probs = tgt_rule.probs;
+        cand->score = tgt_rule.score;
+        cand->applied_rule.nt_num = 0;
+        cand->applied_rule.src_ids = src_wids;
+        cand->applied_rule.tgt_rule = &tgt_rule;
+        cand->applied_rule.tgt_rule_rank = i;
+        cand->lm_prob = lm_model->cal_increased_lm_score(cand);
+        cand->score += feature_weight.rule_num*cand->rule_num 
+            + feature_weight.len*cand->tgt_word_num + feature_weight.lm*cand->lm_prob;
+        span2cands.at(node.src_span.first).at(node.src_span.second).cands.push_back(cand);
+    }
+    span2cands.at(node.src_span.first).at(node.src_span.second).sort();
 }
 
 void SentenceTranslator::fill_span2rules()
@@ -563,7 +612,8 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
     if (duplicate_set.insert(key).second == false)
         return;
 
-    vector<string> nt_orders = {"mono","swap"};
+    //vector<string> nt_orders = {"mono","swap"};
+    vector<string> nt_orders = {"mono"};
     for (string &order : nt_orders)
     {
         Cand *cand = new Cand;
