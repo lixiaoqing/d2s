@@ -72,7 +72,8 @@ struct Weight
 	double lm;
 	double len;							//译文的单词数
 	double rule_num;
-	double glue;
+	double mono;
+	double swap;
 };
 
 #endif

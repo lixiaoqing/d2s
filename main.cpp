@@ -115,9 +115,13 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 				{
 					ss>>weight.rule_num;
 				}
-				else if(feature == "glue")
+				else if(feature == "mono")
 				{
-					ss>>weight.glue;
+					ss>>weight.mono;
+				}
+				else if(feature == "swap")
+				{
+					ss>>weight.swap;
 				}
 			}
 		}

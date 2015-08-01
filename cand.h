@@ -19,7 +19,8 @@ struct Cand
 {
 	//源端信息
 	int rule_num;				//生成当前候选所使用的规则数目
-	int glue_num;				//生成当前候选所使用的glue规则数目
+	int mono_num;				//生成当前候选所使用的正序btg规则数目
+	int swap_num;				//生成当前候选所使用的逆序btg规则数目
 
 	//目标端信息
 	int tgt_word_num;			//当前候选目标端的单词数
@@ -32,7 +33,7 @@ struct Cand
 
 	//来源信息, 记录候选是如何生成的
 	Rule applied_rule;          					//生成当前候选所使用的规则
-	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(glue规则所有叶节点均为非终结符)
+	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(btg规则所有叶节点均为非终结符)
                                                     // 注意排列顺序为规则目标端的非终结符顺序，btg规则除外
 	vector<int> cand_rank_vec;                      // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
     int span_lhs;                                   // 由btg规则生成的候选在源端对应的第一个子跨度
@@ -44,7 +45,8 @@ struct Cand
 	Cand ()
 	{
 		rule_num = 1;
-		glue_num = 0;
+		mono_num = 0;
+		swap_num = 0;
 
 		tgt_word_num = 1;
 		tgt_wids.clear();
