@@ -42,6 +42,7 @@ class SentenceTranslator
 		void dump_rules(vector<string> &applied_rules, Cand *cand);
 		string words_to_str(vector<int> &wids, int drop_oov);
 		pair<double,double> cal_reorder_score(const Cand *cand_lhs,const Cand *cand_rhs);
+        string get_tgt_word(int tgt_wid);
 
 	private:
 		Vocab *src_vocab;

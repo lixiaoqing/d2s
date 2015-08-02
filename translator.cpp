@@ -49,14 +49,32 @@ SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &
 ************************************************************************************* */
 pair<double,double> SentenceTranslator::cal_reorder_score(const Cand* cand_lhs,const Cand* cand_rhs)
 {
-	int c11 = src_wids.at(cand_lhs->src_span.first);
-	int c12 = src_wids.at(cand_lhs->src_span.first+cand_lhs->src_span.second);
-	int c21 = src_wids.at(cand_rhs->src_span.first);
-	int c22 = src_wids.at(cand_rhs->src_span.first+cand_rhs->src_span.second);
-	int e11 = cand_lhs->tgt_wids.at(0);
-	int e12 = cand_lhs->tgt_wids.at(cand_lhs->tgt_wids.size()-1);
-	int e21 = cand_rhs->tgt_wids.at(0);
-	int e22 = cand_rhs->tgt_wids.at(cand_rhs->tgt_wids.size()-1);
+    string c11,c12,c21,c22;
+	c11 = src_tree->nodes.at(cand_lhs->src_span.first).word;
+	c12 = src_tree->nodes.at(cand_lhs->src_span.first+cand_lhs->src_span.second).word;
+	c21 = src_tree->nodes.at(cand_rhs->src_span.first).word;
+	c22 = src_tree->nodes.at(cand_rhs->src_span.first+cand_rhs->src_span.second).word;
+    string e11,e12,e21,e22;
+    if (cand_lhs->tgt_wids.empty())
+    {
+        e11 = "NULL";
+        e12 = "NULL";
+    }
+    else
+    {
+        e11 = get_tgt_word(cand_lhs->tgt_wids.front());
+        e12 = get_tgt_word(cand_lhs->tgt_wids.back());
+    }
+    if (cand_rhs->tgt_wids.empty())
+    {
+        e21 = "NULL";
+        e22 = "NULL";
+    }
+    else
+    {
+        e21 = get_tgt_word(cand_rhs->tgt_wids.front());
+        e22 = get_tgt_word(cand_rhs->tgt_wids.back());
+    }
 	vector<string> feature_vec;
 	feature_vec.resize(8);
 	feature_vec.at(0) = "c11=" + c11;
@@ -70,6 +88,13 @@ pair<double,double> SentenceTranslator::cal_reorder_score(const Cand* cand_lhs,c
 	vector<double> reorder_prob_vec;
 	reorder_model->eval_all(reorder_prob_vec,feature_vec);
 	return make_pair(reorder_prob_vec[reorder_model->get_tagid("straight")],reorder_prob_vec[reorder_model->get_tagid("inverted")]);
+}
+
+string SentenceTranslator::get_tgt_word(int tgt_wid)
+{
+    if (tgt_wid >= 0)
+        return tgt_vocab->get_word(tgt_wid);
+    return src_vocab->get_word(0-tgt_wid);
 }
 
 string SentenceTranslator::words_to_str(vector<int> &wids, int drop_oov)
@@ -267,6 +292,7 @@ void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 		{
             auto &tgt_rule = matched_rules->at(i);
 			Cand* cand = new Cand;
+            cand->src_span = make_pair(node_idx,0);
 			if (tgt_rule.wids.at(0) == tgt_null_id)                                     //deletion规则
 			{
 				cand->tgt_word_num = 0;
@@ -658,6 +684,7 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
     Cand* subcand_lhs = cands_of_src_nt_leaves[0][cand_rank_vec[0]];
     Cand* subcand_rhs = cands_of_src_nt_leaves[1][cand_rank_vec[1]];
     pair<double,double> reorder_probs = cal_reorder_score(subcand_lhs,subcand_rhs);
+    //pair<double,double> reorder_probs = make_pair(1.0,1.0);
 
     vector<string> nt_orders = {"mono","swap"};
     //vector<string> nt_orders = {"mono"};
