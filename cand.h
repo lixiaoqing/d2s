@@ -19,8 +19,6 @@ struct Cand
 {
 	//源端信息
 	int rule_num;				//生成当前候选所使用的规则数目
-	int mono_num;				//生成当前候选所使用的正序btg规则数目
-	int swap_num;				//生成当前候选所使用的逆序btg规则数目
 
 	//目标端信息
 	int tgt_word_num;			//当前候选目标端的单词数
@@ -30,13 +28,16 @@ struct Cand
 	double score;				//当前候选的总得分
 	vector<double> trans_probs;	//翻译概率
 	double lm_prob;
+	double mono_prob;			//生成当前候选所使用的正序btg规则数目
+	double swap_prob;			//生成当前候选所使用的逆序btg规则数目
 
 	//来源信息, 记录候选是如何生成的
 	Rule applied_rule;          					//生成当前候选所使用的规则
 	vector<vector<Cand*> > cands_of_nt_leaves;      // 规则源端非终结符叶节点的翻译候选(btg规则所有叶节点均为非终结符)
                                                     // 注意排列顺序为规则目标端的非终结符顺序，btg规则除外
 	vector<int> cand_rank_vec;                      // 记录当前候选所用的每个非终结符叶节点的翻译候选的排名
-    int span_lhs;                                   // 由btg规则生成的候选在源端对应的第一个子跨度
+    Span src_span;                                  // 记录候选在源端的跨度
+    int span_lhs;                                   // 由btg规则生成的候选在源端的第一个跨度的长度
     int sub_cand_order;                             // btg候选的合并顺序，0为顺序，1为逆序，-1为非btg候选
 
 	//语言模型状态信息
@@ -45,8 +46,6 @@ struct Cand
 	Cand ()
 	{
 		rule_num = 1;
-		mono_num = 0;
-		swap_num = 0;
 
 		tgt_word_num = 1;
 		tgt_wids.clear();
@@ -54,9 +53,12 @@ struct Cand
 		score = 0.0;
 		trans_probs.clear();
 		lm_prob = 0.0;
+		mono_prob = 0.0;
+		swap_prob = 0.0;
 
 		cands_of_nt_leaves.clear();
 		cand_rank_vec.clear();
+        src_span = make_pair(-1,-1);
         span_lhs = -1;
         sub_cand_order = -1;
 	}

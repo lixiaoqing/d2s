@@ -7,12 +7,17 @@ SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &
 	src_vocab = i_models.src_vocab;
 	tgt_vocab = i_models.tgt_vocab;
 	ruletable = i_models.ruletable;
+	reorder_model = i_models.reorder_model;
 	lm_model = i_models.lm_model;
 	para = i_para;
 	feature_weight = i_weight;
 
 	src_tree = new SyntaxTree(input_sen);
 	src_sen_len = src_tree->sen_len;
+    for (int i=0;i<src_sen_len;i++)
+    {
+        src_wids.push_back(src_vocab->get_id(src_tree->nodes.at(i).word));
+    }
 	src_nt_id = src_vocab->get_id("[x]");
 	tgt_nt_id = tgt_vocab->get_id("[x]");
 	tgt_null_id = tgt_vocab->get_id("NULL");
@@ -33,6 +38,38 @@ SentenceTranslator::SentenceTranslator(const Models &i_models, const Parameter &
 	fill_span2cands_with_head_rule();
     //为每个节点生成syntactic-phrase候选
 	fill_span2cands_with_syntactic_phrase_rule();
+}
+
+/**************************************************************************************
+ 1. 函数功能: 计算调序模型打分
+ 2. 入口参数: 生成当前候选的左候选以及右候选,左右是指在当前候选中的位置
+ 3. 出口参数: 顺序以及逆序调序概率
+ 4. 算法简介: 使用如下8个特征估计概率
+              {左候选, 右候选} X {源端, 目标端} X {首词, 尾词}
+************************************************************************************* */
+pair<double,double> SentenceTranslator::cal_reorder_score(const Cand* cand_lhs,const Cand* cand_rhs)
+{
+	int c11 = src_wids.at(cand_lhs->src_span.first);
+	int c12 = src_wids.at(cand_lhs->src_span.first+cand_lhs->src_span.second);
+	int c21 = src_wids.at(cand_rhs->src_span.first);
+	int c22 = src_wids.at(cand_rhs->src_span.first+cand_rhs->src_span.second);
+	int e11 = cand_lhs->tgt_wids.at(0);
+	int e12 = cand_lhs->tgt_wids.at(cand_lhs->tgt_wids.size()-1);
+	int e21 = cand_rhs->tgt_wids.at(0);
+	int e22 = cand_rhs->tgt_wids.at(cand_rhs->tgt_wids.size()-1);
+	vector<string> feature_vec;
+	feature_vec.resize(8);
+	feature_vec.at(0) = "c11=" + c11;
+	feature_vec.at(1) = "c12=" + c12;
+	feature_vec.at(2) = "c21=" + c21;
+	feature_vec.at(3) = "c22=" + c22;
+	feature_vec.at(4) = "e11=" + e11;
+	feature_vec.at(5) = "e12=" + e12;
+	feature_vec.at(6) = "e21=" + e21;
+	feature_vec.at(7) = "e22=" + e22;
+	vector<double> reorder_prob_vec;
+	reorder_model->eval_all(reorder_prob_vec,feature_vec);
+	return make_pair(reorder_prob_vec[reorder_model->get_tagid("straight")],reorder_prob_vec[reorder_model->get_tagid("inverted")]);
 }
 
 string SentenceTranslator::words_to_str(vector<int> &wids, int drop_oov)
@@ -69,8 +106,8 @@ vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 		tune_info.feature_values.push_back(final_cands.at(i)->lm_prob);
 		tune_info.feature_values.push_back(final_cands.at(i)->tgt_wids.size() );
 		tune_info.feature_values.push_back(final_cands.at(i)->rule_num);
-		tune_info.feature_values.push_back(final_cands.at(i)->mono_num);
-		tune_info.feature_values.push_back(final_cands.at(i)->swap_num);
+		tune_info.feature_values.push_back(final_cands.at(i)->mono_prob);
+		tune_info.feature_values.push_back(final_cands.at(i)->swap_prob);
 		tune_info.total_score = final_cands.at(i)->score;
 		nbest_tune_info.push_back(tune_info);
 	}
@@ -206,12 +243,13 @@ void SentenceTranslator::fill_span2cands_with_head_rule()
 void SentenceTranslator::generate_cand_with_head_rule(int node_idx)
 {
 	auto &node = src_tree->nodes.at(node_idx);
-	int src_wid = src_vocab->get_id(node.word);
-	vector<int> src_wids = {src_wid};
-	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
+	int src_wid = src_wids.at(node_idx);
+	vector<int> cur_src_wids = {src_wid};
+	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(cur_src_wids);
 	if (matched_rules == NULL)															//OOV
 	{
 		Cand* cand = new Cand;
+        cand->src_span = make_pair(node_idx,0);
 		cand->tgt_wids.push_back(0 - src_wid);                                          //源端单词id取反，输出译文时使用
 		cand->trans_probs.resize(PROB_NUM,0.0);
 		cand->applied_rule.nt_num = 0;
@@ -272,24 +310,25 @@ void SentenceTranslator::generate_cand_with_syntactic_phrase_rule(int node_idx)
 	auto &node = src_tree->nodes.at(node_idx);
     if (node.children.empty() || node.src_span.second > 7)
         return;
-	vector<int> src_wids;
+	vector<int> cur_src_wids;
     for (int idx=node.src_span.first;idx<=node.src_span.first+node.src_span.second;idx++)
     {
-        src_wids.push_back(src_vocab->get_id(src_tree->nodes.at(idx).word));
+        cur_src_wids.push_back(src_wids.at(idx));
     }
-	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(src_wids);
+	vector<TgtRule>* matched_rules = ruletable->find_matched_rules(cur_src_wids);
 	if (matched_rules == NULL)
         return;
     for (int i=0;i<matched_rules->size();i++)
     {
         auto &tgt_rule = matched_rules->at(i);
         Cand* cand = new Cand;
+        cand->src_span = node.src_span;
         cand->tgt_word_num = tgt_rule.word_num;
         cand->tgt_wids = tgt_rule.wids;
         cand->trans_probs = tgt_rule.probs;
         cand->score = tgt_rule.score;
         cand->applied_rule.nt_num = 0;
-        cand->applied_rule.src_ids = src_wids;
+        cand->applied_rule.src_ids = cur_src_wids;
         cand->applied_rule.tgt_rule = &tgt_rule;
         cand->applied_rule.tgt_rule_rank = i;
         cand->lm_prob = lm_model->cal_increased_lm_score(cand);
@@ -399,7 +438,7 @@ void SentenceTranslator::generalize_rule_src(SyntaxNode &node,int first_child_id
 			}
 			else
 			{
-				generalized_rule_src.push_back(src_vocab->get_id(child.word));
+				generalized_rule_src.push_back(src_wids.at(child.idx));
 			}
 		}
 		else	                              										//内部节点
@@ -425,7 +464,7 @@ void SentenceTranslator::generalize_rule_src(SyntaxNode &node,int first_child_id
         }
         else
         {
-            generalized_rule_src.push_back(src_vocab->get_id(node.word));
+            generalized_rule_src.push_back(src_wids.at(node.idx));
         }
     }
 }
@@ -481,6 +520,7 @@ void SentenceTranslator::generate_kbest_for_span(int beg, int span)
     int head_idx = span2head.at(beg).at(span);
     if (head_idx == -2)
         return;
+    Span src_span = make_pair(beg,span);
 	Candpq candpq_merge;			                                                     //优先级队列,用来临时存储通过合并得到的候选
 	set<vector<int> > duplicate_set;	                                                 //用来记录候选是否已经被加入candpq_merge中
 	duplicate_set.clear();
@@ -492,15 +532,15 @@ void SentenceTranslator::generate_kbest_for_span(int beg, int span)
 		{
 			if (idx != head_idx)
 			{
-                Span src_span = src_tree->nodes.at(idx).src_span;
-				cands_of_nt_leaves.push_back(span2cands.at(src_span.first).at(src_span.second).cands);
+                Span nt_src_span = src_tree->nodes.at(idx).src_span;
+				cands_of_nt_leaves.push_back(span2cands.at(nt_src_span.first).at(nt_src_span.second).cands);
 			}
 			else
 			{
 				cands_of_nt_leaves.push_back(span2cands.at(idx).at(0).cands);
 			}
 		}
-		generate_cand_with_rule_and_add_to_pq(rule,cands_of_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
+		generate_cand_with_rule_and_add_to_pq(rule,src_span,cands_of_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
 	}
     for (int span_lhs=0;span_lhs<span;span_lhs++)       //使用btg规则生成候选
 	{
@@ -515,7 +555,7 @@ void SentenceTranslator::generate_kbest_for_span(int beg, int span)
         vector<vector<Cand*> > cands_of_src_nt_leaves;
         cands_of_src_nt_leaves.push_back(span2cands.at(beg_lhs).at(span_lhs).cands);
         cands_of_src_nt_leaves.push_back(span2cands.at(beg_rhs).at(span_rhs).cands);
-        generate_cand_with_btg_rule_and_add_to_pq(span_lhs,cands_of_src_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
+        generate_cand_with_btg_rule_and_add_to_pq(span_lhs,src_span,cands_of_src_nt_leaves,cand_rank_vec,candpq_merge,duplicate_set);
 	}
 	//立方体剪枝,每次从candpq_merge中取出最好的候选加入span2cands中,并将该候选的邻居加入candpq_merge中
 	int added_cand_num = 0;
@@ -550,7 +590,7 @@ void SentenceTranslator::generate_kbest_for_span(int beg, int span)
  3. 出口参数: 保存当前节点候选的优先级队列
  4. 算法简介: 见注释
 ***************************************************************************************/
-void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
+void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,Span src_span,vector<vector<Cand*> > &cands_of_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
 {
     //key包含规则中变量的个数，每个目标端变量在源端句子中对应的位置（用来检查规则源端是否相同）
     //规则目标端在源端相同的所有目标端的排名（检查规则目标端是否相同），以及子候选在每个个变量中的排名（检查子候选是否相同）
@@ -563,6 +603,7 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
         return;
 
 	Cand *cand = new Cand;
+    cand->src_span = src_span;
 	cand->applied_rule = rule;
 	cand->cands_of_nt_leaves = cands_of_nt_leaves;
 	cand->cand_rank_vec = cand_rank_vec;
@@ -580,8 +621,8 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
 			Cand* subcand = cands_of_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
 			cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
 			cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
-			cand->mono_num += subcand->mono_num;                                                             // 累加所用的正序btg规则数量
-			cand->swap_num += subcand->swap_num;                                                             // 累加所用的逆序btg规则数量
+			cand->mono_prob += subcand->mono_prob;                                                             // 累加所用的正序btg规则数量
+			cand->swap_prob += subcand->swap_prob;                                                             // 累加所用的逆序btg规则数量
 			for (size_t j=0; j<PROB_NUM; j++)
 			{
 				cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -605,7 +646,7 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,vector
  3. 出口参数: 保存当前节点候选的优先级队列
  4. 算法简介: 将两个子跨度的候选顺序和逆序拼接得到当前跨度的候选
 ***************************************************************************************/
-void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,vector<vector<Cand*> > &cands_of_src_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
+void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,Span src_span,vector<vector<Cand*> > &cands_of_src_nt_leaves, vector<int> &cand_rank_vec,Candpq &candpq_merge,set<vector<int> > &duplicate_set)
 {
     //key包含左span的长度（检查规则是否相同），以及子候选在每个变量中的排名（检查子候选是否相同）
     vector<int> key;
@@ -614,11 +655,17 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
     if (duplicate_set.insert(key).second == false)
         return;
 
+    Cand* subcand_lhs = cands_of_src_nt_leaves[0][cand_rank_vec[0]];
+    Cand* subcand_rhs = cands_of_src_nt_leaves[1][cand_rank_vec[1]];
+    pair<double,double> reorder_probs = cal_reorder_score(subcand_lhs,subcand_rhs);
+
     vector<string> nt_orders = {"mono","swap"};
     //vector<string> nt_orders = {"mono"};
     for (string &order : nt_orders)
     {
         Cand *cand = new Cand;
+        cand->src_span = src_span;
+        cand->span_lhs = span_lhs;
         int nt_num = cands_of_src_nt_leaves.size();
         vector<int> src_ids(nt_num,src_nt_id);
         vector<int> tgt_nt_idx_to_src_sen_idx(nt_num,0);
@@ -627,14 +674,11 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
         cand->cands_of_nt_leaves = cands_of_src_nt_leaves;
         cand->cand_rank_vec = cand_rank_vec;
         cand->sub_cand_order = 0;
-        Cand* subcand_lhs = cands_of_src_nt_leaves[0][cand_rank_vec[0]];
-        Cand* subcand_rhs = cands_of_src_nt_leaves[1][cand_rank_vec[1]];
         if (order == "swap")
         {
             swap(subcand_lhs,subcand_rhs);
             cand->sub_cand_order = 1;
         }
-        cand->span_lhs = span_lhs;
 
         vector<Cand*> subcands = {subcand_lhs,subcand_rhs};
         cand->trans_probs.resize(PROB_NUM,0.0);                                                              // 初始化当前候选的翻译概率
@@ -643,8 +687,8 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
             Cand* subcand = subcands.at(nt_idx);
             cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
             cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
-            cand->mono_num += subcand->mono_num;                                                             // 累加所用的正序btg规则数量
-            cand->swap_num += subcand->swap_num;                                                             // 累加所用的逆序btg规则数量
+            cand->mono_prob += subcand->mono_prob;                                                             // 累加所用的正序btg规则数量
+            cand->swap_prob += subcand->swap_prob;                                                             // 累加所用的逆序btg规则数量
             for (size_t j=0; j<PROB_NUM; j++)
             {
                 cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -653,12 +697,12 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
             cand->score   += subcand->score;                                                                 // 累加候选得分
         }
         double increased_lm_score = lm_model->cal_increased_lm_score(cand);                                      // 计算语言模型增量
-        int mono_flag = order=="mono"?1:0;
-        int swap_flag = order=="swap"?1:0;
-        cand->mono_num += mono_flag;
-        cand->swap_num += swap_flag;
+        double mono_prob = order=="mono"?reorder_probs.first:0.0;
+        double swap_prob = order=="swap"?reorder_probs.second:0.0;
+        cand->mono_prob += mono_prob;
+        cand->swap_prob += swap_prob;
         cand->lm_prob  += increased_lm_score;
-        cand->score    += feature_weight.lm*increased_lm_score + feature_weight.mono*mono_flag + feature_weight.swap*swap_flag;
+        cand->score    += feature_weight.lm*increased_lm_score + feature_weight.mono*mono_prob + feature_weight.swap*swap_prob;
         candpq_merge.push(cand);
     }
 }
@@ -681,11 +725,11 @@ void SentenceTranslator::add_neighbours_to_pq(Cand* cur_cand, Candpq &candpq_mer
 			new_cand_rank_vec[i]++;                                   // 考虑当前非终结符叶节点候选的下一位
 			if (cur_cand->applied_rule.tgt_rule != NULL)              // 普通规则生成的候选
 			{
-				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
+				generate_cand_with_rule_and_add_to_pq(cur_cand->applied_rule,cur_cand->src_span,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
 			}
 			else                                                      // btg规则生成的候选
 			{
-				generate_cand_with_btg_rule_and_add_to_pq(cur_cand->span_lhs,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
+				generate_cand_with_btg_rule_and_add_to_pq(cur_cand->span_lhs,cur_cand->src_span,cur_cand->cands_of_nt_leaves,new_cand_rank_vec,candpq_merge,duplicate_set);
 			}
 		}
 	}

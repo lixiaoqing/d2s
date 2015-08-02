@@ -48,6 +48,11 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 			getline(fin,line);
 			fns.lm_file = line;
 		}
+		else if (line == "[reorder-model-file]")
+		{
+			getline(fin,line);
+			fns.reorder_model_file = line;
+		}
 		else if (line == "[BEAM-SIZE]")
 		{
 			getline(fin,line);
@@ -183,7 +188,7 @@ void translate_file(const Models &models, const Parameter &para, const Weight &w
 	output_sen.resize(sen_num);
 	nbest_tune_info_list.resize(sen_num);
 	applied_rules_list.resize(sen_num);
-#pragma omp parallel for num_threads(para.SEN_THREAD_NUM)
+//#pragma omp parallel for num_threads(para.SEN_THREAD_NUM)
 	for (size_t i=0;i<sen_num;i++)
 	{
 		SentenceTranslator sen_translator(models,para,weight,input_sen.at(i));
@@ -258,12 +263,13 @@ int main( int argc, char *argv[])
 	Vocab *src_vocab = new Vocab(fns.src_vocab_file);
 	Vocab *tgt_vocab = new Vocab(fns.tgt_vocab_file);
 	RuleTable *ruletable = new RuleTable(para.RULE_NUM_LIMIT,weight,fns.rule_table_file,src_vocab,tgt_vocab);
+	MaxentModel *reorder_model = new MaxentModel(fns.reorder_model_file);
 	LanguageModel *lm_model = new LanguageModel(fns.lm_file,tgt_vocab);
 
 	b = clock();
 	cout<<"loading time: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
 
-	Models models = {src_vocab,tgt_vocab,ruletable,lm_model};
+	Models models = {src_vocab,tgt_vocab,ruletable,reorder_model,lm_model};
 	translate_file(models,para,weight,fns.input_file,fns.output_file);
 	b = clock();
 	cout<<"time cost: "<<double(b-a)/CLOCKS_PER_SEC<<endl;
