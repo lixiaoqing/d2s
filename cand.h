@@ -19,6 +19,8 @@ struct Cand
 {
 	//源端信息
 	int rule_num;				//生成当前候选所使用的规则数目
+	int btg_num_mono;				//生成当前候选所使用的正序btg规则数目
+	int btg_num_swap;				//生成当前候选所使用的逆序btg规则数目
 
 	//目标端信息
 	int tgt_word_num;			//当前候选目标端的单词数
@@ -28,8 +30,8 @@ struct Cand
 	double score;				//当前候选的总得分
 	vector<double> trans_probs;	//翻译概率
 	double lm_prob;
-	double mono_prob;			//生成当前候选所使用的正序btg规则数目
-	double swap_prob;			//生成当前候选所使用的逆序btg规则数目
+	double mono_prob;			//生成当前候选所使用的正序规则的调序概率总得分
+	double swap_prob;			//生成当前候选所使用的逆序规则的调序概率总得分
 
 	//来源信息, 记录候选是如何生成的
 	Rule applied_rule;          					//生成当前候选所使用的规则
@@ -46,6 +48,8 @@ struct Cand
 	Cand ()
 	{
 		rule_num = 1;
+		btg_num_mono = 0;
+		btg_num_swap = 0;
 
 		tgt_word_num = 1;
 		tgt_wids.clear();

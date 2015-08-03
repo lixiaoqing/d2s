@@ -128,6 +128,14 @@ void read_config(Filenames &fns,Parameter &para, Weight &weight, const string &c
 				{
 					ss>>weight.swap;
 				}
+				else if(feature == "btg-num-mono")
+				{
+					ss>>weight.btg_num_mono;
+				}
+				else if(feature == "btg-num-swap")
+				{
+					ss>>weight.btg_num_swap;
+				}
 			}
 		}
 	}

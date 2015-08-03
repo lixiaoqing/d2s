@@ -133,6 +133,8 @@ vector<TuneInfo> SentenceTranslator::get_tune_info(size_t sen_id)
 		tune_info.feature_values.push_back(final_cands.at(i)->rule_num);
 		tune_info.feature_values.push_back(final_cands.at(i)->mono_prob);
 		tune_info.feature_values.push_back(final_cands.at(i)->swap_prob);
+		tune_info.feature_values.push_back(final_cands.at(i)->btg_num_mono);
+		tune_info.feature_values.push_back(final_cands.at(i)->btg_num_swap);
 		tune_info.total_score = final_cands.at(i)->score;
 		nbest_tune_info.push_back(tune_info);
 	}
@@ -647,8 +649,10 @@ void SentenceTranslator::generate_cand_with_rule_and_add_to_pq(Rule &rule,Span s
 			Cand* subcand = cands_of_nt_leaves[nt_idx][cand_rank_vec[nt_idx]];
 			cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
 			cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
-			cand->mono_prob += subcand->mono_prob;                                                             // 累加所用的正序btg规则数量
-			cand->swap_prob += subcand->swap_prob;                                                             // 累加所用的逆序btg规则数量
+			cand->mono_prob += subcand->mono_prob;                                                           // 累加所用的正序规则调序概率
+			cand->swap_prob += subcand->swap_prob;                                                           // 累加所用的逆序规则调序概率
+			cand->btg_num_mono += subcand->btg_num_mono;                                                               // 累加所用的btg规则数量
+			cand->btg_num_swap += subcand->btg_num_swap;                                                               // 累加所用的btg规则数量
 			for (size_t j=0; j<PROB_NUM; j++)
 			{
 				cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -714,8 +718,10 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
             Cand* subcand = subcands.at(nt_idx);
             cand->tgt_wids.insert( cand->tgt_wids.end(),subcand->tgt_wids.begin(),subcand->tgt_wids.end() ); // 加入规则目标端非终结符的译文
             cand->rule_num += subcand->rule_num;                                                             // 累加所用的规则数量
-            cand->mono_prob += subcand->mono_prob;                                                             // 累加所用的正序btg规则数量
-            cand->swap_prob += subcand->swap_prob;                                                             // 累加所用的逆序btg规则数量
+            cand->mono_prob += subcand->mono_prob;                                                           // 累加所用的正序规则的调序概率
+            cand->swap_prob += subcand->swap_prob;                                                           // 累加所用的逆序规则的调序概率
+            cand->btg_num_mono += subcand->btg_num_mono;                                                               // 累加所用的btg规则数量
+            cand->btg_num_swap += subcand->btg_num_swap;                                                               // 累加所用的btg规则数量
             for (size_t j=0; j<PROB_NUM; j++)
             {
                 cand->trans_probs[j] += subcand->trans_probs[j];                                             // 累加翻译概率
@@ -728,8 +734,13 @@ void SentenceTranslator::generate_cand_with_btg_rule_and_add_to_pq(int span_lhs,
         double swap_prob = order=="swap"?reorder_probs.second:0.0;
         cand->mono_prob += mono_prob;
         cand->swap_prob += swap_prob;
+        int mono_num = order=="mono"?1:0;
+        int swap_num = order=="swap"?1:0;
+        cand->btg_num_mono += mono_num;
+        cand->btg_num_swap += swap_num;
         cand->lm_prob  += increased_lm_score;
-        cand->score    += feature_weight.lm*increased_lm_score + feature_weight.mono*mono_prob + feature_weight.swap*swap_prob;
+        cand->score    += feature_weight.lm*increased_lm_score + feature_weight.mono*mono_prob + feature_weight.swap*swap_prob
+                          + feature_weight.btg_num_mono*mono_num + feature_weight.btg_num_swap*swap_num;
         candpq_merge.push(cand);
     }
 }

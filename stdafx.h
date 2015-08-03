@@ -75,6 +75,8 @@ struct Weight
 	double rule_num;
 	double mono;
 	double swap;
+	double btg_num_mono;
+	double btg_num_swap;
 };
 
 #endif
